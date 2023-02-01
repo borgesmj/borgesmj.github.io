@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/katamotzikasi" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/petit-formal-script" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Añadir una barra de navegacion en la parte superior de la pagina-->
+    <nav class="nav" id="nav-bar">
+        <ul class="nav-list">
+            <li>
+                <a href="#welcome-section">About</a>
+            </li>
+            <li> 
+                <a href="#projects">Work</a>
+            </li>
+            <li> 
+                <a href="#contact"> Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Finalizar la barra de navegacion-->
+    <!--Añadir la primera seccion, la de bienvenida-->
+    <section class="welcome-section" id="welcome-section">
+        <h1>Hi! Im Miguel</h1>
+        <p>Im a web dev student</p>
+    </section>
+    <!--Fin de la seccion de bienvenida-->
+    <section class="projects-section" id="projects">
+        <h2 class="projects-section-header">These are some of my projects so far...</h2> 
+        <div class="projects-grid">
+            <!--Primera seccion, a la landing page-->
+            <a href="https://codepen.io/borgesmj19/full/NWBwMJR"
+                target="_blank"
+                class="project project-title"
+                >
+                <img src="Img/landingpage.jpg" 
+                alt="" 
+                class="project-image"
+                />
+                <p class="project-tile">
+                    Landing Page
+                </p>
+            </a>
+            <!--segunda seccion, a la tribute page-->
+            <a href="https://codepen.io/borgesmj19/full/rNrYvXv"
+                target="_blank"
+                class="project project-title"
+                >
+                <img src="/Img/Disturbed.jpg" 
+                alt="" 
+                class="project-image"
+                />
+                <p class="project-tile">
+                    Tribute Page
+                </p>
+            </a>
+        </div>
+    </section>
+    <!--finaliza la seccion de proyectos-->
+    <!--comienza la secicion de contacto-->
+    <section class="contact-section" id="contact">
+        <div class="contact-section-header">
+            <h2>Lets work together</h2>
+        </div>
+        <div class="contact-links">
+            <a href="https://www.facebook.com/Mborges/" class="btn contact-details" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+                Facebook
+            </a>
+            <a href="https://www.twitter.com/Migu3l_on/" class="btn contact-details" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+                Twitter
+            </a>
+            <a href="https://github.com/borgesmj" class="btn contact-details" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                Github
+            </a>
+            <a href="https://codepen.io/borgesmj19" class="btn contact-details" target="_blank">
+                <i class="fa-brands fa-codepen"></i>
+                Codepen
+            </a>
+            <a href="https://wa.link/t6uv3l" class="btn contact-details" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                Whatsapp
+            </a>
+        </div>
+    </section>
+    <!--finaliza la seccion de contacto-->
+</body>
+</html>
