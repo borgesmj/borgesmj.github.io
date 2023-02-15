@@ -37,7 +37,7 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'KatamotzIkasiMedium';
+    font-family: 'Anonymous Pro', monospace;
    font-weight: normal;
    font-style: normal;
 }
@@ -47,14 +47,6 @@ ul{
     font-size: 6rem;
     font-weight: bold;
 }
-
-.welcome-section p{
-    color: #4B0000;
-    font-size: 2rem;
-    font-style: italic;
-    text-align: center;
-}
-
 .projects-grid{
     font-size: 3rem;
     text-align: center;
@@ -95,27 +87,54 @@ ul{
     
     }
 
-    .contact-section h2{
-        font-size: 4rem;
-        font-family: 'PetitFormalScriptRegular';
-        font-weight: normal;
-        font-style: normal;
-    }
+.contact-section h2{
+    font-size: 4rem;
+    font-family: 'PetitFormalScriptRegular';
+    font-weight: normal;
+    font-style: normal;
+}
 
-    .contact-section a{
-        color: white;
-        font-size: 2rem;
-        margin: 1rem;
-    }
-    .contact-section a:hover{
-        color: red;
-    }
-    .nav-list a:hover{
-        background-color: aqua;
-    }
-    .texto{
-        font-size: 1rem;
-        color: white;
-        font-family: 'Inconsolata', monospace;
+.contact-section a{
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+}
+.contact-section a:hover{
+    color: red;
+}
+.nav-list a:hover{
+    background-color: aqua;
+    opacity: 0.4;
+}
+.texto{
+    font-size: 1rem;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+}
+.line-1{
+    color: #4B0000;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 11em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);  
+}
 
-    }
+.anim-typewriter{
+    animation: typewriter 4s steps(20) 1s 1 normal both,
+    blinkTextCursor 500ms steps(20) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 11em;}
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
