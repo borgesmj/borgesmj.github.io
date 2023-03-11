@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --backgound-color: #FBE7C6;
+    --players:  #B4F8C8;
+    --lines: white;
+    --border-box: yellow;
+    --letters: black;
+    --board-background: green;
+
+}
+    
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--backgound-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    margin: 30px;
+    padding: 10px;
+}
+h1, h3{
+    text-align: center;
+    margin: auto;
+    font-size: 1.5em;
+    color: var(--letters)
+}
+
+.container{
+    width: 350px;
+    height: 350px;
+    border: solid 4px var(--border-box);
+    align-items: center;
+}
+.players{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+#player-one, #player-two{
+    width: 40%;
+    height: 100%;
+    background-color: var(--players);
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.board{
+    width: 100%;
+    height: 300px;
+    background-color: var(--board-background);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.celda{
+    width: 30%;
+    height: 33%;
+    margin: 0;
+    border: 2px solid white;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+
+}
+
+#celda1, #celda2, #celda3{
+    border-top: 0;
+}
+
+#celda1, #celda4, #celda7{
+    border-left: 0;
+}
+
+#celda3, #celda6, #celda9{
+    border-right: 0;
+}
+
+#celda7, #celda8, #celda9{
+    border-bottom: 0;
+}
+
+div p{
+    font-size: 1.2em;
+    text-align: center;
+    
+}
+.victory{
+    text-align: center;
+    color: var(--letters);
+    font-size: 1.3em;
+}
+
+.footer{
+    text-align: center;
+    color: var(--letters);
+    font-size: small;
+    margin-top: 10px;
+}
