@@ -30,6 +30,7 @@ dificil.addEventListener("click", function(){
 
 const generarTablero =()=>{
     cargarIconos()
+    contador = 0
     selecciones=[]
     let tablero = document.getElementById("tablero");
     tablero.style.display = "flex"
@@ -83,9 +84,12 @@ function cargarIconos (){
 
 
 const reiniciarJuego = ()=>{
+    let contador  = 0
     document.getElementById("dificultad").style.display = "flex";
     document.getElementById("tablero").style.display = "none"
     console.log('reiniciar')
+    counter = document.querySelector("#contador")
+    counter.innerHTML = contador
 }
 
 const seleccionarTarjeta =(i)=>{
@@ -104,6 +108,7 @@ const seleccionarTarjeta =(i)=>{
 
 const verificarPareja=(selecciones)=>{
     setTimeout(() => {
+        let  findejuego = 0
         let trasera1 = document.getElementById("trasera" + selecciones[0])
         let trasera2 = document.getElementById("trasera" + selecciones[1])
 
@@ -118,11 +123,7 @@ const verificarPareja=(selecciones)=>{
             contador++
             counter = document.querySelector("#contador")
             counter.innerHTML = contador
-
         }
 
-        // if (contador == dificutad/2){
-        //     console.log('ganaste')
-        // }
     }, 1000);
 }
