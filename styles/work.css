@@ -102,6 +102,23 @@ a{
 .completed{
     background-color: #adff2f;
     height: 100%;
+    text-align: right;
+    color: var(--Midnight-Blue);
+    font-weight: bold;
+}
+
+.projects-title{
+    text-align: center;
+    font-size: 3rem;
+    margin: 5px;
+    font-family: 'NewYork';
+    color: var(--white);
+}
+.projects-text{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--white);
 }
 
 .html{
@@ -119,10 +136,12 @@ a{
 
 .project-card{
     width: 100%;
-    height: 50vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
+    padding: 1px;
 }
 .inside-square{
     width: 80vw;
