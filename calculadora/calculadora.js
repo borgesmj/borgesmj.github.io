@@ -3,7 +3,7 @@ let num2 = 0
 let operador = ""
 let resultado = ''
 let a = ''
-
+let dot = false
 const pantalla =  document.querySelector('#pantalla')
 
 
@@ -12,13 +12,12 @@ const cuerpoDelDocumento = document.body;
 cuerpoDelDocumento.onload = miFuncion;
 
 function miFuncion() {
-    console.log(`visita mi pagine web https://borgesmj.github.io/`)
+    console.log(`visita mi pagina web https://borgesmj.github.io/`)
 }
 
 
 const loadPage =()=>{
 pantalla.innerHTML = ''
-// 
 }
 loadPage()
 
@@ -28,6 +27,7 @@ loadPage()
         num2 = '';
         operador = '';
         resultado = ''
+        dot = false
         loadPage();
 
     }
@@ -57,10 +57,17 @@ loadPage()
 
     
     const escribirEnPantalla = (e) => {
-        
         const numero = e.target.innerHTML;
-        pantalla.textContent = pantalla.textContent + numero
-    }
+
+        if (numero === '.' && dot){
+            return
+        } else if (numero === '.'){
+            dot = true
+        }
+            pantalla.textContent = pantalla.textContent + numero
+        }
+
+    
     
     const establecerOperador = (e) =>{
         operador = e.target.innerHTML;
@@ -72,17 +79,13 @@ loadPage()
 
     const igual  = document.querySelector('#igual').addEventListener('click', function(){
         num2 = pantalla.textContent
-        // console.log('num1 ' + num1)
-        // console.log('num2 ' + num2) 
-    
         resolver()
     })
 
 
     const teclas = document.querySelectorAll('.numero')
     teclas.forEach(element => {
-        element.addEventListener('click', escribirEnPantalla)
-    })
+        element.addEventListener('click', escribirEnPantalla)})
 
 
     const operacion = document.querySelectorAll('.operador')
@@ -92,4 +95,7 @@ loadPage()
 
 
     document.querySelector("#borrar").addEventListener('click', clear)
+
+    document.querySelector('#punto').addEventListener('click', escribirEnPantalla)
+
 
