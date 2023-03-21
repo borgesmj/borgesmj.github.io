@@ -338,7 +338,7 @@ input[type="button"]:hover{
     border: 1px black solid
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     #main-section{
         background-image: none;
         display: flex;
@@ -353,11 +353,45 @@ input[type="button"]:hover{
         margin-bottom: 10px;
     }
     .about-me{
-        height: 860px;
+        height: 100%;
    
     }
     #form-section{
         background-image: none;
     }
     
+}
+
+@media (max-width: 370px) {
+    #main-section{
+        background-image: none;
+        height: 250px;
+    }
+    .code-line{
+        display: none;
+    }
+    .main-text{
+        margin-left: 10px;
+    }
+
+    .main-text h3{
+        font-size: 2rem;
+        color: blue;
+    }
+    .main-text h1{
+        font-size: 2rem;
+    }
+    .main-text p{
+        font-size: 1rem;
+    }
+    .profile-links{
+        position: absolute;
+        top: 12vh
+    }
+    .about-me{
+        background-color: red;
+        margin-left: 30px;
+        width: 300px;
+        height: 1050px;
+    }
 }
