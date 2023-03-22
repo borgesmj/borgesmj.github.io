@@ -226,9 +226,8 @@ body{
     margin: 20px;
     padding: 20px;
     font-family: 'PoetsenOne-Regular';
-    /* display: flex; */
-    /* flex-direction: column; */
     color: var(--Midnight-Blue);
+    height: 100%;
 
 }
 
