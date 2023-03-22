@@ -204,7 +204,7 @@ body{
 
 .about-me{
     width: 60%;
-    height: 70%;
+    height: 100%;
     background-color: var(--Desert-Sun);
     display: flex;
     flex-direction: column;
@@ -288,7 +288,9 @@ input[type="checkbox"]{
     align-items: center;
     justify-content: space-between;
     background-image: url('/img/Emails-amico.svg');
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    padding: 15px;
     
 }
 form{
@@ -362,7 +364,7 @@ input[type="button"]:hover{
     
 }
 
-@media (max-width: 370px) {
+@media (max-width: 365px) {
     #main-section{
         background-image: none;
         height: 250px;
@@ -389,9 +391,28 @@ input[type="button"]:hover{
         top: 12vh
     }
     .about-me{
-      
         margin-left: 30px;
         width: 300px;
         height: 1050px;
+     
+    }
+    .about{
+        font-size: 1rem;
+        height: 100%;
+        line-height: 1.2;
+    }
+
+    form{
+        width: 60%;
+        padding: 10px;
+        margin: 10px;
+    }
+    #Subject{
+        width: 300px;
+    }
+    
+    #Emailtext{
+        width: 300px;
+    
     }
 }
