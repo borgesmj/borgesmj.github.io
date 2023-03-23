@@ -136,7 +136,7 @@ const seleccionado = () => {
 }
 
 const loadPrice = () => {
-if (score > 9){
+if (score > 8){
     quiz.innerHTML = `
             <h2 class="quiz-header"> Eres Un genio. Respondiste ${score}/${questionCounter} preguntas correctamente</h2>
                 <button onclick="location.reload()">Comenzar de nuevo</button>
