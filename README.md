@@ -8,6 +8,6 @@ Estos proyectos todos los pryectos que he realizado hasta el momento, tanto de p
     </tr>
     <tr>
         <td><a href="https://borgesmj.github.io/Quiz-app/index.html"> Quiz App</a>
-        <td><a href="https://borgesmj.github.io/work.html"> Codigo<a></td>
+        <td><a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/Quiz-app"> Codigo<a></td>
     </tr>
 </table>
