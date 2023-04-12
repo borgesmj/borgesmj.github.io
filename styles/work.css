@@ -200,6 +200,34 @@ a{
     
 
 }
+
+#botones{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filterButton{
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.filterButton:hover{
+    background-color: white;
+    color: var(--Midnight-Blue)
+}
 @media (max-width: 550px){
     .skill-div h3{
         display: none;

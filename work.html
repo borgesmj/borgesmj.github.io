@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="back-section">
-        <a href="./index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+        <a href="https://borgesmj.github.io/"><i class="fa-solid fa-arrow-left-long"></i></a>
     </div>
     <section id="skills-section">
         <h3>Skills</h3>
@@ -40,121 +40,16 @@
             </div>
         </div>
     </section>
+    <h3 class="projects-title">Proyectos</h3>
+    <p class="projects-text"> Estos han sido proyectos de práctica, para mejorar las habilidades de programación</p>
+    <div id="botones">
+        <div class="filterButton" id="verTodos" onclick="verProyectos()">Ver todos</div>
+        <div class="filterButton" id="verUltimos" onclick="verUltimos()">Ver ultimos 3</div>
+        <div class="filterButton" id="verUltimos" onclick="verJavaScript()">JavaScript</div>
+    </div>
     <section id="projects-section">
-        <h3 class="projects-title">Proyectos</h3>
-        <p class="projects-text"> Estos han sido proyectos de práctica, para mejorar las habilidades de programación</p>
-         <!-- Octavi proyecto, Quiz App-->
-         <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/Quiz-App.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">Quiz App</div>
-                    <p>Se inicia con un arreglo de 10 preguntas con respuestas, y las muestra aleatoriamente en pantalla, lleva un contador de puntos y tres mensajes distintos al final, que imprime en pantalla segun el puntaje</p>
-                    <div class="projects-button">
-                         <a href="#" class="button">Ver Codigo</a>
-                        <a href="/Quiz-app/index.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Septimo proyecto, calculadora -->
-        <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/calculadora.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">Calculadora</div>
-                    <p>Utilizando los valores de la pantalla y los valores tomados de los eventos de click para realizar operaciones matemáticas básicas.</p>
-                    <div class="projects-button">
-                         <a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/calculadora" class="button">Ver Codigo</a>
-                        <a href="/calculadora/calculadora.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Sexto proyecto, juego de memoria -->
-        <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/Juego-de-Memoria.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">Juego de Memoria</div>
-                    <p>Este juego evalua los pares de las cartas, verifica si son iguales, si no lo son, las regresa a su posicion inicial y si lo son, las cambia de color, y aumenta un contador de puntos.</p>
-                    <div class="projects-button">
-                         <a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/Juego-de-Memoria" class="button">Ver Codigo</a>
-                        <a href="/Juego-de-Memoria/Juego-de-memoria.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Quinto proyecto, 3 en linea -->
-        <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/Juego-3-en-linea.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">Tres en linea</div>
-                    <p>En este juego aprendí a manipular el DOM con solo click, y seleccionar y mostrar un ganador mediate una evaluacion de criterios</p>
-                    <div class="projects-button">
-                         <a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/3enLinea" class="button">Ver Codigo</a>
-                        <a href="/3enLinea/3enLinea.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Cuarto proyecto, ToDo -->
-        <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/To-do_list.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">To-Do List</div>
-                    <p>En este proyecto aprendí a agregar elementos nuevos a una lista, a marcar las tareas hechas y eliminar otras.</p>
-                    <div class="projects-button">
-                         <a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/To-do_List" class="button">Ver Codigo</a>
-                        <a href="/To-do_List/todo-list.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Tercer Proyecto, bingo -->
-        <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/BINGO.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">Bingo</div>
-                    <p>Este proyecto fué el primero donde comencé a trabajar con JavaScript, utilizando numeros aleatorios para seleccionar el numero a imprimir en la pantalla</p>
-                    <div class="projects-button">
-                         <a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/Bingo" class="button">Ver Codigo</a>
-                        <a href="/Bingo/Bingo.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Segundo Proyecto, tribute page -->
-        <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/Disturbed-band-logo.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">Tribute Page</div>
-                    <p>Este proyecto fué una prueba para FreeCodeCamp, donde se evaluó la capacidad de dar estilo a una pagina por medio de CSS</p>
-                    <div class="projects-button">
-                         <a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/Tribute-page" class="button">Ver Codigo</a>
-                        <a href="/Tribute-page/index.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Primer proyecto, nav-bar -->
-        <div class="project-card">
-            <div class="inside-square">
-                <img class="image-project" src="/Img/Excel_page.png" alt="">
-                <div class="data-project">
-                    <div class="project-title">Nav bar</div>
-                    <p>Este proyecto fué una prueba para la plataforma de FreeCodeCamp, donde debía hacer una barra de navegación con links directo a secciones.</p>
-                    <div class="projects-button">
-                         <a href="https://github.com/borgesmj/borgesmj.github.io/tree/main/nav-bar" class="button">Ver Codigo</a>
-                        <a href="/nav-bar/index.html" class="button">Vista Previa</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </section>
+    <script src="/JS/work.js"></script>
 </body>
 </html>
