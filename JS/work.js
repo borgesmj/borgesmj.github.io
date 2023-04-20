@@ -84,8 +84,8 @@ function verProyectos(){
                     <div class="project-title">${proyectos[i].Titulo}</div>
                         <p>${proyectos[i].Descripcion}</p>
                             <div class="projects-button">
-                        <a href=${proyectos[i].linkCodigo} class="button">Ver Codigo</a>
-                        <a href=${proyectos[i].linkPrevia} class="button">Vista Previa</a>
+                        <a href=${proyectos[i].linkCodigo} target="_blank" class="button">Ver Codigo</a>
+                        <a href=${proyectos[i].linkPrevia} target="_blank" class="button">Vista Previa</a>
                     </div>
                 </div>
             </div>
