@@ -2,7 +2,7 @@ let projectsList = document.querySelector('#projects-section')
 
 const proyectos = [
     {
-        Titulo: "To-Do List React",
+        Titulo: "ToDo List React",
         Descripcion: "Este es mi primer proyecto con react, un proyecto de práctica, se comienza con un formulario que toma tres datos, el nombre de la tarea, la fecha de entrega y un comentario, donde se podria incluir la persona a cargo, la tarea se va a la segunda columna, como una tarea pendiente, ahi se puede editar o eliminar y luego, cuando se marca como hecha, pasa a una tercera columna.",
         imagen: '/Img/todo-list-react.png',
         linkCodigo: "https://github.com/borgesmj/todo-list-react",
