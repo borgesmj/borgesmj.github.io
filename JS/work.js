@@ -3,7 +3,7 @@ let projectsList = document.querySelector('#projects-section')
 const proyectos = [
     {
         Titulo: "Twitter Clon React",
-        Descripcion: "Proyecto Realizado con React JS, realizando una copia al la red social TWITTER, importando iconos como componentes. se imprime en pantalla un contador de caracteres, el boton se mantiene bloqueado si se pasa de los 280, o si no hay nada de texto. Este es un proyecto mas grande, por lo tanto es una primera fase completada",
+        Descripcion: "Proyecto Realizado con React JS, realizando una copia al la red social TWITTER, importando iconos como componentes. se imprime en pantalla un contador de caracteres, el boton se mantiene bloqueado si se pasa de los 280, o si no hay nada de texto.",
         imagen: '/Img/Twitter.png',
         linkCodigo: "https://github.com/borgesmj/twitter-clon",
         linkPrevia: "https://taupe-naiad-b72780.netlify.app/",
@@ -11,7 +11,7 @@ const proyectos = [
     },
     {
         Titulo: "ToDo List React",
-        Descripcion: "Este es mi primer proyecto con react, un proyecto de práctica, se comienza con un formulario que toma tres datos, el nombre de la tarea, la fecha de entrega y un comentario, donde se podria incluir la persona a cargo, la tarea se va a la segunda columna, como una tarea pendiente, ahi se puede editar o eliminar y luego, cuando se marca como hecha, pasa a una tercera columna.",
+        Descripcion: "Este es mi primer proyecto con react, un proyecto de práctica, se comienza con un formulario que toma tres datos, el nombre de la tarea, la fecha de entrega y un comentario, donde se podria incluir la persona a cargo, la tarea se va a la segunda columna, como una tarea pendiente, ahi se puede editar o eliminar...",
         imagen: '/Img/todo-list-react.png',
         linkCodigo: "https://github.com/borgesmj/todo-list-react",
         linkPrevia: "https://superb-pika-f1330c.netlify.app/",
