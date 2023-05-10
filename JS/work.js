@@ -6,7 +6,7 @@ const proyectos = [
         Descripcion: "Proyecto Realizado con React JS, realizando una copia al la red social TWITTER, importando iconos como componentes. se imprime en pantalla un contador de caracteres, el boton se mantiene bloqueado si se pasa de los 280, o si no hay nada de texto.",
         imagen: '/Img/Twitter.png',
         linkCodigo: "https://github.com/borgesmj/twitter-clon",
-        linkPrevia: "https://taupe-naiad-b72780.netlify.app/",
+        linkPrevia: "https://borgesmj-twitter-clon.netlify.app/",
         tags: ["HTML, CSS, JavaScript, React"]
     },
     {
@@ -14,7 +14,7 @@ const proyectos = [
         Descripcion: "Este es mi primer proyecto con react, un proyecto de práctica, se comienza con un formulario que toma tres datos, el nombre de la tarea, la fecha de entrega y un comentario, donde se podria incluir la persona a cargo, la tarea se va a la segunda columna, como una tarea pendiente, ahi se puede editar o eliminar...",
         imagen: '/Img/todo-list-react.png',
         linkCodigo: "https://github.com/borgesmj/todo-list-react",
-        linkPrevia: "https://superb-pika-f1330c.netlify.app/",
+        linkPrevia: "https://borgesmj-todo-list.netlify.app/",
         tags: ["HTML, CSS, JavaScript, React"]
     },
     {
