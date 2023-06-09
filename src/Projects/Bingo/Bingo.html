@@ -1,0 +1,158 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bingo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Añadimos un header con una imagen añadida por css -->
+    <header>
+    </header>
+    <!-- añadimos un div con un texto que dirija al portfolios -->
+    <div class="presentacion">
+        <h3>Esto es un proyecto de practica para mi <br><a href="https://borgesmj.github.io/" target="_blank">Portafolio Personal</a></h3>
+    </div>
+    <!-- un div que contenga la tabla de los numeros y la pantallas y el boton-->
+    <div class="juego">
+        <div class="table">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>B</th>
+                        <th>I</th>
+                        <th>N</th>
+                        <th>G</th>
+                        <th>O</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="celda1">1</td>
+                        <td id="celda16">16</td>
+                        <td id="celda31">31</td>
+                        <td id="celda46">46</td>
+                        <td id="celda61">61</td>
+                    </tr>
+                    <tr>
+                        <td id="celda2">2</td>
+                        <td id="celda17">17</td>
+                        <td id="celda32">32</td>
+                        <td id="celda47">47</td>
+                        <td id="celda62">62</td>
+                    </tr>
+                    <tr>
+                        <td id="celda3">3</td>
+                        <td id="celda18">18</td>
+                        <td id="celda33">33</td>
+                        <td id="celda48">48</td>
+                        <td id="celda63">63</td>
+                    </tr>
+                    <tr>
+                        <td id="celda4">4</td>
+                        <td id="celda19">19</td>
+                        <td id="celda34">34</td>
+                        <td id="celda49">49</td>
+                        <td id="celda64">64</td>
+                    </tr>
+                    <tr>
+                        <td id="celda5">5</td>
+                        <td id="celda20">20</td>
+                        <td id="celda35">35</td>
+                        <td id="celda50">50</td>
+                        <td id="celda65">65</td>
+                    </tr>
+                    <tr>
+                        <td id="celda6">6</td>
+                        <td id="celda21">21</td>
+                        <td id="celda36">36</td>
+                        <td id="celda51">51</td>
+                        <td id="celda66">66</td>
+                    </tr>
+                    <tr>
+                        <td id="celda7">7</td>
+                        <td id="celda22">22</td>
+                        <td id="celda37">37</td>
+                        <td id="celda52">52</td>
+                        <td id="celda67">67</td>
+                    </tr>
+                    <tr>
+                        <td id="celda8" class="8">8</td>
+                        <td id="celda23">23</td>
+                        <td id="celda38">38</td>
+                        <td id="celda53">53</td>
+                        <td id="celda68">68</td>
+                    </tr>
+                    <tr>
+                        <td id="celda9">9</td>
+                        <td id="celda24">24</td>
+                        <td id="celda39">39</td>
+                        <td id="celda54">54</td>
+                        <td id="celda69">69</td>
+                    </tr>
+                    <tr>
+                        <td id="celda10">10</td>
+                        <td id="celda25">25</td>
+                        <td id="celda40">40</td>
+                        <td id="celda55">55</td>
+                        <td id="celda70">70</td>
+                    </tr>
+                    <tr>
+                        <td id="celda11">11</td>
+                        <td id="celda26">26</td>
+                        <td id="celda41">41</td>
+                        <td id="celda56">56</td>
+                        <td id="celda71">71</td>
+                    </tr>
+                    <tr>
+                        <td id="celda12">12</td>
+                        <td id="celda27">27</td>
+                        <td id="celda42">42</td>
+                        <td id="celda57">57</td>
+                        <td id="celda72">72</td>
+                    </tr>
+                    <tr>
+                        <td id="celda13">13</td>
+                        <td id="celda28">28</td>
+                        <td id="celda43">43</td>
+                        <td id="celda58">58</td>
+                        <td id="celda73">73</td>
+                    </tr>
+                    <tr>
+                        <td id="celda14">14</td>
+                        <td id="celda29">29</td>
+                        <td id="celda44">44</td>
+                        <td id="celda59">59</td>
+                        <td id="celda74">74</td>
+                    </tr>
+                    <tr>
+                        <td id="celda15">15</td>
+                        <td id="celda30">30</td>
+                        <td id="celda45">45</td>
+                        <td id="celda60">60</td>
+                        <td id="celda75">75</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pantallas">
+            <div class="letra" id="letra"></div>
+            <div class="espacio"></div>
+            <div class="numeros" id="numero"></div>
+        </div>
+        <div  class="boton">
+            <button class="play" id="boton">Play</button>
+            <button type="button" onClick="window.location.reload()" class="reset">
+                Reset
+             </button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>

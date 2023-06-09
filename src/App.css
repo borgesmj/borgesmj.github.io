@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Artifika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+:root{
+  --primary-100:#3F6FB5;
+  --primary-200:#749de8;
+  --primary-300:#dcffff;
+  --accent-100:#00BFFF;
+  --accent-200:#00619a;
+  --text-100:#FFFFFF;
+  --text-200:#e0e0e0;
+  --bg-100:#1E2A3A;
+  --bg-200:#2e3a4a;
+  --bg-300:#475264;
+    
+}
+
+.container{
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+.links{
+  width: 50%;
+  height: 50px;
+}
+
+.links{
+  background-color: transparent;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.profiles-links{
+  color: white;
+  height: 100%;
+  background-color: transparent;
+  width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  opacity: 0.6;
+}
+
+.profiles-links:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+.Profile{
+  padding: 10px;
+}
+
+.Profile h1{
+  font-size: 3em;
+  font-family: 'Artifika', serif;
+}
+
+.Profile input{
+  display: none;
+}
+
+.Profile a{
+  text-decoration: none;
+  color: var(--text-200);
+  font-weight: bold;
+}
+
+.Profile form{
+  display: none;
+}
+
+.data{
+  max-width: 95%;
+}
+
+
+#about p::first-letter {
+  margin-left: 20px;
+}
+
+#experience{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+#experience h2{
+  font-size: 2em;
+}
+#experience div{
+  background-color: #e0e0e005;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#experience div:last-child{
+  width: 100%;
+  text-align: right;
+  background-color: var(--bg-100);
+  margin-right: 20px;
+  align-self: flex-end;
+}
+
+#experience div:last-child a{
+  color: var(--text-200);
+  text-decoration: none;
+}
+
+#projects .Project-card{
+  background-color: #00BFFF08;
+  width: 100%;
+}
+
+#projects h2{
+  font-size: 2em;
+}
+
+.Project-card div{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.Project-card a{
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.Project-card span{
+  border: 1px solid var(--primary-200);
+  padding: 5px;
+  border-radius: 30px;
+
+}
+
+@media (min-width: 768px) { 
+    .links{
+      width: 40%;
+      color: white
+    }
+
+    .Profile h1{
+      font-size: 4em;
+    }
+    .Profile p{
+      font-size: 2em;
+    }
+
+    .Profile form{
+      display: block;
+    }
+
+    .project-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+
+
+
+ }
+
+@media (min-width: 1024px) { 
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .links{
+    display: flex;
+   width: 20vw;
+   z-index: 1;
+  }
+  .Profile{
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+  }
+  .Profile h1{
+    font-size: 5.5em;
+  }
+  .Profile p{
+    font-size: 3em;
+  }
+
+  .data{
+    width: 50vw;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .project-grid{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  #projects .Project-card{
+    background-color: var(--bg-100);
+  }
+  .options a{
+    font-size: 1.5em;
+  }
+
+  .options a:hover{
+    text-decoration: line-through;
+    cursor: pointer;
+  }
+
+  .links a{
+    color: white
+  }
+  #projects .Project-card:hover{
+    background-color: #00BFFF20
+  }
+  input[type="radio"]{
+    display: block;
+  }
+ }
