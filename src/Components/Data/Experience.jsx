@@ -1,4 +1,6 @@
 import React from 'react'
+import Resume from './Resume';
+import Certificates from './Certificates';
 
 const Experience = () => {
 
@@ -31,14 +33,15 @@ const Experience = () => {
       <h2>Experiencia</h2>
       {experiencia.map ((item, index) => (
         <div key={index} className="experience-card">
-        <h3>{item.Titulo}</h3>
+        <h3 className='bold'>{item.Titulo}</h3>
         <p>{item.Empresa}</p>
         <p>{item.Tiempo}</p>
         <p>{item.Lugar}</p>
         <p>{item.Texto}</p>
       </div>
       ))}
-      <div><a href="https://www.linkedin.com/in/borgesmj">Ver CV completo</a></div>
+        <Certificates/>
+        <Resume/>
     </div>
   )
 }

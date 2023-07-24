@@ -15,9 +15,12 @@ const Links = () => {
   ]
   return (
     <div className='links' id='inicio'> 
-      {links.map((item, index) => (
+    <span className='links-title red'>Sígueme en mis redes sociales:</span>
+    <div className='links-icons'>
+    {links.map((item, index) => (
         <a className='profiles-links' key={index} href={item.link}>{item.icono}</a>
       ))}
+    </div>
     </div>
   )
 }
