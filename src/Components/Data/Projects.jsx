@@ -7,7 +7,7 @@ const Projects = () => {
   const proyectos = [
     {
       Titulo: "Tienda Virtual",
-      Descripcion: "Primer proyecto para una empresa real, creando una tienda virtual ara un local de ventas de licores en Venezela, que tiene un carrito de compras, al que puedes acceder, eliminar o agregar mas productos, y enviar el pedido directamente por un mensaje de WhatsApp.",
+      Descripcion: "Primer proyecto para una empresa real. Creando una tienda virtual ara un local de ventas de licores en Venezela, que tiene un carrito de compras, al que puedes acceder, eliminar o agregar mas productos, y enviar el pedido directamente por un mensaje de WhatsApp.",
       linkCodigo: `${base}tienda-licoreria/`,
       linkPrevia: `https://tienda-licoreria.netlify.app/`,
       tags: ["HTML",  "Tailwind", "JavaScript", "React",]
