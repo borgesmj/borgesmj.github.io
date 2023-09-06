@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="shortcut icon" href="./Favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/work.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div id="back-section">
+        <a href="https://borgesmj.github.io/"><i class="fa-solid fa-arrow-left-long"></i></a>
+    </div>
+    <section id="skills-section">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-div">
+                <h3>HTML</h3>
+                <i class="fa-brands fa-html5"  style="color: #005eff;"></i>
+                
+                <div class="progress-bar">
+                    <div class="completed html">60%</div>
+                </div>
+            </div>
+            <div class="skill-div">
+                <h3>CSS</h3>
+                <i class="fa-brands fa-css3-alt" style="color: #005eff;"></i>
+                <div class="progress-bar">
+                    <div class="completed css">50%</div>
+                </div>
+            </div>
+            <div class="skill-div">
+                <h3>JavaScript</h3>
+                <i class="fa-brands fa-square-js" style="color: #005eff;"></i>
+                <div class="progress-bar">
+                    <div class="completed js">40%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h3 class="projects-title">Proyectos</h3>
+    <p class="projects-text"> Estos han sido proyectos de práctica, para mejorar las habilidades de programación</p>
+    <div id="botones">
+        <div class="filterButton" id="verTodos" onclick="verProyectos()">Ver todos</div>
+        <div class="filterButton" id="verUltimos" onclick="verUltimos()">Ver ultimos 3</div>
+        <!-- <div class="filterButton" id="verUltimos" onclick="verJavaScript()">JavaScript</div> -->
+    </div>
+    <section id="projects-section"></section>
+    <script src="/JS/work.js"></script>
+</body>
+</html>

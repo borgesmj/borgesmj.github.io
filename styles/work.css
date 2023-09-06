@@ -1,0 +1,250 @@
+:root{
+    --Burnt-Orange: #E87A00;
+    --Desert-Sun: #D89C60;
+    --Navy-Blue: #045174;
+    --Midnight-Blue: #001F3D;
+    --black: #000000;
+    --white: #ffffff;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--Midnight-Blue);
+}
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Brightag;
+    src: url('/Font/Brightag_Medium.ttf');
+}
+
+@font-face {
+    font-family: PoetsenOne-Regular;
+    src: url('/Font/PoetsenOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: NewYork;
+    src: url('/Font/NewYork\ PERSONAL\ USE.otf');
+}
+
+@font-face {
+    font-family: Apple;
+    src: url('/Font/AppleGaramond.ttf');
+}
+#back-section{
+    margin: 20px;
+    padding: 20px;
+    color: var(--white);
+    font-size: 200%;
+    height: 10vh;
+    position: fixed;
+    opacity: 0.3;
+
+ 
+}
+
+#back-section:hover{
+    opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--Burnt-Orange);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#skills-section{
+    width: 100vw;
+    height: 80vh;
+}
+#skills-section > h3{
+    color: var(--white);
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Brightag';
+}
+
+
+.skills-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skill-div{
+ 
+    height: 200px;
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.skill-div > h3{
+    color: var(--Burnt-Orange);
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'PoetsenOne-Regular';
+}
+
+.fa-brands{
+    /* color: var(--Burnt-Orange); */
+    font-size: 300%;
+    text-align: center;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.completed{
+    background-color: #adff2f;
+    height: 100%;
+    text-align: right;
+    color: var(--Midnight-Blue);
+    font-weight: bold;
+}
+
+.projects-title{
+    text-align: center;
+    font-size: 3rem;
+    margin: 5px;
+    font-family: 'NewYork';
+    color: var(--white);
+}
+.projects-text{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--white);
+}
+
+.html{
+    width: 60%;
+    
+}
+
+.css{
+    width: 50%;
+}
+
+.js{
+    width: 40%;
+}
+
+.project-card{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 1px;
+}
+.inside-square{
+    width: 80vw;
+    height: 30vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #a6c6d1;
+}
+
+.image-project{
+    height: 100%;
+    border-radius: 10px;
+}
+.data-project{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+    
+}
+
+.project-title{
+    font-size: 1rem;
+    font-family: 'NewYork';
+
+}
+.data-project > p{
+    display:none;
+
+}
+
+.button{
+    background-color: var(--Burnt-Orange);
+    padding: 2px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.5rem;
+    font-family: 'NewYork';
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+.button:hover{
+    cursor: pointer;
+    
+
+}
+
+#botones{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filterButton{
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.filterButton:hover{
+    background-color: white;
+    color: var(--Midnight-Blue)
+}
+
+@media (min-width: 1280px) { 
+    .data-project > p{
+        display:inline;
+    }
+    .button{
+        width: 150px;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    .projects-button{
+        display: flex;
+        flex-direction: row;
+    }
+    .project-title{
+        font-size: 1.5rem;
+    }
+
+}
