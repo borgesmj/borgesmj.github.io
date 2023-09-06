@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import './App.css'
+import './App.css'
 import Data from './Components/Data'
 import Profile from './Components/Profile'
 import Modal from './Components/Modal'
