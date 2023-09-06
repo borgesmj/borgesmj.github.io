@@ -1,29 +1,37 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
-import Data from './Components/Data'
-import Profile from './Components/Profile'
-import Modal from './Components/Modal'
+// import Data from './Components/Data'
+import Profile from './Components/Profile/Profile'
+// import Modal from './Components/Modal'
 
 
 
 
 function App() {
-  const [modal, setModal] = useState(false)
-  const [data, setData] = useState(true)
-  const [profile, setProfile] = useState(true)
+  const [profileInfo, setProfileInfo] = useState([])
+
+  //Estraer informacion personal desde la API
+  useEffect(() => {
+    const fetchAPI = () => {
+      fetch('https://api.github.com/users/borgesmj')
+        .then((res) => res.json())
+        .then((json) => {
+          setProfileInfo(json);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {});
+    };
+
+    fetchAPI();
+  }, []);
 
   return (
-    <div className='container modalActiva'>
-        {profile && <Profile
-          setModal={setModal}
-          setData={setData}
-          setProfile={setProfile}
-        />}
-        {data && <Data/>}
-        {modal && <Modal
-            setModal={setModal}
-            setData={setData}
-            setProfile={setProfile}/>}
+    <div>
+        <Profile
+          profileInfo = {profileInfo}
+        />
     </div>
   )
 }

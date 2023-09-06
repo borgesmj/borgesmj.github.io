@@ -1,8 +1,9 @@
 import React from 'react'
-import Links from '../Components/Links'
+import Links from '../Links'
+import './Profile.css'
 
-
-const Profile = ({setModal, setProfile, setData}) => {
+const Profile = ({profileInfo}) => {
+  console.log(profileInfo)
 
   const handleclick = (e) =>{
     e.preventDefault()
@@ -11,8 +12,8 @@ const Profile = ({setModal, setProfile, setData}) => {
     setData(false)
   }
   return (
-    <div className='Profile'>
-      <h1 className='nombre'>Miguel José</h1>
+    <div className='profile__info'>
+      <h1 className='nombre'>{profileInfo.name}</h1>
       <p>Front-End developer</p>
       <form action="">
         <div className='options'>
@@ -30,7 +31,6 @@ const Profile = ({setModal, setProfile, setData}) => {
             </div>
         </div>
       </form>
-      <Links />
     </div>
   )
 }
