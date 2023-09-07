@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react'
-// import './App.css'
-// import Data from './Components/Data'
+import { Routes, Route } from 'react-router-dom'
+
+//componentes
 import Profile from './Components/Profile/Profile'
-// import Modal from './Components/Modal'
 
-
+//Paginas
+import About from './Pages/About'
+import Blog from './Pages/Blog'
+import Experience from './Pages/Experience'
+import Projects from './Pages/Projects'
+import Contact from './Pages/Contact'
 
 
 function App() {
@@ -61,6 +66,30 @@ function App() {
           setLanguage = {setLanguage}
           english = {english}
         />
+        <div className="contenido">
+          <Routes>
+            <Route
+              path='/'
+              element={<About/>}
+            />
+            <Route
+              path='/contact/'
+              element={<Contact/>}
+            />
+            <Route
+              path='/experience/'
+              element={<Experience/>}
+            />
+            <Route
+              path='/projects/'
+              element={<Projects/>}
+            />
+            <Route
+              path='/blog/'
+              element={<Blog/>}
+            />
+          </Routes>
+        </div>
     </div>
   )
 }

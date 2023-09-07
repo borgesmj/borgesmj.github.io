@@ -1,5 +1,6 @@
 import React from 'react'
-import Links from '../Links'
+
+import { NavLink } from 'react-router-dom'
 import './Profile.css'
 import Sidebar from '../Sidebar/Sidebar'
 import CSS_icon from '../Icons/CSS_icon'
@@ -16,6 +17,32 @@ const Profile = ({profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, chan
     <React_icon/>,
     <Tailwind_icon/>,  
   ]
+
+  const linksPages = [
+    {
+      name: 'About',
+      to: '/'
+    },
+    {
+      name: 'Experience',
+      to: '/experience/'
+    },{
+      name: 'Projects',
+      to: '/projects/'
+    },
+    {
+      name: 'Contact',
+      to: '/contact/'
+    },
+    {
+      name: 'Blog',
+      to: '/blog/'
+    }
+  ]
+
+  const handleLinkClick = () => {
+    changeSidebarCheckboxValue()
+  }
 
 
   console.log(profileInfo)
@@ -37,6 +64,22 @@ const Profile = ({profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, chan
           <ul className="skills_list_grid">
             {skillsIcons.map((item, index) => (
               <li key={index}>{item}</li>) )}
+          </ul>
+          <ul className='links'>
+          {linksPages.map((item, index) => (
+  <li key={index}>
+    <NavLink 
+      to={item.to} 
+      className={({ isActive, isPending }) =>
+      isPending ? "pending" : isActive ? "active" : "noactive"
+  }
+    onClick={handleLinkClick}
+    >
+      {item.name}
+      <span></span>
+    </NavLink>
+  </li>
+))}
           </ul>
       </div>
       <input type="checkbox" name="" id="socials_panel_checkbox" checked={socialSidebar}  readOnly/>
