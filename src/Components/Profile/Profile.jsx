@@ -1,36 +1,48 @@
 import React from 'react'
 import Links from '../Links'
 import './Profile.css'
+import Sidebar from '../Sidebar/Sidebar'
+import CSS_icon from '../Icons/CSS_icon'
+import HTML_icon from '../Icons/HTML_icon'
+import JS_icon from '../Icons/JS_icon'
+import React_icon from '../Icons/React_icon'
+import Tailwind_icon from '../Icons/Tailwind_icon'
 
-const Profile = ({profileInfo}) => {
+const Profile = ({profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, changeSocialSidebarCheckbox, socialSidebar}) => {
+  const skillsIcons = [
+    <CSS_icon/>,
+    <HTML_icon/>,
+    <JS_icon/>,
+    <React_icon/>,
+    <Tailwind_icon/>,  
+  ]
+
+
   console.log(profileInfo)
-
-  const handleclick = (e) =>{
-    e.preventDefault()
-    setModal(true)
-    setProfile(false)
-    setData(false)
-  }
   return (
     <div className='profile__info'>
-      <h1 className='nombre'>{profileInfo.name}</h1>
-      <p>Front-End developer</p>
-      <form action="">
-        <div className='options'>
-            <div>
-                  <label htmlFor="About"><a href="#about">About.</a></label>
-            </div>
-            <div>
-                  <label htmlFor="Experience"><a href="#experience">Experiencia.</a></label>
-            </div>
-            <div>
-                  <label htmlFor="Projects"><a href="#projects">Proyectos.</a></label>
-            </div>
-            <div>
-                  <label onClick={handleclick}><a>Trabajemos juntos.</a></label>
-            </div>
-        </div>
-      </form>
+      <Sidebar
+        changeSidebarCheckboxValue = {changeSidebarCheckboxValue}
+        sidebarCheckbox={sidebarCheckbox}
+        changeSocialSidebarCheckbox = {changeSocialSidebarCheckbox}
+        socialSidebar = {socialSidebar}
+        avatar = {profileInfo?.avatar_url}
+      />
+      <input type="checkbox" name="" id="" className='sidebar__checkbox' checked={sidebarCheckbox} readOnly />
+      <div className="content_sidebar">
+          <h1 className='nombre'>Miguel José</h1>
+          <h3>Front-End developer</h3>
+          <p>{profileInfo?.bio}</p>
+          <p>Skills:</p>
+          <ul className="skills_list_grid">
+            {skillsIcons.map((item, index) => (
+              <li key={index}>{item}</li>) )}
+          </ul>
+      </div>
+      <input type="checkbox" name="" id="socials_panel_checkbox" checked={socialSidebar}  readOnly/>
+      <div className="socials_panel">
+          ddddd
+      </div>
     </div>
   )
 }
