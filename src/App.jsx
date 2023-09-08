@@ -1,27 +1,20 @@
-import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
-
-//componentes
-import Profile from './Components/Profile/Profile'
-
-//Paginas
-import About from './Pages/About'
-import Blog from './Pages/Blog'
-import Experience from './Pages/Experience'
-import Projects from './Pages/Projects'
-import Contact from './Pages/Contact'
-import ProjectInfo from './Pages/ProjectInfo'
-
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Profile from './Components/Profile/Profile';
+import About from './Pages/About';
+import Blog from './Pages/Blog';
+import Experience from './Pages/Experience';
+import Projects from './Pages/Projects';
+import Contact from './Pages/Contact';
+import ProjectInfo from './Pages/ProjectInfo';
 
 function App() {
+  const [profileInfo, setProfileInfo] = useState([]);
+  const [sidebarCheckbox, setSidebarCheckbox] = useState(false);
+  const [socialSidebar, setSocialSidebar] = useState(false);
+  const [english, setEnglish] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
 
-  // Estados Iniciales
-  const [profileInfo, setProfileInfo] = useState([])
-  const [sidebarCheckbox, setSidebarCheckbox] = useState(false)
-  const [socialSidebar, setSocialSidebar] = useState(false)
-  const [english, setEnglish] = useState(true)
-
-  //Estraer informacion personal desde la API
   useEffect(() => {
     const fetchAPI = () => {
       fetch('https://api.github.com/users/borgesmj')
@@ -31,81 +24,78 @@ function App() {
         })
         .catch((error) => {
           console.log(error);
-        })
-        .finally(() => {});
+        });
     };
 
     fetchAPI();
   }, []);
 
-
-
-  //valor del checkbox para el sidebar
   const changeSidebarCheckboxValue = () => {
-    setSidebarCheckbox(!sidebarCheckbox)
-    if (socialSidebar){
-      setSocialSidebar(false)
+    setSidebarCheckbox(!sidebarCheckbox);
+    if (socialSidebar) {
+      setSocialSidebar(false);
     }
-  }
+  };
 
-  //valor del checkbox para el socialbar
   const changeSocialSidebarCheckbox = () => {
-    setSocialSidebar(!socialSidebar)
-    if (sidebarCheckbox){
-      setSidebarCheckbox(false)
+    setSocialSidebar(!socialSidebar);
+    if (sidebarCheckbox) {
+      setSidebarCheckbox(false);
     }
-  }
+  };
 
+  useEffect(() => {
+    const rootElement = document.getElementById('root');
+    if (darkTheme) {
+      rootElement.classList.add('dark-mode');
+    } else {
+      rootElement.classList.remove('dark-mode');
+    }
+  }, [darkTheme]);
 
   return (
     <div className='app_container'>
-        <Profile
-          profileInfo = {profileInfo}
-          changeSidebarCheckboxValue = {changeSidebarCheckboxValue}
-          sidebarCheckbox = {sidebarCheckbox}
-          changeSocialSidebarCheckbox = {changeSocialSidebarCheckbox}
-          socialSidebar={socialSidebar}
-          setEnglish = {setEnglish}
-          english = {english}
-        />
-        <div className="contenido">
-          <Routes>
-            <Route
-              path='/'
-              element={<About
-                english = {english}
-              />}
-            />
-            <Route
-              path='/contact/'
-              element={<Contact/>}
-            />
-            <Route
-              path='/experience/'
-              element={<Experience
-                english={english}
-              />}
-            />
-            <Route
-              path='/projects/'
-              element={<Projects
-                repos_url = {profileInfo?.repos_url}
-              />}
-            />
-            <Route
-              path='/blog/'
-              element={<Blog/>}
-            />
-            <Route
-              path='/projects/:name'
-              element={<ProjectInfo
-                repos_url = {profileInfo?.repos_url}
-              />}
-            />
-          </Routes>
-        </div>
+      <Profile
+        profileInfo={profileInfo}
+        changeSidebarCheckboxValue={changeSidebarCheckboxValue}
+        sidebarCheckbox={sidebarCheckbox}
+        changeSocialSidebarCheckbox={changeSocialSidebarCheckbox}
+        socialSidebar={socialSidebar}
+        setEnglish={setEnglish}
+        english={english}
+        darkTheme={darkTheme}
+        setDarkTheme={setDarkTheme}
+      />
+      <div className='contenido'>
+        <Routes>
+          <Route
+            path='/'
+            element={<About english={english} />}
+          />
+          <Route
+            path='/contact/'
+            element={<Contact />}
+          />
+          <Route
+            path='/experience/'
+            element={<Experience english={english} />}
+          />
+          <Route
+            path='/projects/'
+            element={<Projects repos_url={profileInfo?.repos_url} />}
+          />
+          <Route
+            path='/blog/'
+            element={<Blog />}
+          />
+          <Route
+            path='/projects/:name'
+            element={<ProjectInfo repos_url={profileInfo?.repos_url} />}
+          />
+        </Routes>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

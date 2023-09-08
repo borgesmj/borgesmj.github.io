@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: space-around;
     position: fixed;
+    color: var(--text-200);
+    background-color: var(--bg-100);
 }
 
 .sidebar__burger{
@@ -17,7 +19,7 @@
 
 .sidebar__burger > span{
     border-radius: 50px;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid var(--text-200);
     transition: all 0.5s ease 0s;
     display: block;
 }
@@ -41,7 +43,7 @@
 #socials_btn > img{
     height: 100%;
     border-radius: 50%;
-    border: white solid 2px;
+    border: var(--text-200) solid 2px;
 }
 
 #sidebar .button{
@@ -49,7 +51,7 @@
     width: 50px;
     border-radius: 20px;
     /* background: var(--bg-300); */
-    border: 2px solid white;
+    border: 2px solid var(--text-200);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +63,7 @@
 }
 
 #sidebar .button > svg > path{
-    fill: white;
+    fill: var(--text-200);
     font-weight: bold;
 }
 

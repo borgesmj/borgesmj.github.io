@@ -5,7 +5,16 @@ import Espanol from './Espanol__icon'
 import Sun_Icon from './Sun_Icon'
 import MoonIcon from './Moon_icon'
 
-const Sidebar = ({english, setEnglish, changeSidebarCheckboxValue, sidebarCheckbox, avatar, changeSocialSidebarCheckbox, socialSidebar}) => {
+const Sidebar = ({
+  english, 
+  setEnglish, 
+  changeSidebarCheckboxValue, 
+  sidebarCheckbox, 
+  avatar, 
+  changeSocialSidebarCheckbox, 
+  socialSidebar,
+  darkTheme,
+  setDarkTheme}) => {
   
   const handleInputChange = () => {
     changeSidebarCheckboxValue()
@@ -18,6 +27,10 @@ const Sidebar = ({english, setEnglish, changeSidebarCheckboxValue, sidebarCheckb
   const handleLanguageChange = () => {
     setEnglish(!english)
   }
+
+  const handleThemeChange = () =>{
+    setDarkTheme(!darkTheme)
+  }
     return (
     <div id='sidebar'>
       <input type="checkbox" name="" id="sidebar__checkbox" className='sidebar__checkbox' onChange={handleInputChange} checked={sidebarCheckbox} />
@@ -28,7 +41,7 @@ const Sidebar = ({english, setEnglish, changeSidebarCheckboxValue, sidebarCheckb
       </label>
       <div className="button__panel">
           <div className='button' onClick={handleLanguageChange}>{english ? <English/> : <Espanol/> }</div>
-          <div className='button'>{english ? <MoonIcon/> : <Sun_Icon/> }</div>
+          <div className='button' onClick={handleThemeChange}>{darkTheme ? <MoonIcon/> : <Sun_Icon/> }</div>
 
       </div>
       <input type="checkbox" name="" id="socials_sidebar" className='socials_sidebar'  onChange={handleSocialChange} checked={socialSidebar}/>

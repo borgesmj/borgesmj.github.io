@@ -10,7 +10,19 @@ import React_icon from '../Icons/React_icon'
 import Tailwind_icon from '../Icons/Tailwind_icon'
 import Github_icon from '../Icons/Github_icon'
 
-const Profile = ({english, setEnglish, profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, changeSocialSidebarCheckbox, socialSidebar}) => {
+const Profile = ({
+    english, 
+    setEnglish, 
+    profileInfo, 
+    changeSidebarCheckboxValue, 
+    sidebarCheckbox, 
+    changeSocialSidebarCheckbox, 
+    socialSidebar,
+    darkTheme,
+    setDarkTheme
+  }) => {
+
+
   const skillsIcons = [
     <CSS_icon/>,
     <HTML_icon/>,
@@ -60,6 +72,8 @@ const Profile = ({english, setEnglish, profileInfo, changeSidebarCheckboxValue, 
         socialSidebar = {socialSidebar}
         english = {english}
         setEnglish={setEnglish}
+        darkTheme = {darkTheme}
+        setDarkTheme = {setDarkTheme}
         avatar = {profileInfo?.avatar_url}
       />
       <input type="checkbox" name="" id="" className='sidebar__checkbox' checked={sidebarCheckbox} readOnly />

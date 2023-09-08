@@ -8,7 +8,7 @@ const About = ({ english }) => {
 
   return (
     <div className='about__page'>
-      <h2>Acerca</h2>
+      <h2>{english ? 'About' : 'Acerca'}</h2>
       {paragraphs.map((paragraph, index) => (
         <p key={index}>{paragraph.trim()}</p>
       ))}
