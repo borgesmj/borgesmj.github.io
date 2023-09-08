@@ -1,6 +1,6 @@
 :root {
   font-family: 'Quicksand', sans-serif;
-  line-height: 1.5;
+  line-height: 1.1;
   font-weight: 400;
 
   font-synthesis: none;
@@ -78,9 +78,10 @@ body {
 
 @media (min-width: 1024px) {
   .contenido {
-    top: 105px;
+    top: 100px;
     width: 50vw;
-    right: 5px;
+    right: 25px;
     height: calc(100vh - 120px);
-  }
+    padding: 10px 15px;
+}
 }

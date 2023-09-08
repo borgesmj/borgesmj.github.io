@@ -43,7 +43,7 @@ const Projects = ({repos_url}) => {
     return dateB - dateA;
   });
   
-  
+  console.log(orderedRepos)
 
   return (
     <div className='projects__section'>

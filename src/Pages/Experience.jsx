@@ -56,7 +56,7 @@ const Experience = ({ english }) => {
 
   return (
     <div>
-      <h2>Experiencia</h2>
+      <h2>{english ? 'Experience' : 'Experiencia'}</h2>
       {trabajosAMostrar.map((trabajo, index) => (
         <div key={index}>
           <h3>{trabajo.Trabajo}</h3>
