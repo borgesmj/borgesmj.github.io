@@ -82,7 +82,9 @@ function App() {
             />
             <Route
               path='/experience/'
-              element={<Experience/>}
+              element={<Experience
+                english={english}
+              />}
             />
             <Route
               path='/projects/'

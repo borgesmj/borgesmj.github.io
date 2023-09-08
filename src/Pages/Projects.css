@@ -21,8 +21,8 @@
 }
 
 .project__item > img{
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 150px;
 }
 
 .project__content{

@@ -112,8 +112,8 @@
         height: 90px;
     }
 
-    #sidebar {
-
+    #sidebar .button:hover {
+        cursor: pointer;
     }
 }
 
