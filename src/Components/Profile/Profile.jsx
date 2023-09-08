@@ -10,7 +10,7 @@ import React_icon from '../Icons/React_icon'
 import Tailwind_icon from '../Icons/Tailwind_icon'
 import Github_icon from '../Icons/Github_icon'
 
-const Profile = ({profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, changeSocialSidebarCheckbox, socialSidebar}) => {
+const Profile = ({english, setEnglish, profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, changeSocialSidebarCheckbox, socialSidebar}) => {
   const skillsIcons = [
     <CSS_icon/>,
     <HTML_icon/>,
@@ -22,21 +22,26 @@ const Profile = ({profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, chan
   const linksPages = [
     {
       name: 'About',
+      nombre: 'Acerca',
       to: '/'
     },
     {
       name: 'Experience',
+      nombre: 'Experiencia',
       to: '/experience/'
     },{
       name: 'Projects',
+      nombre: 'Proyectos',
       to: '/projects/'
     },
     {
       name: 'Contact',
+      nombre: 'Contacto',
       to: '/contact/'
     },
     {
       name: 'Blog',
+      nombre: 'Blog',
       to: '/blog/'
     }
   ]
@@ -53,14 +58,16 @@ const Profile = ({profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, chan
         sidebarCheckbox={sidebarCheckbox}
         changeSocialSidebarCheckbox = {changeSocialSidebarCheckbox}
         socialSidebar = {socialSidebar}
+        english = {english}
+        setEnglish={setEnglish}
         avatar = {profileInfo?.avatar_url}
       />
       <input type="checkbox" name="" id="" className='sidebar__checkbox' checked={sidebarCheckbox} readOnly />
       <div className="content_sidebar">
           <h1 className='nombre'>Miguel José</h1>
-          <h3>Front-End developer</h3>
+          <h3>{english ? 'FrontEnd Web Developer' : 'Desarrollador Web FrontEnd'}</h3>
           <p>{profileInfo?.bio}</p>
-          <p>Skills:</p>
+          <p>{english ? 'Skills:' : 'Habilidades:'}</p>
           <ul className="skills_list_grid">
             {skillsIcons.map((item, index) => (
               <li key={index}>{item}</li>) )}
@@ -75,7 +82,7 @@ const Profile = ({profileInfo, changeSidebarCheckboxValue, sidebarCheckbox, chan
   }
     onClick={handleLinkClick}
     >
-      {item.name}
+      {english? item.name : item.nombre}
       <span></span>
     </NavLink>
   </li>

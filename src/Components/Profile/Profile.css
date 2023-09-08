@@ -134,6 +134,7 @@
     align-items: center;
     font-size: 1.5em;
     justify-content: flex-end;
+    width: fit-content;
 }
 
 .links > li > a > span {

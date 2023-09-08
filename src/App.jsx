@@ -14,10 +14,12 @@ import ProjectInfo from './Pages/ProjectInfo'
 
 
 function App() {
+
+  // Estados Iniciales
   const [profileInfo, setProfileInfo] = useState([])
   const [sidebarCheckbox, setSidebarCheckbox] = useState(false)
   const [socialSidebar, setSocialSidebar] = useState(false)
-  const [english, setEnglish] = useState(false)
+  const [english, setEnglish] = useState(true)
 
   //Estraer informacion personal desde la API
   useEffect(() => {
@@ -36,8 +38,9 @@ function App() {
     fetchAPI();
   }, []);
 
-  //valor del checkbox para el sidebar
 
+
+  //valor del checkbox para el sidebar
   const changeSidebarCheckboxValue = () => {
     setSidebarCheckbox(!sidebarCheckbox)
     if (socialSidebar){
@@ -45,6 +48,7 @@ function App() {
     }
   }
 
+  //valor del checkbox para el socialbar
   const changeSocialSidebarCheckbox = () => {
     setSocialSidebar(!socialSidebar)
     if (sidebarCheckbox){
@@ -52,9 +56,6 @@ function App() {
     }
   }
 
-  const setLanguage = () => {
-    setEnglish(!english)
-  }
 
   return (
     <div className='app_container'>
@@ -64,14 +65,16 @@ function App() {
           sidebarCheckbox = {sidebarCheckbox}
           changeSocialSidebarCheckbox = {changeSocialSidebarCheckbox}
           socialSidebar={socialSidebar}
-          setLanguage = {setLanguage}
+          setEnglish = {setEnglish}
           english = {english}
         />
         <div className="contenido">
           <Routes>
             <Route
               path='/'
-              element={<About/>}
+              element={<About
+                english = {english}
+              />}
             />
             <Route
               path='/contact/'

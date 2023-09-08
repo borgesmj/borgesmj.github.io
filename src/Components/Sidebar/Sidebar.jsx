@@ -1,7 +1,11 @@
 import React from 'react'
 import './Sidebar.css'
+import English from './English__icon'
+import Espanol from './Espanol__icon'
+import Sun_Icon from './Sun_Icon'
+import MoonIcon from './Moon_icon'
 
-const Sidebar = ({changeSidebarCheckboxValue, sidebarCheckbox, avatar, changeSocialSidebarCheckbox, socialSidebar}) => {
+const Sidebar = ({english, setEnglish, changeSidebarCheckboxValue, sidebarCheckbox, avatar, changeSocialSidebarCheckbox, socialSidebar}) => {
   
   const handleInputChange = () => {
     changeSidebarCheckboxValue()
@@ -11,6 +15,9 @@ const Sidebar = ({changeSidebarCheckboxValue, sidebarCheckbox, avatar, changeSoc
     changeSocialSidebarCheckbox()
   }
 
+  const handleLanguageChange = () => {
+    setEnglish(!english)
+  }
     return (
     <div id='sidebar'>
       <input type="checkbox" name="" id="sidebar__checkbox" className='sidebar__checkbox' onChange={handleInputChange} checked={sidebarCheckbox} />
@@ -19,6 +26,11 @@ const Sidebar = ({changeSidebarCheckboxValue, sidebarCheckbox, avatar, changeSoc
         <span></span>
         <span></span>
       </label>
+      <div className="button__panel">
+          <div className='button' onClick={handleLanguageChange}>{english ? <English/> : <Espanol/> }</div>
+          <div className='button'>{english ? <MoonIcon/> : <Sun_Icon/> }</div>
+
+      </div>
       <input type="checkbox" name="" id="socials_sidebar" className='socials_sidebar'  onChange={handleSocialChange} checked={socialSidebar}/>
       <label htmlFor="socials_sidebar" id='socials_btn' >
         <img src={avatar} alt="" />

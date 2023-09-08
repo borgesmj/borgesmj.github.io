@@ -44,6 +44,33 @@
     border: white solid 2px;
 }
 
+#sidebar .button{
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+    /* background: var(--bg-300); */
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar .button svg{
+    width: 2em;
+    height: 2em;
+}
+
+#sidebar .button > svg > path{
+    fill: white;
+    font-weight: bold;
+}
+
+.button__panel{
+    display: flex;
+    width: 10em;
+    justify-content: space-between;
+}
+
 @media (width >= 768px){
     #sidebar{
         height: 70px;
@@ -65,6 +92,14 @@
 @media (width >=1024px){
     #sidebar{
         display: block;
+        height: 70px;
+        width: 50dvw;
+        position: fixed;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .sidebar__burger{
@@ -75,6 +110,10 @@
         position: fixed;
         right: 100px;
         height: 90px;
+    }
+
+    #sidebar {
+
     }
 }
 

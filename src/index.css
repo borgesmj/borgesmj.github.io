@@ -32,6 +32,11 @@
   overflow: hidden;
 }
 
+.contenido > div> h2{
+  width: 100%;
+  text-align: center;
+}
+
 
 .contenido{
   width: 93dvw;
