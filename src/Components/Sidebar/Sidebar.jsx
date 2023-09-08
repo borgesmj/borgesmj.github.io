@@ -11,7 +11,6 @@ const Sidebar = ({changeSidebarCheckboxValue, sidebarCheckbox, avatar, changeSoc
     changeSocialSidebarCheckbox()
   }
 
-  console.log(avatar)
     return (
     <div id='sidebar'>
       <input type="checkbox" name="" id="sidebar__checkbox" className='sidebar__checkbox' onChange={handleInputChange} checked={sidebarCheckbox} />

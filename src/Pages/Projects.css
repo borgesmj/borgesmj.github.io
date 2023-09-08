@@ -1,0 +1,31 @@
+.projects__section{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project__item {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: var(--bg-200);
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    height: fit-content;
+    width: 90%;
+    height: 150px;
+}
+
+.project__item > img{
+    width: 100px;
+    height: auto;
+}
+
+.project__content{
+    width: 100%;
+    height: 100%;
+}

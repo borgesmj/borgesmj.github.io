@@ -10,6 +10,7 @@ import Blog from './Pages/Blog'
 import Experience from './Pages/Experience'
 import Projects from './Pages/Projects'
 import Contact from './Pages/Contact'
+import ProjectInfo from './Pages/ProjectInfo'
 
 
 function App() {
@@ -82,11 +83,19 @@ function App() {
             />
             <Route
               path='/projects/'
-              element={<Projects/>}
+              element={<Projects
+                repos_url = {profileInfo?.repos_url}
+              />}
             />
             <Route
               path='/blog/'
               element={<Blog/>}
+            />
+            <Route
+              path='/projects/:name'
+              element={<ProjectInfo
+                repos_url = {profileInfo?.repos_url}
+              />}
             />
           </Routes>
         </div>

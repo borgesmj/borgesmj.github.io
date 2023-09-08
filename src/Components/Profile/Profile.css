@@ -1,5 +1,5 @@
 .content_sidebar {
-    width: 100vw;
+    width: 90dvw;
     height: calc(100vh - 70px);
     transition: all 0.5s ease 0s;
     transform: translateX(-200%);
@@ -54,13 +54,54 @@
 
 .socials_panel{
     background-color: var(--bg-100);
-    width: 100vw;
-    height: calc(100vh - 70px);
+    width: 90dvw;
+    height: calc(100dvh - 100px);
     transition: all 0.5s ease 0s;
     transform: translateX(-200%);
     position: absolute;
     top: 70px;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.socials_panel > h2{
+    font-weight: bold !important ;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.socials_panel > h1 > svg{
+    width: 2em;
+}
+
+.github__data{
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.github__data > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 25%;
+}
+
+.github__data > a span{
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
 }
 
 #socials_panel_checkbox{
@@ -115,7 +156,12 @@
     width: 50px;
 }
 
-
+.socials_panel > .github__data > .active{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 @media(width >= 768px){

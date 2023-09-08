@@ -3,7 +3,7 @@ import React from 'react'
 const Experience = () => {
   return (
     <div>
-      <h1>experience</h1>
+      <h1>Experiencia</h1>
     </div>
   )
 }
