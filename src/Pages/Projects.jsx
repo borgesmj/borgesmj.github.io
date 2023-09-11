@@ -3,7 +3,7 @@ import './Projects.css'
 import { NavLink } from 'react-router-dom'
 
 const Projects = ({repos_url}) => {
-  console.log(repos_url)
+  
 
   const [repoData, setRepoData] = useState([])
 
@@ -43,7 +43,6 @@ const Projects = ({repos_url}) => {
     return dateB - dateA;
   });
   
-  console.log(orderedRepos)
 
   return (
     <div className='projects__section'>

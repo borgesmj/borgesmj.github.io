@@ -1,4 +1,5 @@
 import React from 'react';
+import './Experience.css'
 
 const Experience = ({ english }) => {
   const trabajoExperiencia = [
@@ -58,7 +59,7 @@ const Experience = ({ english }) => {
     <div>
       <h2>{english ? 'Experience' : 'Experiencia'}</h2>
       {trabajosAMostrar.map((trabajo, index) => (
-        <div key={index}>
+        <div key={index} className='experience__item'>
           <h3>{trabajo.Trabajo}</h3>
           <p>{`${trabajo.Empresa}`}</p>
           <p>{`${trabajo.Periodo}`}</p>
