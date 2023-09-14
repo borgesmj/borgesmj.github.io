@@ -53,8 +53,6 @@ const ProfileInfo = ({
       const handleLinkClick = () => {
         changeSidebarCheckboxValue()
       }
-
-      console.log(english)
   return (
     <div className='profile_info'>
       <input type="checkbox" name="" id="" className='sidebar__checkbox' checked={sidebarCheckbox} readOnly />

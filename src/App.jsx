@@ -8,6 +8,7 @@ import Contact from './Pages/Contact';
 import ProjectInfo from './Pages/ProjectInfo';
 import Navbar from './Components/Navbar/Navbar'
 import ProfileInfo from './Components/ProfileInfo/ProfileInfo';
+import Socialsbar from './Components/SocialsBar/Socialsbar';
 
 function App() {
   const [profileInfo, setProfileInfo] = useState([]);
@@ -73,6 +74,12 @@ function App() {
         sidebarCheckbox={sidebarCheckbox}
         english={english}
       />
+      <Socialsbar
+       changeSocialSidebarCheckbox={changeSocialSidebarCheckbox}
+       socialSidebar={socialSidebar}
+       profileInfo={profileInfo}
+       english={english}
+       />
       {/* <div className='contenido'>
         <Routes>
           <Route

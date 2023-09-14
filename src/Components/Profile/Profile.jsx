@@ -6,7 +6,6 @@ import HTML_icon from '../Icons/HTML_icon'
 import JS_icon from '../Icons/JS_icon'
 import React_icon from '../Icons/React_icon'
 import Tailwind_icon from '../Icons/Tailwind_icon'
-import Github_icon from '../Icons/Github_icon'
 
 const Profile = ({
     english, 
@@ -87,24 +86,7 @@ const Profile = ({
 ))}
           </ul>
       </div>
-      <input type="checkbox" name="" id="socials_panel_checkbox" checked={socialSidebar}  readOnly/>
-      <div className="socials_panel">
-          <h2>Perfil de github <Github_icon/></h2>
-          <div className="github__data">
-            <NavLink  href="/projects/" onClick={changeSocialSidebarCheckbox}>
-              <span>{profileInfo?.public_repos}</span>
-              <span>Repositorios</span>
-            </NavLink>
-            <a href="https://github.com/borgesmj?tab=followers" target='_blank' onClick={changeSocialSidebarCheckbox}>
-              <span>{profileInfo?.followers}</span>
-              <span>Followers</span>
-            </a>
-            <a href="https://github.com/borgesmj?tab=following" target='_blank' onClick={changeSocialSidebarCheckbox}>
-              <span>{profileInfo?.following}</span>
-              <span>Following</span>
-            </a>
-          </div>
-      </div>
+
     </div>
   )
 }

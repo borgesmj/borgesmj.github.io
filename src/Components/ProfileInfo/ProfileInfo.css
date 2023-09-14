@@ -98,6 +98,7 @@
 
     .profile___content{
         padding: 20px;
+        top: 90px;
     }
     .profile___content > h1 {
         font-size: 5em;

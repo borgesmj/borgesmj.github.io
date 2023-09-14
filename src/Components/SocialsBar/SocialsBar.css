@@ -1,0 +1,65 @@
+.socials_panel {
+    position: fixed;
+    top: var(--height);
+    width: 100dvw;
+    height: calc(100dvh - var(--height));
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    color: var(--text-200);
+    background-color: var(--bg-100);
+}
+
+#socials_panel_checkbox:checked ~ .socials_panel {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.socials_panel > h2{
+    font-weight: bold !important ;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: var(--text-200);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.socials_panel > h2 > svg > path{
+    fill: var(--text-200);
+}
+
+.github__data{
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.github__data > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-200);
+    width: 25%;
+}
+
+.github__data > a span{
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+@media (width>= 1024px) {
+    .socials_panel{
+        width: 50dvw;
+        right: 0;
+        bottom: 0;
+        top: 100px
+    }
+}
+
