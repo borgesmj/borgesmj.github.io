@@ -1,0 +1,152 @@
+.profile_info{
+    transition: all 0.5s ease 0s;
+    
+}
+
+.profile___content{
+    position: fixed;
+    top: var(--height);
+    color: var(--text-200);
+    transition: all 0.5s ease 0s;
+    transform: translateX(-200%);
+    background-color: var(--bg-100);
+    height: calc(100dvh - var(--height));
+}
+
+.profile___content > h1{
+    font-size: 3em;
+}
+
+.profile___content > h3{
+    font-size: 1.15em;
+}
+
+.profile___content ul{
+    list-style: none;
+    padding: 0;
+}
+
+.profile___content > .skills_list_grid{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.skills_list_grid > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills_list_grid > li > svg{
+    width: 2.5em;
+    height: auto;
+}
+
+.sidebar__checkbox:checked ~ .profile___content{
+    display: block;
+    opacity: 1;
+    transform: translateX(0%);
+
+
+}
+
+
+.links > li{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.links > li > a{
+    text-decoration: none;
+    color: var(--text-200);
+    position: relative;
+    width: 100%;
+    display: flex ;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: 1.2em;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+.links > li > a > span {
+    border-bottom: 3px solid var(--text-200);
+    height: 10px;
+    display: block;
+    transform: translateY(-50%);
+    transition: all 0.5s ease 0s;
+}
+
+.noactive > span{
+    width: 20px;
+}
+
+.active{
+    font-weight: bold;
+}
+
+.active > span{
+    width: 50px;
+}
+
+@media (width >= 768px) {
+
+    .profile___content{
+        padding: 20px;
+    }
+    .profile___content > h1 {
+        font-size: 5em;
+    }
+    .profile___content > h3 {
+        font-size: 2.15em;
+    }
+
+    .skills_list_grid{
+        margin-bottom: 50px;
+    }
+
+    .skills_list_grid > li > svg{
+        width: 4em;
+        height: auto;
+    }
+
+    .links{
+        font-size: 2em;
+    }
+    
+}
+@media (width >= 1024px) {
+    .profile_info > .profile___content{
+        display: block;
+        position: fixed;
+        top: var(--height);
+        height: calc(100dvh - var(--height));
+        margin-top: 10px;
+        padding: 10px;
+        width: 40dvw;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    .profile___content > h1 {
+        font-size: 3em;
+    }
+
+    .profile___content > h3 {
+        font-size: 1.15em;
+    }
+
+    .skills_list_grid > li > svg{
+        width: 3em;
+        height: auto;
+    }
+    .links{
+        font-size: 1em;
+    }
+    
+}

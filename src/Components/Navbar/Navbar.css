@@ -1,12 +1,19 @@
-#sidebar{
-    width: 100vw;
-    height: 40px;
+#navbar {
+    width: calc(100dvw - 20px);
+    height: calc(var(--height) - 20px);
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: fixed;
     color: var(--text-200);
     background-color: var(--bg-100);
+    padding: 10px 10px;
+    top: 0;
+    left: 0;
+}
+
+#navbar input[type='checkbox']{
+    display: none;
 }
 
 .sidebar__burger{
@@ -24,14 +31,14 @@
     display: block;
 }
 
-#sidebar__checkbox:checked ~ label > span:nth-child(2){
+#navbar__checkbox:checked ~ label > span:nth-child(2){
     display: none;
 }
 
-#sidebar__checkbox:checked ~ label > span:nth-child(1){
+#navbar__checkbox:checked ~ label > span:nth-child(1){
     transform: translateY(13px) rotate(45deg);
 }
-#sidebar__checkbox:checked ~ label > span:nth-child(3){
+#navbar__checkbox:checked ~ label > span:nth-child(3){
     transform: translateY(-14px) rotate(-45deg);
 }
 
@@ -46,23 +53,22 @@
     border: var(--text-200) solid 2px;
 }
 
-#sidebar .button{
+#navbar .button{
     height: 50px;
     width: 50px;
     border-radius: 20px;
-    /* background: var(--bg-300); */
     border: 2px solid var(--text-200);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#sidebar .button svg{
+#navbar .button svg{
     width: 2em;
     height: 2em;
 }
 
-#sidebar .button > svg > path{
+#navbar .button > svg > path{
     fill: var(--text-200);
     font-weight: bold;
 }
@@ -74,8 +80,8 @@
 }
 
 @media (width >= 768px){
-    #sidebar{
-        height: 70px;
+    #navbar{
+        height: var(--height);
     }
 
     .sidebar__burger{
@@ -83,16 +89,16 @@
         height: 50px;
     }
 
-    #sidebar__checkbox:checked ~ label > span:nth-child(1){
+    #navbar__checkbox:checked ~ label > span:nth-child(1){
         transform: translateY(25px) rotate(45deg);
     }
-    #sidebar__checkbox:checked ~ label > span:nth-child(3){
+    #navbar__checkbox:checked ~ label > span:nth-child(3){
         transform: translateY(-22px) rotate(-45deg);
     }
 }
 
 @media (width >=1024px){
-    #sidebar{
+    #navbar{
         display: block;
         height: 70px;
         width: 50dvw;
@@ -114,7 +120,7 @@
         height: 90px;
     }
 
-    #sidebar .button:hover {
+    #navbar .button:hover {
         cursor: pointer;
     }
 }

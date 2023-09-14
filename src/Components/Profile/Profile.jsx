@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { NavLink } from 'react-router-dom'
 import './Profile.css'
-import Sidebar from '../Sidebar/Sidebar'
 import CSS_icon from '../Icons/CSS_icon'
 import HTML_icon from '../Icons/HTML_icon'
 import JS_icon from '../Icons/JS_icon'
@@ -12,14 +10,11 @@ import Github_icon from '../Icons/Github_icon'
 
 const Profile = ({
     english, 
-    setEnglish, 
     profileInfo, 
     changeSidebarCheckboxValue, 
     sidebarCheckbox, 
     changeSocialSidebarCheckbox, 
     socialSidebar,
-    darkTheme,
-    setDarkTheme
   }) => {
 
 
@@ -65,17 +60,6 @@ const Profile = ({
 
   return (
     <div className='profile__info'>
-      <Sidebar
-        changeSidebarCheckboxValue = {changeSidebarCheckboxValue}
-        sidebarCheckbox={sidebarCheckbox}
-        changeSocialSidebarCheckbox = {changeSocialSidebarCheckbox}
-        socialSidebar = {socialSidebar}
-        english = {english}
-        setEnglish={setEnglish}
-        darkTheme = {darkTheme}
-        setDarkTheme = {setDarkTheme}
-        avatar = {profileInfo?.avatar_url}
-      />
       <input type="checkbox" name="" id="" className='sidebar__checkbox' checked={sidebarCheckbox} readOnly />
       <div className="content_sidebar">
           <h1 className='nombre'>Miguel José</h1>

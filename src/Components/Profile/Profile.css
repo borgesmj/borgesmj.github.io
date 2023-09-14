@@ -1,14 +1,16 @@
 .content_sidebar {
-    width: 90dvw;
-    height: calc(100vh - 70px);
+    width: 100dvw;
+    height: calc(100vh - var(--height) - 20px);
     transition: all 0.5s ease 0s;
     transform: translateX(-200%);
     background-color: var(--bg-100);
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: var(--height);
     z-index: 1;
     color: var(--text-200);
     height: 100vh;
+    padding: 10px;
+    background-color: red;
 }
 
 .sidebar__checkbox:checked ~ .content_sidebar {

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Profile from './Components/Profile/Profile';
 import About from './Pages/About';
 import Blog from './Pages/Blog';
 import Experience from './Pages/Experience';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
 import ProjectInfo from './Pages/ProjectInfo';
+import Navbar from './Components/Navbar/Navbar'
+import ProfileInfo from './Components/ProfileInfo/ProfileInfo';
 
 function App() {
   const [profileInfo, setProfileInfo] = useState([]);
@@ -55,7 +56,7 @@ function App() {
 
   return (
     <div className='app_container'>
-      <Profile
+      <Navbar
         profileInfo={profileInfo}
         changeSidebarCheckboxValue={changeSidebarCheckboxValue}
         sidebarCheckbox={sidebarCheckbox}
@@ -65,8 +66,14 @@ function App() {
         english={english}
         darkTheme={darkTheme}
         setDarkTheme={setDarkTheme}
+        avatar_url = {profileInfo?.avatar_url}
       />
-      <div className='contenido'>
+      <ProfileInfo
+        profileInfo={profileInfo}
+        sidebarCheckbox={sidebarCheckbox}
+        english={english}
+      />
+      {/* <div className='contenido'>
         <Routes>
           <Route
             path='/'
@@ -93,7 +100,7 @@ function App() {
             element={<ProjectInfo repos_url={profileInfo?.repos_url} />}
           />
         </Routes>
-      </div>
+      </div> */}
     </div>
   );
 }
