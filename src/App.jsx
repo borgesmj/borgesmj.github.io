@@ -93,7 +93,7 @@ function App() {
           />
           <Route
             path='/contact/'
-            element={<Contact />}
+            element={<Contact english= {english} />}
           />
           <Route
             path='/experience/'
