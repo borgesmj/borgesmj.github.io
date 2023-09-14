@@ -84,11 +84,21 @@ form{
 }
 
 .campo input:focus + .label,
-.campo textarea:focus + .label {
-  transform: translateY(-20px); /* Mueve el label hacia arriba */
-  font-size: 0.8em; /* Cambia el tamaño del label */
-  color: var(--text-200); /* Cambia el color del label */
+.campo input:valid + .label{
+    transform: translateY(-20px); /* Mueve el label hacia arriba */
+    font-size: 0.8em; /* Cambia el tamaño del label */
+    color: var(--text-200); /* Cambia el color del label */
+    padding: 0.4em;
 }
+
+.campo textarea:focus + .label,
+.campo textarea:valid + .label{
+    transform: translateY(-20px); /* Mueve el label hacia arriba */
+    font-size: 0.8em; /* Cambia el tamaño del label */
+    color: var(--text-200); /* Cambia el color del label */
+    padding: 0.4em;
+}
+
 
 form .button{  
     cursor: pointer;
