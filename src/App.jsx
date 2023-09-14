@@ -80,7 +80,7 @@ function App() {
        profileInfo={profileInfo}
        english={english}
        />
-      {/* <div className='contenido'>
+      <div className='contenido'>
         <Routes>
           <Route
             path='/'
@@ -107,7 +107,7 @@ function App() {
             element={<ProjectInfo repos_url={profileInfo?.repos_url} />}
           />
         </Routes>
-      </div> */}
+      </div>
     </div>
   );
 }
