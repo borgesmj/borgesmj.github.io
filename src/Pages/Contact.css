@@ -90,7 +90,7 @@ form{
   color: var(--text-200); /* Cambia el color del label */
 }
 
-form button{  
+form .button{  
     cursor: pointer;
     width: 50%;
     height: 30px;
@@ -102,7 +102,7 @@ form button{
     transition: all 0.5s ease 0s;
 }
 
-form button:before {
+form .button:before {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -126,7 +126,7 @@ form button:before {
   @media (width >= 1024px) {
 
 
-    form button:hover {
+    form .button:hover {
         transform: translateY(-3px);
         box-shadow: 0 5px 15px var(--accent-200);
       }
