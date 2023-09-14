@@ -149,5 +149,9 @@
     .links{
         font-size: 1em;
     }
+
+    .links > li a:hover > span{
+        width: 50px;
+    }
     
 }
