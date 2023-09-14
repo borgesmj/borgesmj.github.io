@@ -9,7 +9,7 @@ const Socialsbar = ({
   profileInfo,
   english,
 }) => {
-  console.log(english);
+
   return (
     <div className="socials__sidebar">
       <input

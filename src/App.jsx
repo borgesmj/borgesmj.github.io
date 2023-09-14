@@ -1,11 +1,16 @@
+//Dependencias
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
+//Paginas
 import About from './Pages/About';
 import Blog from './Pages/Blog';
 import Experience from './Pages/Experience';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
 import ProjectInfo from './Pages/ProjectInfo';
+
+//Componentes
 import Navbar from './Components/Navbar/Navbar'
 import ProfileInfo from './Components/ProfileInfo/ProfileInfo';
 import Socialsbar from './Components/SocialsBar/Socialsbar';

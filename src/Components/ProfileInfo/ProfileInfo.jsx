@@ -49,10 +49,8 @@ const ProfileInfo = ({
           to: '/blog/'
         }
       ]
+
     
-      const handleLinkClick = () => {
-        changeSidebarCheckboxValue()
-      }
   return (
     <div className='profile_info'>
       <input type="checkbox" name="" id="" className='sidebar__checkbox' checked={sidebarCheckbox} readOnly />
@@ -73,7 +71,6 @@ const ProfileInfo = ({
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "active" : "noactive"
                             }
-                        onClick={handleLinkClick}
                     >
                     {english? item.name : item.nombre}
                     <span></span>

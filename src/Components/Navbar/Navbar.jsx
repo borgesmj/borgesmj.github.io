@@ -10,7 +10,6 @@ const Navbar = ({
   setEnglish,
   changeSidebarCheckboxValue,
   sidebarCheckbox,
-  avatar,
   changeSocialSidebarCheckbox,
   socialSidebar,
   darkTheme,
