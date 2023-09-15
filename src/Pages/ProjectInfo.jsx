@@ -55,7 +55,7 @@ const project__data = projectInfo.filter((item) => {
         {project__data[0]?.topics.length > 0 &&
           <div className="proyects-tags">
               {project__data[0]?.topics.map((item, index) => (
-                <span key={`tag_key_${index}`}>{item}</span>
+                <span key={`tag_key_${index}`}>{item.toUpperCase()}</span>
               ))}
           </div>
         }

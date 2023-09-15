@@ -1,0 +1,6 @@
+.dowmload-link{
+    text-decoration: none;
+    color: var(--text-200);
+    margin-left: 30px;
+    font-weight: bold;
+}

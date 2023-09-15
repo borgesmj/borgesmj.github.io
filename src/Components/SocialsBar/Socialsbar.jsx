@@ -1,7 +1,9 @@
 import React from "react";
 import Github_icon from "../Icons/Github_icon";
 import { NavLink } from "react-router-dom";
+import Certificados from "../Certificados/Certificados";
 import "./SocialsBar.css";
+import Resume from "../Resume/Resume";
 
 const Socialsbar = ({
   changeSocialSidebarCheckbox,
@@ -53,6 +55,12 @@ const Socialsbar = ({
             <span>{english ? 'Following' : 'Seguidos'}</span>
           </a>
         </div>
+      <Certificados
+        english={english}
+      />
+      <Resume
+        english={english}
+      />
       </div>
     </div>
   );

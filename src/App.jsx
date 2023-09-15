@@ -61,8 +61,6 @@ function App() {
   }, [darkTheme]);
 
   const location = useLocation();
-
-  console.log(location.pathname)
   useEffect(() => {
     changeSidebarCheckboxValue()
   },[location])
@@ -109,7 +107,7 @@ function App() {
           />
           <Route
             path='/projects/'
-            element={<Projects repos_url={profileInfo?.repos_url} />}
+            element={<Projects repos_url={profileInfo?.repos_url} english={english} />}
           />
           <Route
             path='/blog/'
