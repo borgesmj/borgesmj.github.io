@@ -54,7 +54,7 @@ const Contact = ({ english }) => {
               value={userName}
             />
             <label htmlFor="nombre" className="label">
-              {english ? "nombre" : "name"}
+              {english ? "name" : "nombre"}
             </label>
           </div>
           <div className="campo">
@@ -82,7 +82,7 @@ const Contact = ({ english }) => {
               value={message}
             ></textarea>
             <label htmlFor="textarea" className="label">
-              Mensaje
+              {english ? 'Message' : 'Mensaje'}
             </label>
           </div>
           <input

@@ -17,7 +17,7 @@
     border-radius: 10px;
     border: 2px solid var(--accent-200);
     background-color: var(--bg-100);
-    box-shadow: var(--accent-200) 0px 3px 8px;
+    box-shadow: var(--accent-200) 0px 0px 15px 6px;
     color: var(--text-200);
 }
 

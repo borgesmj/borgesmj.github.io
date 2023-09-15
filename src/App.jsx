@@ -1,6 +1,6 @@
 //Dependencias
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 //Paginas
 import About from './Pages/About';
@@ -60,6 +60,13 @@ function App() {
     }
   }, [darkTheme]);
 
+  const location = useLocation();
+
+  console.log(location.pathname)
+  useEffect(() => {
+    changeSidebarCheckboxValue()
+  },[location])
+
   return (
     <div className='app_container'>
       <Navbar
@@ -78,6 +85,7 @@ function App() {
         profileInfo={profileInfo}
         sidebarCheckbox={sidebarCheckbox}
         english={english}
+        changeSidebarCheckboxValue={changeSidebarCheckboxValue}
       />
       <Socialsbar
        changeSocialSidebarCheckbox={changeSocialSidebarCheckbox}
