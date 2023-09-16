@@ -30,6 +30,8 @@ const project__data = projectInfo.filter((item) => {
   return item.name === name
 })
 
+console.log(`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${name}.jpeg`)
+
   return (
     <div className="project__info">
         <NavLink to="/projects/">
@@ -43,12 +45,12 @@ const project__data = projectInfo.filter((item) => {
         <div className="cell__image_content">
           <img
             className="phone__mockup"
-            src="../src/Images/cellphone__template.png"
+            src="https://borgesmj.github.io/cloud-storage/cellphone__template.png"
             alt="Phone Mockup"
           />
           <img
             className="project__image"
-            src="https://img.freepik.com/vector-premium/imagen-dibujos-animados-hongo-palabra-hongo_587001-200.jpg"
+            src={`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${name}.jpeg`}
             alt="Project Image"
           />
         </div>
@@ -60,7 +62,7 @@ const project__data = projectInfo.filter((item) => {
           </div>
         }
         <div className="links_section">
-          {project__data[0]?.html_url && <a href={project__data[0]?.html_url} target='_blank'>Código</a>}
+          {project__data[0]?.html_url && <a href={project__data[0]?.html_url} target='_blank'>Documentación y código</a>}
           {project__data[0]?.homepage && <a href={project__data[0]?.homepage} target='_blank'>Demo</a>}
         </div>
         {project__data[0]?.name ? (

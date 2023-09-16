@@ -64,17 +64,19 @@
 .links_section > a{
     color: var(--text-200);
     font-size: 1.2em;
-
+    
 }
 
 .proyects-tags{
-    width: 100%;
+    width: 80%;
     height: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     padding: 10px;
+    background-color: red;
+    flex-wrap: wrap;
 }
 
 .proyects-tags > span{
