@@ -2,13 +2,14 @@
 .socials_panel {
     position: fixed;
     top: var(--height);
-    width: 100dvw;
+    width: calc(100dvw - 20px);
     height: calc(100dvh - var(--height));
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
     color: var(--text-200);
     background-color: var(--bg-100);
+    padding: 20px;
 }
 
 #socials_panel_checkbox:checked ~ .socials_panel {
