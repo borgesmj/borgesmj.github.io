@@ -1,5 +1,4 @@
 .about__page{
   padding: 10px;
-  overflow: auto;
-  height: calc(100dvh - 90px);
+  height: fit-content;
 }

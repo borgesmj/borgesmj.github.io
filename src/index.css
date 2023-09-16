@@ -80,11 +80,12 @@ body {
   position: absolute;
   top: 120px;
   overflow: auto;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 90px);
   background-color: var(--bg-100);
   color: var(--text-200);
   z-index: -1;
   padding: 15px;
+  bottom: 0;
 }
 
 
