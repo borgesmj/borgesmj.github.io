@@ -7,5 +7,5 @@
     -webkit-box-shadow: 0px 0px 29px 10px var(--accent-100);
     -moz-box-shadow: 0px 0px 29px 10px var(--accent-100);
     box-shadow: var(--accent-200) 0px 0px 15px 6px;
-    border: 2px solid var(--accent-100)
+    border: 2px solid var(--bg-100)
 }

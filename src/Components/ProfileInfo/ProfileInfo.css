@@ -11,6 +11,8 @@
     transform: translateX(-200%);
     background-color: var(--bg-100);
     height: calc(100dvh - var(--height));
+    padding: 20px;
+    width: calc(100vw - 30px);
 }
 
 .profile___content > h1{

@@ -62,7 +62,7 @@ function App() {
 
   const location = useLocation();
   useEffect(() => {
-    changeSidebarCheckboxValue()
+    setSidebarCheckbox(false)
   },[location])
 
   return (
