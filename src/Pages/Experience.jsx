@@ -57,7 +57,7 @@ const Experience = ({ english }) => {
 
   return (
     <div>
-      <h2>{english ? 'Experience' : 'Experiencia'}</h2>
+      <h2>{english ? 'Job Experience' : 'Experiencia Laboral'}</h2>
       {trabajosAMostrar.map((trabajo, index) => (
         <div key={index} className='experience__item'>
           <h3>{trabajo.Trabajo}</h3>

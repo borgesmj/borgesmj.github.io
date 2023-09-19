@@ -11,7 +11,6 @@ import Tailwind_icon from '../Icons/Tailwind_icon'
 const ProfileInfo = ({
     english, 
     profileInfo, 
-    changeSidebarCheckboxValue, 
     sidebarCheckbox, 
 }) => {
 
@@ -56,7 +55,7 @@ const ProfileInfo = ({
       <input type="checkbox" name="" id="" className='sidebar__checkbox' checked={sidebarCheckbox} readOnly />
       <div className="profile___content">
           <h1 className='nombre'>Miguel José</h1>
-          <h3>{english ? 'I\'m a Jr FrontEnd Web Developer' : 'Soy un desarrollador jr FrontEnd'}</h3>
+          <h3>{english ? 'I\'m a Jr FrontEnd Web Developer' : 'Soy un Desarrollador FrontEnd Jr'}</h3>
           <p>{profileInfo?.bio}</p>
           <p>{english ? 'Skills:' : 'Habilidades:'}</p>
           <ul className="skills_list_grid">
