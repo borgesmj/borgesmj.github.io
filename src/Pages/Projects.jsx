@@ -37,7 +37,9 @@ const Projects = ({ repos_url, english }) => {
       item.name !== "cloud-storage" &&
       item.name !== 'crear-multipage-vite' &&
       item.name !== 'kids-quiz' &&
-      item.name !== 'Udemy-react'
+      item.name !== 'Udemy-react' &&
+      item.name !== 'course-Full-Stack-Open-2023-part-3' &&
+      item.name !== 'course-Full-Stack-Open-2023' 
     );
   });
 
