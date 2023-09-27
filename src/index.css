@@ -84,7 +84,7 @@ body {
   background-color: var(--bg-100);
   color: var(--text-200);
   z-index: -1;
-  padding: 15px;
+  padding: 0px 0px 20px 25px;
   bottom: 0;
 }
 

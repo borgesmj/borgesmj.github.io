@@ -1,4 +1,12 @@
 .about__page{
-  padding: 10px;
-  height: fit-content;
+  padding: 0px 0px 10px 0px;
+}
+
+.about__page > a{
+  color: var(--text-200);
+  text-decoration: none;
+}
+
+.about__page > a > svg > path{
+  fill: var(--text-200);
 }
