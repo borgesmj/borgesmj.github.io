@@ -39,7 +39,8 @@ const Projects = ({ repos_url, english }) => {
       item.name !== 'kids-quiz' &&
       item.name !== 'Udemy-react' &&
       item.name !== 'course-Full-Stack-Open-2023-part-3' &&
-      item.name !== 'course-Full-Stack-Open-2023' 
+      item.name !== 'course-Full-Stack-Open-2023' &&
+      item.name !== 'retos-programacion-2023'
     );
   });
 
