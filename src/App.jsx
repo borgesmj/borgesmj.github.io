@@ -63,6 +63,7 @@ function App() {
   const location = useLocation();
   useEffect(() => {
     setSidebarCheckbox(false)
+    setSocialSidebar(false)
   },[location])
 
   return (

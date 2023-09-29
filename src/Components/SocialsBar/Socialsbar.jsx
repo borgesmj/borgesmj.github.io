@@ -34,7 +34,7 @@ const Socialsbar = ({
           )}
         </h2>
         <div className="github__data">
-          <NavLink href="/projects/" onClick={changeSocialSidebarCheckbox}>
+          <NavLink to="/projects/">
             <span>{profileInfo?.public_repos}</span>
             <span>{english ? 'Repositories' : 'Repositorios'}</span>
           </NavLink>
