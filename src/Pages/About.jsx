@@ -18,7 +18,7 @@ const About = ({ english }) => {
       <a
         href={
           english
-            ? "https://github.com/borgesmj/borgesmj/tree/main/en-US#readme"
+            ? "https://github.com/borgesmj/borgesmj/blob/main/en-US/README.md"
             : "https://github.com/borgesmj"
         }
         target="_blank"
