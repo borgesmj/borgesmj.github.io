@@ -95,26 +95,32 @@ function App() {
       <div className='contenido'>
         <Routes>
           <Route
+            exact
             path='/'
             element={<About english={english} />}
           />
           <Route
+            exact
             path='/contact/'
             element={<Contact english= {english} />}
           />
           <Route
+            exact
             path='/experience/'
             element={<Experience english={english} />}
           />
           <Route
+            exact
             path='/projects/'
             element={<Projects repos_url={profileInfo?.repos_url} english={english} />}
           />
           <Route
+            exact
             path='/blog/'
             element={<Blog />}
           />
           <Route
+            exact
             path='/projects/:name'
             element={<ProjectInfo repos_url={profileInfo?.repos_url} />}
           />
