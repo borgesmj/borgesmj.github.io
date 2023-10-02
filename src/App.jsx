@@ -21,6 +21,7 @@ function App() {
   const [socialSidebar, setSocialSidebar] = useState(false);
   const [english, setEnglish] = useState(false);
   const [darkTheme, setDarkTheme] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchAPI = () => {
@@ -60,7 +61,6 @@ function App() {
     }
   }, [darkTheme]);
 
-  const location = useLocation();
   useEffect(() => {
     setSidebarCheckbox(false)
     setSocialSidebar(false)
@@ -112,7 +112,7 @@ function App() {
           <Route
             exact
             path='/projects/'
-            element={<Projects repos_url={profileInfo?.repos_url} english={english} />}
+            element={<Projects repos_url={profileInfo?.repos_url} english={english} location={location}/>}  
           />
           <Route
             exact

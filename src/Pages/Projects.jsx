@@ -3,14 +3,20 @@ import "./Projects.css";
 import { NavLink } from "react-router-dom";
 import Loader from "../Components/Loader/Loader";
 
-const Projects = ({ repos_url, english }) => {
+const Projects = ({ repos_url, english, location}) => {
   const [repoData, setRepoData] = useState([]);
   const [loader, setLoader] = useState(false)
+  const [url, setUrl] = useState('')
+
+
+  useEffect(() => {
+      setUrl(repos_url)
+  },[repos_url])
 
   useEffect(() => {
     const fetchAPI = () => {
       setLoader(true)
-      fetch(repos_url)
+      fetch(url)
         .then((res) => res.json())
         .then((json) => {
           setRepoData(json);
@@ -24,7 +30,7 @@ const Projects = ({ repos_url, english }) => {
     };
 
     fetchAPI();
-  }, []);
+  }, [url]);
 
   const filteredRepos = repoData?.filter((item) => {
     return (

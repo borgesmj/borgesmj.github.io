@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Back_Icon from '../Components/Icons/Back_Icon'
-import './ProjectInfo.css'
+import './projectInfo.css'
 import RepoComments from '../Components/RepoComents/RepoComments'
 
-const ProjectInfo = ({repos_url}) => {
+const projectInfo = () => {
   const { name } = useParams()
 
 
     const [projectInfo, setProjectInfo] = useState([])
+    const [url, setUrl] = useState('')
 
     useEffect(() => {
+      setUrl(`https://api.github.com/repos/borgesmj/${name}`)
+  },[name])
+
+    useEffect(() => {
+      console.log(url)
       const fetchAPI = () => {
-        fetch(repos_url)
+        fetch(url)
           .then((res) => res.json())
           .then((json) => {
             setProjectInfo(json);
@@ -24,51 +30,48 @@ const ProjectInfo = ({repos_url}) => {
       };
   
       fetchAPI();
-    }, []);
+    }, [url]);
 
-const project__data = projectInfo.filter((item) => {
-  return item.name === name
-})
+    console.log(projectInfo)
 
-console.log(`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${name}.jpeg`)
 
   return (
     <div className="project__info">
         <NavLink to="/projects/">
           <Back_Icon />
         </NavLink>
-        <h3>{project__data[0]?.name.toUpperCase().replace(/[-_]/g, ' ')}</h3>
-        <h4>Descripción</h4>
-        <p>
-          {/* Tu descripción aquí */}
-        </p>
+        <h3>{projectInfo?.name?.toUpperCase().replace(/[-_]/g, ' ')}</h3>
         <div className="cell__image_content">
           <img
             className="phone__mockup"
-            src="https://borgesmj.github.io/cloud-storage/cellphone__template.png"
+            src={projectInfo ? 'https://borgesmj.github.io/cloud-storage/cellphone__template.png' : null}
             alt="Phone Mockup"
           />
           <img
             className="project__image"
-            src={`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${name}.jpeg`}
+            src={projectInfo ? `https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${name}.jpeg` : null}
             alt="Project Image"
           />
         </div>
-        {project__data[0]?.topics.length > 0 &&
+        <h4>Descripción</h4>
+        <p>
+          {/* Tu descripción aquí */}
+        </p>
+        
           <div className="proyects-tags">
-              {project__data[0]?.topics.map((item, index) => (
+              {projectInfo?.topics?.map((item, index) => (
                 <span key={`tag_key_${index}`}>{item.toUpperCase()}</span>
               ))}
           </div>
-        }
+        
         <div className="links_section">
-          {project__data[0]?.html_url && <a href={project__data[0]?.html_url} target='_blank'>Documentación y código</a>}
-          {project__data[0]?.homepage && <a href={project__data[0]?.homepage} target='_blank'>Demo</a>}
+          {projectInfo?.html_url && <a href={projectInfo?.html_url} target='_blank'>Documentación y código</a>}
+          {projectInfo?.homepage && <a href={projectInfo?.homepage} target='_blank'>Demo</a>}
         </div>
-        {project__data[0]?.name ? (
+        {projectInfo?.name ? (
           <RepoComments
-            comments_url={`https://api.github.com/repos/borgesmj/${project__data[0]?.name}/issues`}
-            name={project__data[0]?.name}
+            comments_url={projectInfo?.issues_url}
+            name={projectInfo?.name}
           />
         ) : (
           <p>Loading...</p>
@@ -79,4 +82,4 @@ console.log(`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/$
   )
 }
 
-export default ProjectInfo
+export default projectInfo
