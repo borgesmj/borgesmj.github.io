@@ -1,3 +1,8 @@
+@media (width < 768px){
+    .project__item > img{
+        display: none;
+    }
+}
 .projects__section{
     padding: 10px;
     display: flex;
@@ -28,6 +33,7 @@
 .project__item > img{
     width: auto;
     height: 150px;
+    border-radius: 20px;
 }
 
 .project__content{

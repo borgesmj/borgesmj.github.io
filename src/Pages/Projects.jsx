@@ -66,7 +66,7 @@ const Projects = ({ repos_url, english, location}) => {
         {orderedRepos?.map((item) => (
         <NavLink to={item.name} className="project__item" key={item.id}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/1200px-Imagen_no_disponible.svg.png"
+            src={`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${item.name}.jpeg`}
             alt=""
             className="project__img"
           />
