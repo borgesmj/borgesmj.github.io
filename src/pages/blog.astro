@@ -1,13 +1,11 @@
 ---
-// Importar plantilla base
 import BaseLayout from '../layouts/BaseLayout.astro'
-const pageTitle = 'Pagina de Inicio'
-// realizar fetch de github
 const response = await fetch('https://api.github.com/users/borgesmj');
 const data = await response.json();
 
+const pageTitle = 'MB | Blog'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>Inicio</h2>
+	<h2>blog</h2>
 </BaseLayout>
