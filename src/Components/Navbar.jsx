@@ -43,7 +43,7 @@ const Navbar = () => {
           <li key={index} className="lg:hover:bg-lightWhite md:p-2 rounded-xl">
             <a href={item.href} className="md:flex justify-start items-center">
               <span className="md:hidden">{item.icon}</span>
-              <span className="hidden md:block ml-4 text-accent-100">{index + 1}. {item.name}</span>
+              <span className="hidden md:block ml-4 text-accent-100"><span className='font-bold text-white'>{index + 1}</span>. {item.name}</span>
             </a>
           </li>
         ))}
