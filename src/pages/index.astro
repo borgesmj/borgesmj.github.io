@@ -1,13 +1,28 @@
 ---
 // Importar plantilla base
-import BaseLayout from '../layouts/BaseLayout.astro'
-const pageTitle = 'Pagina de Inicio'
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TectStack from '../Components/TectStack'
+const pageTitle = "Pagina de Inicio";
 // realizar fetch de github
-const response = await fetch('https://api.github.com/users/borgesmj');
+const response = await fetch("https://api.github.com/users/borgesmj");
 const data = await response.json();
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>Inicio</h2>
+  <div
+    class="bg-background-200 flex flex-col justify-center w-full items-center"
+  >
+    <img src="https://avatars.githubusercontent.com/u/121818423?v=4" alt="Github avatar" class="w-40 h-auto" />
+    <h1 class="text-primary-100 font-bold text-xl text-center my-4">
+      {data?.name}
+    </h1>
+    <p class="p-4 text-center">Ingeniero Mecánico ➡️ Desarrollador FrontEnd. Amante del diseño web y la programación. Proyectos: Portfolio, juegos y más. Solucionador de problemas. 🚀💻</p>
+    <div class="w-full px-4 flex flex-row justify-between">
+      <p class="text-center flex flex-col"><span>Followers:</span> <span><a class="font-bold underline px-2" href={data?.followers_url}>1</a></span></p>
+      <p class="text-center flex flex-col"><span>Following:</span> <span><a class="font-bold underline px-2" href={data?.following_url}>5</a></span></p>
+      <p class="text-center flex flex-col"><span>Repos:</span> <span><a class="font-bold underline px-2" href={data?.repos_url}>33</a></span></p>
+      <p class="text-center flex flex-col"><span>Gist:</span> <span><a class="font-bold underline px-2" href={data?.gists_url}>5</a></span></p>
+    </div>
+	<TectStack/>
+  </div>
 </BaseLayout>

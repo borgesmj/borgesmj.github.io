@@ -5,23 +5,24 @@ export default {
     extend: {},
     colors: {
       transparent: 'transparent',
+      lightWhite: "#ffffff40",
       'background': {
-        100: '#0A1929',
-        200: '#1a2839',
-        300: '#323f52'
+        100: '#0F1C3F',
+        200: '#212b50',
+        300: '#3b426a'
       },
       'primary': {
-        100: '#1F3C88',
-        200: '#5666b9',
-        300: '#bbc4ff'
+        100: '#00BFA5',
+        200: '#00a189',
+        300: '#005f4b'
       },
       'accent': {
-        100: '#FF5A5F',
-        200: '#fff7ef',
+        100: '#00E676',
+        200: '#008119',
       },
       'text': {
         100: '#FFFFFF',
-        200: '#1a2839'
+        200: '#e0e0e0'
       },
       'white': '#FFFFFF',
       'black': '#000000'
