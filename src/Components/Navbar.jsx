@@ -1,13 +1,8 @@
-import { useState } from "react";
-// import UserIcon from "../Icons/User";
-// import Projects from "../Icons/Projects";
-// import Briefcase from "../Icons/Briefcase";
-// import Contact from "../Icons/Contact";
-// import Blog from "../Icons/Pen";
+
 import {Briefcase, Contact, Pen, Projects, User } from '../Icons/Icons'
 
 const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
+
 
   const navLinks = [
     {
