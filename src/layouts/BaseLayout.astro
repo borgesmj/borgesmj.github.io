@@ -1,5 +1,6 @@
 ---
 import Navbar from "../Components/Navbar";
+import Infobar from "../Components/Infobar"
 const { pageTitle } = Astro.props;
 import "../styles/global.css";
 ---
@@ -15,5 +16,6 @@ import "../styles/global.css";
   <body class="bg-background-100 text-white">
     <Navbar />
     <slot />
+    <Infobar/>
   </body>
 </html>

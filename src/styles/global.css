@@ -1,5 +1,5 @@
 body{
-    padding: 3rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 5rem 1rem;
 }
 
 .TechIcon{
@@ -10,5 +10,11 @@ body{
 @media (width >= 768px){
     body{
         padding: 5rem 3rem 5rem 14rem;
+    }
+}
+
+@media(width >= 1024px){
+    body{
+        width: 85%;
     }
 }

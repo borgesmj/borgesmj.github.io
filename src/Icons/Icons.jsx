@@ -67,4 +67,17 @@ export const User = () => {
     </svg>
   );
 };
-  
+
+const IconContainer = ({ children }) => {
+  return (
+    <div
+      width={32}
+      height={32}
+      viewBox="0 0 256 256"
+      className="flex items-center justify-center rounded-full bg-gray-80"
+      fill="#FF0000"
+    >
+      {children}
+    </div>
+  );
+};
