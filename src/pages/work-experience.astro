@@ -1,8 +1,63 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 const pageTitle = 'MB | Experience'
+const workExperience = [
+	{
+		Trabajo: 'Web Developer',
+        Empresa: 'Freelancer',
+        Periodo: 'January 2023 - Present',
+        Lugar: 'Medellín, Antioquia',
+        Descripcion: 'During my learning and job search period, I am working on independent development projects with the goal of improving my technical skills. These projects span a variety of areas, including creating games like memory and bingo, crafting work tools such as a to-do list, developed using both Vanilla JavaScript and ReactJs, and implementing a replica of the main Twitter interface. Currently, I am immersed in the development of a React application with the purpose of enriching the learning process for children aged 4 to 6, emphasizing its didactic aspect. If you would like to learn more about my projects, you can visit my web portfolio at the following address: https://borgesmj.github.io/',
+	},
+	{
+		Trabajo: 'Baker Pastry Chef',
+        Empresa: 'Carlotta Bakery',
+        Periodo: 'May 2018 - Feb 2019',
+        Lugar: 'Envigado, Antioquia, Colombia',
+        Descripcion: 'Responsible for production in the bakery, pastry, confectionery, and cookie area.',
+	},
+	{
+		Trabajo: 'QA/QC Inspector',
+        Empresa: 'PDVSA.Petropiar',
+        Periodo: 'Sept 2015 - Nov 2017',
+        Lugar: 'Barcelona, Anzoátegui, Venezuela',
+        Descripcion: 'Inspection and quality control work in various areas of the Petropiar crude upgrader, part of the "José Antonio Anzoátegui" Complex, involving inspection and control of welds, static equipment. Monitoring and control (welding master, repair record, etc.) of welding work and performance of welders in maintenance, repair, and expansion work in different areas of the Petropiar upgrader. Inspection of materials and equipment. Control and monitoring of parameters and procedures for SURFACE PREPARATION and application of anticorrosive paint systems. Execution of Non-Destructive Testing (NDT) inspection work. Implementing quality plans for work on upgrader equipment in internal and external workshops to ensure compliance with required quality standards and specifications. Preparations for Major Plant Shutdown with Excel files, counting the volume of inspections and welds. Witnessing and ensuring compliance with the preventive maintenance program for safety valves in the upgrader. Work on creating a database of welders to be used in operational windows and the major shutdown.',
+      },
+]
+
+console.log(workExperience)
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>Work experience</h2>
+	<h2 class='w-full text-center text-2xl border-b-2 border-b-solid border-d-white py-4'>Work experience</h2>
+	<section class="p-4">
+		{
+			workExperience.map((item, index) => (
+			<div class="my-8 bg-background-200 border-solid border-accent-200 border-[1px] p-4 rounded-2xl shadow-lg flex flex-col items-start justify-between gap-x-6 experience">
+			<div class="campo mt-2">
+				<span class="font-bold">Role:</span>
+				<span class="">{item.Trabajo}</span>
+			</div>
+			<div class="campo mt-2">
+				<span class="font-bold">Date:</span>
+				<span class="">{item.Periodo}</span>
+			</div>
+			<div class="campo mt-2">
+				<span class="font-bold">Company:</span>
+				<span class="">{item.Empresa}</span>
+			</div>
+			<div class="campo mt-2">
+				<span class="font-bold">Location:</span>
+				<span class="">{item.Lugar}</span>
+			</div>
+			<div class="campo mt-2">
+				<span class="font-bold">Responsibilities:</span>
+				<p class="">
+					{item.Descripcion}
+				</p>
+			</div>
+		</div>
+			))
+		}
+	</section>
 </BaseLayout>

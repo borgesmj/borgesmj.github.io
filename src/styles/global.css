@@ -1,20 +1,39 @@
-body{
-    padding: 2rem 1rem 5rem 1rem;
+body {
+  padding: 2rem 1rem 5rem 1rem;
 }
 
-.TechIcon{
-    width: 60px;
-    height: 60px;
+.TechIcon {
+  width: 60px;
+  height: 60px;
 }
 
-@media (width >= 768px){
-    body{
-        padding: 5rem 3rem 5rem 16rem;
-    }
+.experience {
+  -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
 }
 
-@media(width >= 1024px){
-    body{
-        width: 85%;
-    }
+@media (width >= 768px) {
+  body {
+    padding: 5rem 3rem 5rem 16rem;
+  }
+}
+
+@media (width >= 1024px) {
+  body {
+    width: 85%;
+  }
+  .experience {
+    -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .experience:hover{
+    transform: scale(1.015);
+    -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+  }
 }
