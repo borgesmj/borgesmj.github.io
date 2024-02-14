@@ -33,7 +33,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-background-100 w-dvw text-white py-4 px-2 bottom-0 left-0 border-t-[1px] border-t-white border-t-solid z-50 fixed md:left-0 md:h-9/10 md:w-fit md:top-8 md:bottom-8 md:border-r-[1px] md:border-r-solid md:border-r-white md:border-t-[0px] md:flex md:flex-col md:justify-center">
+    <nav className="bg-background-100 w-dvw text-white py-4 px-2 bottom-0 left-0 border-t-[1px] border-t-white border-t-solid z-50 fixed md:left-0 md:h-9/10 md:w-fit md:top-8 md:bottom-8 md:border-r-[1px] md:border-r-solid md:border-r-white md:border-t-[0px] md:flex md:flex-col md:justify-center  font-mono">
       <ul className=" flex flex-row w-full h-full justify-between md:flex-col md:justify-around px-4 md:h-1/4 lg:h-1/3">
         {navLinks.map((item, index) => (
           <li key={index} className="lg:hover:bg-lightWhite md:p-2 rounded-xl">

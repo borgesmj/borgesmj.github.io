@@ -5,7 +5,7 @@ export default {
     extend: {},
     colors: {
       transparent: 'transparent',
-      lightWhite: "#ffffff40",
+      lightWhite: "#ffffff30",
       'background': {
         100: '#0F1C3F',
         200: '#212b50',
