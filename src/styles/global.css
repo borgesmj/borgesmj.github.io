@@ -28,6 +28,7 @@ body {
     -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
     box-shadow: none;
     transition: all 0.3s ease-in-out;
+    opacity: 0.8
   }
 
   .experience:hover, .project:hover{
@@ -35,5 +36,6 @@ body {
     -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
+  opacity: 1;
   }
 }
