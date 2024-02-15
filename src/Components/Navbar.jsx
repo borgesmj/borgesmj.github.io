@@ -37,7 +37,7 @@ const Navbar = () => {
       <ul className=" flex flex-row w-full h-full justify-between md:flex-col md:justify-around px-4 md:h-1/4 lg:h-1/3">
         {navLinks.map((item, index) => (
           <li key={index} className="lg:hover:bg-lightWhite md:p-2 rounded-xl">
-            <a href={item.href} className="md:flex justify-start items-center">
+            <a href={item.href} className="md:flex justify-start items-center w-full h-full">
               <span className="md:hidden">{item.icon}</span>
               <span className="hidden md:block ml-4 text-accent-100"><span className='font-bold text-white'>{index + 1}.</span> {item.name}</span>
             </a>
