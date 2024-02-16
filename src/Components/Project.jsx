@@ -12,13 +12,6 @@ const Project = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // const repo_title = 'cifrado-cesar'
-  // const repo_description = '30 days of JavaScript programming challenge is a step-by-step guide to learn JavaScript programming language in 30 days. This challenge may take more than 100 days, please just follow your own pace.'
-  // const repo_homepage = "https://borgesmj.github.io/3enlinea/"
-  // const repo_html_url = "https://github.com/borgesmj/3enlinea/"
-  // const topics = ["css", "games", "html", "javascript"];
-
-  // let date = "2023-02-20T15:51:24Z";
   const formatDate = (date) => {
     date = new Date(date);
 
@@ -30,7 +23,7 @@ const Project = ({
   };
 
   return (
-    <div className="project border-accent-100 border-solid border-2 p-4 rounded-2xl flex flex-col items-center md:flex-row lg:w-4/5 xl:w-3/5 mt-8">
+    <div className="project border-accent-100 border-solid border-2 p-4 rounded-2xl flex flex-col items-center md:flex-row lg:w-full  mt-8">
       <img
         src={`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${repo_title}.jpeg`}
         alt={repo_title}
@@ -54,6 +47,7 @@ const Project = ({
             className=" mt-2 text-center text-accent-100 text-sm lg:text- flex flex-row items-center justify-between border-solid border-[1px] border-accent-100 p-2 w-1/2 md:w-1/3 rounded-xl md:my-4 md:mx-2 md:p-2 lg:w-1/3 xl:w-1/4 2xl:w-1/5"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            target = 'blank'
           >
             Code <Code_Icon isHovered={isHovered} />
           </a>
@@ -62,17 +56,18 @@ const Project = ({
             className=" mt-2 text-center text-accent-100 text-sm lg:text- flex flex-row items-center justify-between border-solid border-[1px] border-accent-100 p-2 w-1/2 md:w-1/3 rounded-xl md:my-4 md:mx-2 md:p-2 lg:w-1/3 xl:w-1/4 2xl:w-1/5"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            target = 'blank'
           >
             Demo <Play_Icon isHovered={isHovered} />
           </a>
         </div>
-        <div className="w-full flex justify-between items-center my-2">
+        <div className="w-full grid grid-cols-2  grid-rows-2 justify-items-center my-2">
           {topics?.map((topic, index) => (
             <span
               key={`topic_${index}`}
-              className="bg-primary-200 p-1 rounded-lg text-text-200 uppercase text-xs"
+              className="bg-primary-200 p-[5px] rounded-lg text-text-200 uppercase text-[10px] h-fit my-[5px]"
             >
-              {topic}
+              {topic.slice(0, 10)}
             </span>
           ))}
         </div>
