@@ -1,6 +1,7 @@
 body {
-  padding: 2rem 1rem 5rem 1rem;
   margin: 0 auto;
+  width: 100dvw;
+  padding: 2rem 1rem 3rem 1rem;
 }
 
 .TechIcon {
@@ -16,15 +17,16 @@ body {
 
 @media (width >= 768px) {
   body {
-    padding: 0rem 2rem 5rem 16rem;
-    width: 90%;
+    width: 65dvw ;
+    margin: 0rem 0rem 0rem 16rem;
   }
 }
 
 @media (width >= 1024px) {
   body {
-    width: 80%;
-    padding: 0rem 10rem 4rem 13rem;
+    width: 60dvw;
+    margin: 0rem 0rem 0rem 18rem;
+    padding: 0rem 5rem 0rem 2rem;
   }
   .experience, .project {
     -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
@@ -45,8 +47,9 @@ body {
 
 @media (width >= 1280px) {
   body{
-    width: 75%;
-    padding: 0rem 14rem 4rem 16rem;
+    margin: 0rem 0rem 0rem 20rem;
+    padding: 0rem 2rem 0rem 2rem;
+    width: 60dvw;
   }
 }
 
