@@ -37,7 +37,21 @@ const orderedRepos = filteredData.sort((a, b) => {
   >
     Projects
   </h2>
-  <section class="p-4 flex flex-wrap items-center justify-center md:justify-between">
-    {orderedRepos.map((repo) => <Project repo_title={repo.name} repo_description={repo.description} repo_homepage={repo.homepage} repo_html_url={repo.html_url} topics={repo.topics} created_at={repo.created_at} updated_at={repo.updated_at} />)}
+  <section
+    class="p-4 flex flex-wrap items-center justify-center md:justify-between"
+  >
+    {
+      orderedRepos.map((repo) => (
+        <Project
+          repo_title={repo.name}
+          repo_description={repo.description}
+          repo_homepage={repo.homepage}
+          repo_html_url={repo.html_url}
+          topics={repo.topics}
+          created_at={repo.created_at}
+          updated_at={repo.updated_at}
+        />
+      ))
+    }
   </section>
 </BaseLayout>
