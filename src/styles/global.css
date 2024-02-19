@@ -43,6 +43,23 @@ body {
   box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
   opacity: 1;
   }
+
+  .card > .card-button{
+    opacity: 0;
+    transform: translate(-8%, 125%);
+    transition: 0.3s ease-out;
+    border: transparent 1px solid;
+  }
+
+  .card:hover > .card-button{
+    opacity: 1;
+    transform: translate(-8%, 0%);
+  }
+  .card-button:hover{
+    color: #00E676;
+    border: #00E676 1px solid;
+    background-color: white;
+  }
 }
 
 @media (width >= 1280px) {

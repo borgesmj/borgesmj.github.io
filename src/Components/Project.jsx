@@ -23,63 +23,16 @@ const Project = ({
   };
 
   return (
-    <div className="project border-accent-100 border-solid border-2 p-4 rounded-2xl flex flex-col items-center md:flex-row lg:w-full  mt-8">
-      <img
-        src={`https://borgesmj.github.io/cloud-storage/Responsively-Screenshots/${repo_title}.jpeg`}
-        alt={repo_title}
-        className="h-40 w-auto my-6 md:h-48 md:mx-2 rounded-xl lg:h-36 border-solid border-[1px] border-white"
-        onError={(e) => {
-          e.target.onError = null;
-          e.target.src = "/no-image.webp";
-          e.target.alt = "no image available";
-        }}
-      />
-      <div>
-        <p class="font-bold w-full md:w-3/4 text-center text-xl capitalize">
+    <div className="project card w-[14rem] rounded-xl border-white border-solid border-2 bg-[#f5f55f5] relative overflow-visible my-8 md:w-48 md:h-[25rem] lg:h-[20rem]">
+      <div class="card-details text-white h-full gap-2 flex flex-col md:max-h-4/5 md:overflow-y-hidden md:w-full">
+        <p class="text-title capitalize font-bold text-xl w-full text-center md:text-lg bg-accent-200 rounded-t-xl h-1/4 flex justify-center items-center">
           {repo_title.replace("-", " ")}
         </p>
-        <p class="w-full md:w-full text-rigth my-4 lg:w-[70%] lg:ml-8 font-mono text-[0.8rem]">
-          {repo_description}
-        </p>
-        <div className="w-full flex flex-col justify-between items-center md:flex-row lg:w-full lg:justify-around xl:w-full">
-          <a
-            href={repo_html_url}
-            className=" mt-2 text-center text-accent-100 text-sm lg:text- flex flex-row items-center justify-between border-solid border-[1px] border-accent-100 p-2 w-1/2 md:w-1/3 rounded-xl md:my-4 md:mx-2 md:p-2 lg:w-1/3 xl:w-1/4 2xl:w-1/5"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            target = 'blank'
-          >
-            Code <Code_Icon isHovered={isHovered} />
-          </a>
-          <a
-            href={repo_homepage}
-            className=" mt-2 text-center text-accent-100 text-sm lg:text- flex flex-row items-center justify-between border-solid border-[1px] border-accent-100 p-2 w-1/2 md:w-1/3 rounded-xl md:my-4 md:mx-2 md:p-2 lg:w-1/3 xl:w-1/4 2xl:w-1/5"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            target = 'blank'
-          >
-            Demo <Play_Icon isHovered={isHovered} />
-          </a>
-        </div>
-        <div className="w-full grid grid-cols-2  grid-rows-2 justify-items-center my-2">
-          {topics?.map((topic, index) => (
-            <span
-              key={`topic_${index}`}
-              className="bg-primary-200 p-[5px] rounded-lg text-text-200 uppercase text-[10px] h-fit my-[5px]"
-            >
-              {topic.slice(0, 10)}
-            </span>
-          ))}
-        </div>
-        <div className="w-full flex flex-col justify-between items-center md:flex-row lg:w-full lg:justify-around xl:w-full">
-          <p className="font-mono text-[0.5rem]">
-            Created at <span>{formatDate(created_at)}</span>
-          </p>
-          <p className="font-mono text-[0.5rem]">
-            Last Update <span>{formatDate(updated_at)}</span>
-          </p>
-        </div>
+        <p class="text-body h-3/4 px-2">{repo_description}</p>
       </div>
+      <button class="card-button w-3/5 rounded-2xl border-none bg-accent-100 text-white text-[1rem] py-2 px-4 absolute left-[22%] right-1/5 -bottom-[1.5rem] opacity-1 font-mono">
+        More info
+      </button>
     </div>
   );
 };
