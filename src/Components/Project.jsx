@@ -22,7 +22,7 @@ const Project = ({
     return formattedDate;
   };
   return (
-    <div className="project card w-[14rem] rounded-xl border-white border-solid border-2 bg-[#f5f55f5] relative overflow-visible my-8 h-[15rem] md:w-48 md:h-[18rem] lg:h-[18rem]">
+    <div className="project card w-[14rem] rounded-xl border-white border-solid border-2  relative overflow-visible my-8 h-[15rem] md:w-48 md:h-[18rem] lg:h-[18rem]">
       <div class="card-details text-whitegap-2 flex flex-col md:max-h-4/5 md:overflow-y-hidden md:w-full h-full pb-4">
         <p class="text-title capitalize font-bold text-xl w-full text-center md:text-lg bg-primary-100 rounded-t-xl h-1/4 flex justify-center items-center">
           {repo_title.replace("-", " ")}
