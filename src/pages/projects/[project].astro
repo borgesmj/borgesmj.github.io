@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+
+export async function getStaticPaths() {
+    const data = await fetch("https://api.github.com/users/borgesmj/repos")
+    .then(response => response.json())
+    return data.map((project) => {
+        return {
+            params: {project:  project.name},
+        }
+    });
+}
+
+
+const {project} = Astro.params
+
+console.log(project)
+---
+
+<BaseLayout pageTitle = {project}>
+    <h2
+    class="w-full text-rigth text-2xl border-b-2 border-b-solid border-d-white py-4 font-bold xl:w-4/5 xl:ml-4 uppercase"
+  >
+    {project}
+  </h2>
+</BaseLayout>

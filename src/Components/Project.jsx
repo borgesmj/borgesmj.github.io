@@ -29,9 +29,9 @@ const Project = ({
         </p>
         <p class="text-body h-3/4 px-2">{repo_description.length > 150 ? repo_description.slice(0,150) + "..." : repo_description }</p>
       </div>
-      <button class="card-button w-3/5 rounded-2xl border-none bg-accent-100 text-white text-[1rem] py-2 px-4 absolute left-[22%] right-1/5 -bottom-[1.5rem] opacity-1 font-mono">
+      <a class="card-button w-3/5 rounded-2xl border-none bg-accent-100 text-white text-[1rem] py-2 px-4 absolute left-[22%] right-1/5 -bottom-[1.5rem] opacity-1 font-mono" href={`http://localhost:4321/projects/${repo_title}`}>
         More info
-      </button>
+      </a>
     </div>
   );
 };

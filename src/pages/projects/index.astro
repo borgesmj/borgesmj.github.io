@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Project from "../Components/Project";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Project from "../../Components/Project";
 const pageTitle = "MB | Projects";
 const response = await fetch("https://api.github.com/users/borgesmj/repos");
 const data = await response.json();
