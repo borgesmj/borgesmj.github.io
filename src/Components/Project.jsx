@@ -1,26 +1,8 @@
-import { useState } from "react";
-import { Play_Icon, Code_Icon } from "../Icons/Icons";
-
 const Project = ({
   repo_title,
   repo_description,
-  repo_homepage,
-  repo_html_url,
-  topics,
-  created_at,
-  updated_at,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
 
-  const formatDate = (date) => {
-    date = new Date(date);
-
-    const options = { month: "long", day: "numeric", year: "numeric" };
-
-    const formattedDate = date.toLocaleString("en-US", options);
-
-    return formattedDate;
-  };
   return (
     <div className="project card w-[14rem] rounded-xl border-white border-solid border-2  relative overflow-visible my-8 h-[15rem] md:w-48 md:h-[18rem] lg:h-[18rem]">
       <div class="card-details text-whitegap-2 flex flex-col md:max-h-4/5 md:overflow-y-hidden md:w-full h-full pb-4">
