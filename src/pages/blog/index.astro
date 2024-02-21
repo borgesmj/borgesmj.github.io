@@ -1,25 +1,31 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-const allPosts = await Astro.glob('./posts/*.md')
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Postcard from "../../Components/Postcard";
+const allPosts = await Astro.glob("./posts/*.md");
 
-
-const pageTitle = 'MB | Blog'
+const pageTitle = "MB | Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2 class='w-full text-center text-2xl border-b-2 border-b-solid border-d-white py-4'>Work experience</h2>
-	<section class="p-4 flex flex-wrap w-full">
-		<h3>Welcome to my blog</h3>
-		<p>Where I will post my learning path in this marvelous world of tech</p>
-		{
-			allPosts.map((post) => (
-				<a class="p-4 my-4 post-link
-				
-				" href={post.url}>
-					<img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}/>
-					<span>{post.frontmatter.title}</span>
-					</a>
-			))
-		}
-	</section>
+  <h2
+    class="w-full text-center text-2xl border-b-2 border-b-solid border-d-white py-4"
+  >
+    My Blog
+  </h2>
+  <section class="p-4 flex flex-col w-full lg:w-3/4">
+    <h3>Welcome to my blog</h3>
+    <p>Where I will post my learning path in this marvelous world of tech</p>
+    <div class="flex flex-wrap justify-between w-full gap-4">
+      {
+        allPosts.map((post) => (
+          <Postcard
+            postUrl={post.url}
+            postTitle={post.frontmatter.title}
+            postImageUrl={post.frontmatter.image.url}
+            postImageAlt={post.frontmatter.image.alt}
+          />
+        ))
+      }
+    </div>
+  </section>
 </BaseLayout>
