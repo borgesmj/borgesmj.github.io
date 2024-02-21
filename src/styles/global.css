@@ -9,7 +9,7 @@ body {
   height: 60px;
 }
 
-.experience, .project {
+.experience, .project, .post-link {
   -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
@@ -45,7 +45,7 @@ body {
   }
 
 
-  .experience, .project {
+  .experience, .project, .post-link{
     -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
     -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
     box-shadow: none;
@@ -53,7 +53,7 @@ body {
     opacity: 0.8
   }
 
-  .experience:hover, .project:hover{
+  .experience:hover, .project:hover, .post-link:hover{
     transform: scale(1.015);
     -webkit-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 22px -5px rgba(255, 255, 255, 1);

@@ -1,0 +1,37 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import {Share_Icon, Facebook_Icon, WhatsApp_Icon, Linkedin_Icon} from '../Icons/Icons'
+const {frontmatter} = Astro.props
+
+const formatDate = (date) => {
+    date = new Date(date);
+
+    const options = { month: "long", day: "numeric", year: "numeric" };
+
+    const formattedDate = date.toLocaleString("en-US", options);
+
+    return formattedDate;
+  };
+
+---
+
+<BaseLayout pageTitle={`MB | ${frontmatter.title}`}>
+    <h2 class="w-full text-center text-2xl border-b-2 border-b-solid border-d-white py-4">{frontmatter.title}</h2>
+    <section  class="p-4 flex flex-col items-start justify-center md:justify-between">
+        <p class="my-4 text-xs">Published: {formatDate(frontmatter.pubDate)}</p>
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="w-full">
+    <div class="tags w-full my-4 md:w-3/4">
+        <p class="w-full text-center">Tags:</p>
+        <p class="flex flex-wrap justify-center items-center gap-2 my-4">
+            {
+                frontmatter.tags.map((tag) => (
+                    <span class="p-2 border-white border-solid border-[0.5px] rounded-xl text-xs">{tag}</span>
+                ))
+            }
+        </p>
+    </div>
+    <div class="pb-4 max-w-full my-0 mx-auto md:w-3/4 lg:w-1/2">
+        <slot class="w-full"/>
+    </div>
+    </section>
+</BaseLayout>
