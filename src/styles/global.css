@@ -37,8 +37,8 @@ body {
 
 @media (width >= 768px) {
   body {
-    width: 50dvw;
-    margin: 0 auto;
+    width: 65dvw;
+    margin: 0 0 0 16rem;
   }
 }
 
