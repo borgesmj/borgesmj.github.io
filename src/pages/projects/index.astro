@@ -33,12 +33,12 @@ const orderedRepos = filteredData.sort((a, b) => {
 
 <BaseLayout pageTitle={pageTitle}>
   <h2
-    class="w-full text-rigth text-2xl border-b-2 border-b-solid border-d-white py-4 font-bold xl:w-4/5 xl:ml-4"
+    class="w-full text-left text-2xl border-b-2 border-b-solid border-d-white py-4 px-4 italic font-bold"
   >
     Projects
   </h2>
   <section
-    class="w-full text-lef text-2xl border-b-2 border-b-solid border-d-white py-4 px-4 italic font-bold"
+    class="p-4 flex flex-wrap items-center justify-center md:justify-between"
   >
     {
       orderedRepos.map((repo) => (
