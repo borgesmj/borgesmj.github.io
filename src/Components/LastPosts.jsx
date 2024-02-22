@@ -2,7 +2,7 @@ import React from "react";
 
 const LastPosts = ({allPosts}) => {
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col border-y-solid border-y-[1px] border-y-white py-2">
       <h2 className="w-full text-center text-[16px] font-bold">Last posts on my blog:</h2>
       <ul className="mb-2">
         {allPosts.slice(0, 4).map((post, index) => (
