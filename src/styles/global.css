@@ -37,14 +37,14 @@ body {
 
 @media (width >= 768px) {
   body {
-    width: 65dvw;
+    width: 60dvw;
     margin: 0 0 0 16rem;
   }
 }
 
 @media (width >= 1024px) {
   body {
-    width: 50dvw;
+    width: 45dvw;
     margin: 0 auto;
   }
 
@@ -120,6 +120,6 @@ body {
 
 @media (width >= 1280px) {
   body {
-    width: 55dvw;
+    width: 45dvw;
   }
 }

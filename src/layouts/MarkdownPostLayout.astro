@@ -15,7 +15,7 @@ const formatDate = (date) => {
 ---
 
 <BaseLayout pageTitle={`MB | ${frontmatter.title}`}>
-    <h2 class="w-full text-center text-2xl border-b-2 border-b-solid border-d-white py-4">{frontmatter.title}</h2>
+    <h2 class="w-full text-lef text-2xl border-b-2 border-b-solid border-d-white py-4 px-4 italic font-bold">{frontmatter.title}</h2>
     <section  class="p-4 flex flex-col items-start justify-center md:justify-between">
         <p class="my-4 text-xs">Published: {formatDate(frontmatter.pubDate)}</p>
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="w-full">
