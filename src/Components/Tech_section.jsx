@@ -5,7 +5,6 @@ const Tech_section = () => {
   const iconos = [
     "HTML", "CSS", "JavaScript", "TailwindCss", "ReactJs", "NextJs", "NodeJs", "AstroJs"
   ]
-  console.log(iconos)
   return(
     <div className='my-2 py-2 w-full grid grid-cols-2 md:grid-cols-4 justify-items-center '>
         {iconos.map((item, index) => (
