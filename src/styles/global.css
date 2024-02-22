@@ -1,7 +1,6 @@
 body {
   margin: 0 auto;
   width: 100dvw;
-  padding: 2rem 1rem 3rem 1rem;
 }
 
 .TechIcon {
@@ -36,16 +35,15 @@ body {
 
 @media (width >= 768px) {
   body {
-    width: 65dvw ;
-    margin: 0rem 0rem 0rem 16rem;
-  }
+    width: 50dvw;
+    margin: 0 auto;
+}
 }
 
 @media (width >= 1024px) {
   body {
-    width: 60dvw;
-    margin: 0rem 0rem 0rem 18rem;
-    padding: 0rem 5rem 0rem 2rem;
+    width: 50dvw;
+    margin: 0 auto;
   }
 
   .navbar > ul > li > a:before{
@@ -115,18 +113,13 @@ body {
   }
 }
 
-@media (width >= 1280px) {
+@media (width >= 1280px){
   body{
-    margin: 0rem 0rem 0rem 20rem;
-    padding: 0rem 2rem 0rem 2rem;
-    width: 60dvw;
+    width: 55dvw;
   }
 }
 
 
-@media (width >= 1920px) {
-  body{
-    padding: 0rem 19rem 4rem 17rem;
-  }
-}
+
+
 
