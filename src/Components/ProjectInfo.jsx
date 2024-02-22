@@ -17,7 +17,7 @@ const ProjectInfo = ({ data, name }) => {
   };
 
   return (
-    <div className="w-full project mt-8 p-4 flex flex-col justify-between mb-4 rounded-lg md:w-80 my-0 mx-auto lg:border-solid lg:border-white lg:border-[1px] lg:w-[25rem] xl:w-[30rem] 2xl:w[35rem]]">
+    <div className="w-[90%] project mt-8 px-4 py-8 flex flex-col justify-between mb-4 rounded-lg md:w-[95%] my-0 mx-auto lg:border-solid lg:border-white lg:border-[1px] lg:w-[25rem] xl:w-[30rem] 2xl:w[35rem]]">
       <p className="my-2">
         <span className="font-bold">Created at: </span>
         {formatDate(projectData[0]?.created_at)}
