@@ -1,7 +1,7 @@
 ---
 import Navbar from "../Components/Navbar";
 import Infobar from "../Components/Infobar";
-const { pageTitle } = Astro.props;
+const { pageTitle, pageDescription, pageUrl, pageImg, twitterCardUrl } = Astro.props;
 import "../styles/global.css";
 const allPosts = await Astro.glob("../pages/blog/posts/*.md");
 console.log(allPosts);
@@ -9,37 +9,40 @@ console.log(allPosts);
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Page title -->
     <title>{pageTitle}</title>
+    <!-- meta  -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Personal portfolio webpage. " />
+    <meta name="description" content={pageDescription} />
     <meta name="author" content="Borgesmj" />
     <meta name="robots" content="index, follow" />
+    <!-- Graph QL -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Portfolio website" />
-    <meta property="og:url" content="https://borgesmj.github.io/" />
+    <meta property="og:url" content={pageUrl} />
     <meta
       property="og:image"
-      content="https://avatars.githubusercontent.com/u/121818423?v=4"
+      content={pageImg}
     />
     <meta
       property="og:description"
-      content="Personal portfolio showcasing web development projects with an integrated blog. Utilizes HTML, CSS, and JavaScript for frontend, Git for version control, and continuous deployment. Optimized for performance and user experience. Follow for updates"
+      content={pageDescription}
     />
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Portfolio website" />
-    <meta name="twitter:site" content="@https://borgesmj.github.io/" />
+    <meta name="twitter:site" content={twitterCardUrl}/>
     <meta
       name="twitter:description"
-      content="Personal portfolio showcasing web development projects with an integrated blog. Utilizes HTML, CSS, and JavaScript for frontend, Git for version control, and continuous deployment. Optimized for perfo"
+      content={pageDescription}
     />
     <meta
       name="twitter:image"
-      content="https://avatars.githubusercontent.com/u/121818423?v=4"
+      content={pageImg}
     />
   </head>
   <body

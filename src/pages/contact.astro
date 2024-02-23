@@ -1,11 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-const response = await fetch('https://api.github.com/users/borgesmj');
-const data = await response.json();
 
 const pageTitle = 'MB | Contact'
+const pageDescription =
+  "Personal portfolio showcasing web development projects with an integrated blog. Utilizes HTML, CSS, and JavaScript for frontend, Git for version control, and continuous deployment. Optimized for performance and user experience. Follow for updates";
+const pageUrl = "https://borgesmj.github.io/contact/";
+const pageImg = "https://avatars.githubusercontent.com/u/121818423?v=4";
+const twitterCardUrl = "@https://borgesmj.github.io/contact";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout
+  pageTitle={pageTitle}
+  pageDescription={pageDescription}
+  pageUrl={pageUrl}
+  pageImg={pageImg}
+  twitterCardUrl={twitterCardUrl}
+>
 	<h2 class="w-full text-left text-2xl border-b-2 border-b-solid border-d-white py-4 px-4 italic font-bold">Contact</h2>
 </BaseLayout>
