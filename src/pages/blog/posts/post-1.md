@@ -2,12 +2,13 @@
 layout: ../../../layouts/MarkdownPostLayout.astro
 title: "if you're reading this..."
 pubDate: 2024-02-21
-description: 'Esta es la primera publicación de mi nuevo blog Astro.'
-author: 'Miguel José'
+description: 'My first post on my website blog. Follow me'
+author: 'Borgesmj'
 image:
   url: '/blog-images/post-1.webp'
   alt: 'El logotipo completo de Astro.'
 tags: ["astro", "portfolio", "frontend"]
+posturl: 'post-1'
 ---
 
 
