@@ -4,7 +4,6 @@ import Infobar from "../Components/Infobar";
 const { pageTitle, pageDescription, pageUrl, pageImg, twitterCardUrl } = Astro.props;
 import "../styles/global.css";
 const allPosts = await Astro.glob("../pages/blog/posts/*.md");
-console.log(allPosts);
 ---
 
 <html lang="en">
