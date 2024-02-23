@@ -1,6 +1,6 @@
 ---
 import Navbar from "../Components/Navbar";
-import Infobar from "../Components/Infobar"
+import Infobar from "../Components/Infobar";
 const { pageTitle } = Astro.props;
 import "../styles/global.css";
 const allPosts = await Astro.glob("../pages/blog/posts/*.md");
@@ -14,12 +14,39 @@ console.log(allPosts);
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal portfolio webpage. " />
+    <meta name="author" content="Borgesmj" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio website" />
+    <meta property="og:url" content="https://borgesmj.github.io/" />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/121818423?v=4"
+    />
+    <meta
+      property="og:description"
+      content="Personal portfolio showcasing web development projects with an integrated blog. Utilizes HTML, CSS, and JavaScript for frontend, Git for version control, and continuous deployment. Optimized for performance and user experience. Follow for updates"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Portfolio website" />
+    <meta name="twitter:site" content="@https://borgesmj.github.io/" />
+    <meta
+      name="twitter:description"
+      content="Personal portfolio showcasing web development projects with an integrated blog. Utilizes HTML, CSS, and JavaScript for frontend, Git for version control, and continuous deployment. Optimized for perfo"
+    />
+    <meta
+      name="twitter:image"
+      content="https://avatars.githubusercontent.com/u/121818423?v=4"
+    />
   </head>
-  <body class="bg-background-100 text-white mx-auto my-0 md:ml-[17rem] lg:mx-auto lg:my-0 py-4 px-0 lg:py-4 2xl:py-12 2xl:px-8">
+  <body
+    class="bg-background-100 text-white mx-auto my-0 md:ml-[17rem] lg:mx-auto lg:my-0 py-4 px-0 lg:py-4 2xl:py-12 2xl:px-8"
+  >
     <Navbar />
     <slot />
-    <Infobar
-    allPosts = {allPosts}
-    />
+    <Infobar allPosts={allPosts} />
   </body>
 </html>
