@@ -1,7 +1,9 @@
 ---
 // Importar plantilla base
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Tech_section from "../Components/Tech_section";
+// Componentes
+import Header from "../Components/Profile/Header";
+// constantes e la pagina
 const pageTitle = "MB | Web Developer";
 const pageDescription =
   "Personal portfolio showcasing web development projects with an integrated blog. Utilizes HTML, CSS, and JavaScript for frontend, Git for version control, and continuous deployment. Optimized for performance and user experience. Follow for updates";
@@ -20,8 +22,8 @@ const data = await response.json();
   pageImg={pageImg}
   twitterCardUrl={twitterCardUrl}
 >
-  <div class="flex flex-col justify-center w-full items-center py-4">
-    <img
+  <div class="flex flex-col justify-center w-full items-center pb-4">
+    <!-- <img
       src="https://avatars.githubusercontent.com/u/121818423?v=4"
       alt="Github avatar"
       class="w-40 h-auto"
@@ -58,8 +60,8 @@ const data = await response.json();
         target="_blank"
         href={data?.gists_url}
         class="lg:hover:underline text-center">{`${data.public_gists} gists`}</a
-      >
-    </div>
-    <Tech_section />
+      > -->
+    <!-- </div> -->
+    <Header/>
   </div>
 </BaseLayout>
