@@ -4,6 +4,9 @@ import Infobar from "../Components/Infobar";
 const { pageTitle, pageDescription, pageUrl, pageImg, twitterCardUrl } = Astro.props;
 import "../styles/global.css";
 const allPosts = await Astro.glob("../pages/blog/posts/*.md");
+const pathName = new URL(Astro.request.url).pathname;
+const currentPath = pathName;
+
 ---
 
 <html lang="en">
@@ -47,7 +50,10 @@ const allPosts = await Astro.glob("../pages/blog/posts/*.md");
   <body
     class="bg-background-100 text-white mx-auto my-0 md:ml-[17rem] lg:mx-auto lg:my-0 py-4 px-0 lg:py-4 2xl:py-12 2xl:px-8"
   >
-    <Navbar />
+    <Navbar 
+      currentPath = {currentPath}
+      }
+    />
     <slot />
     <Infobar allPosts={allPosts} />
   </body>
