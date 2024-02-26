@@ -1,10 +1,7 @@
 
 import {Briefcase, Contact, Pen, Projects, User } from '../Icons/Icons'
-import {useParams} from 'react-router-dom'
-const Navbar = () => {
 
-  const params = useParams()
-  console.log(params)
+const Navbar = () => {
 
 
   const navLinks = [
