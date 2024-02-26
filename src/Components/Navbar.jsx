@@ -12,22 +12,22 @@ console.log(currentPath)
     },
     {
       name: "Work Experience",
-      href: "/work-experience",
+      href: "/work-experience/",
       icon: <Briefcase />,
     },
     {
       name: "Projects",
-      href: "/projects",
+      href: "/projects/",
       icon: <Projects />,
     },
     {
       name: "Blog",
-      href: "/blog",
+      href: "/blog/",
       icon: <Pen />,
     },
     {
       name: "Contact",
-      href: "/contact",
+      href: "/contact/",
       icon: <Contact />,
     },
   ];
