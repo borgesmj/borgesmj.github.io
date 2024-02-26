@@ -6,7 +6,7 @@ const LastPosts = ({ allPosts }) => {
   let lastPosts = fivePosts.reverse()
   
   return (
-    <div className="w-full flex flex-col border-y-solid border-y-[1px] border-y-white py-2">
+    <div className="w-full flex flex-col my-4 p-2 rounded-xl bg-accent-100">
       <h2 className="w-full text-center text-[16px] font-bold">
         Last posts on my blog:
       </h2>

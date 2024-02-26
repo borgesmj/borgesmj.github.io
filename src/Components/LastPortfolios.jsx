@@ -17,7 +17,7 @@ const portfolioVersions = [
 
 const LastPortfolios = () => {
   return (
-    <div className="w-full flex flex-col border-b-solid border-b-[1px] border-b-white py-2">
+    <div className="w-full flex flex-col my-4 p-2 rounded-xl bg-accent-100">
       <h2 className="w-full text-center text-[16px] font-bold">
         Last versions of my portfolio:
       </h2>
