@@ -39,7 +39,7 @@ console.log(currentPath)
           <li key={index} className={`flex justify-center items-center md:p-2 w-1/5 ${currentPath === item.href ?  "border-t-primary-100" : "border-t-white"} ${currentPath === item.href ?  "border-t-[4px]" : "border-t-[2px]"} ${currentPath === item.href ?  "border-l-primary-100" : "border-l-transparent"} ${currentPath === item.href ?  "border-l-[4px]" : "border-l-[2px]"} border-t-solid py-2 md:border-t-[0px] md:border-t-white md:border-t-solid  md:w-full md:h-1/5 lg:relative`}>
             <a href={item.href} className="flex justify-center items-center md:flex md:justify-start w-full h-full">
               <span className="md:hidden">{item.icon}</span>
-              <span className="hidden md:block ml-4 text-accent-100"><span className='font-bold text-white'>{index + 1}.</span> {item.name}</span>
+              <span className={`hidden md:block ml-4 ${ currentPath === item.href ? "text-white" : "text-accent-100"}`}><span className='font-bold text-white'>{index + 1}.</span> {item.name}</span>
             </a>
           </li>
         ))}
