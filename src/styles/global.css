@@ -35,6 +35,21 @@ body {
   padding-right: 0.2rem;
 }
 
+
+.profile-nav{
+  scroll-padding: 0px 36px;
+    transform: translate3d(0px, 0px, 0px);
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: none;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    height:6%;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+}
 @media (width >= 768px) {
   body {
     width: 60dvw;
