@@ -12,7 +12,7 @@ const LastPosts = ({ allPosts }) => {
       </h2>
       <ul className="mb-2">
         {lastPosts.map((post, index) => (
-          <li className="lg:p-0 lg:w-full lg:h-full lg:text-[14px] lg:flex lg:items-center m-0 mt-1 mb-1">
+          <li className="lg:p-0 lg:w-full lg:h-full lg:text-[14px] lg:flex lg:items-center m-0 mt-1 mb-1" key={index}>
             <a className="lg:hover:underline" href={post.url}>
               {index + 1}. {post.frontmatter.title}
             </a>

@@ -3,6 +3,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 // Componentes
 import Header from "../Components/Profile/Header";
+import ProfileInfo from "../Components/Profile/ProfileInfo"
 // constantes e la pagina
 const pageTitle = "MB | Web Developer";
 const pageDescription =
@@ -63,5 +64,9 @@ const data = await response.json();
       > -->
     <!-- </div> -->
     <Header/>
+    <ProfileInfo
+      bio = {data.bio}
+      location = {data.location}
+    />
   </div>
 </BaseLayout>
