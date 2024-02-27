@@ -5,7 +5,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Componentes
 import Header from "../Components/Profile/Header";
 import ProfileInfo from "../Components/Profile/ProfileInfo"
-import ProfileNav from "../Components/Profile/ProfileNav"
+import Router from "../Components/Profile/Router"
 // constantes e la pagina
 const pageTitle = "MB | Web Developer";
 const pageDescription =
@@ -70,6 +70,6 @@ const data = await response.json();
       bio = {data.bio}
       location = {data.location}
     />
-    <ProfileNav/>
+    <Router client:only="react"/>
   </div>
 </BaseLayout>
