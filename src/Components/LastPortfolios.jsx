@@ -24,7 +24,7 @@ const LastPortfolios = () => {
       <ul className="mb-2">
         {portfolioVersions.map((item, index) => (
           <li className="lg:p-0 lg:w-full lg:h-full lg:text-[14px] lg:flex lg:items-center m-0 mt-1 mb-1">
-            <a href={item.href} className="lg:hover:underline" key={index} target="_blank">
+            <a href={item.href} className="lg:hover:underline" key={`posrtfolio-version-${index}`} target="_blank">
               {item.name}
             </a>
           </li>
