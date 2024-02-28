@@ -10,7 +10,7 @@ const StackSection = () => {
     "AstroJs",
   ];
   return (
-    <div className="my-2 py-2 w-full grid grid-cols-2 md:grid-cols-4 justify-items-center ">
+    <div className="my-2 pt-2 w-full grid grid-cols-2 md:grid-cols-4 justify-items-center bg-background-300 rounded-xl mb-8">
       {iconos.map((item, index) => (
         <img
           key={`icono_${index}`}
