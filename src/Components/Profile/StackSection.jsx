@@ -14,7 +14,7 @@ const StackSection = () => {
       {iconos.map((item, index) => (
         <img
           key={`icono_${index}`}
-          src={`/${item}.webp`}
+          src={`/Stack-logos/${item}.webp`}
           alt={`${item}_icono`}
           className="w-16 p-2 md:w-24 md:p-4 md:mx-2 lg:w-20 lg:p-2"
         />

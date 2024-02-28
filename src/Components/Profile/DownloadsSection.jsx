@@ -21,7 +21,7 @@ const DownloadsSection = () => {
         >
           <img
             className="aspect-square"
-            src={`/files/Miguel_Borges_${item.language}.png`}
+            src={`/files/Miguel_Borges_${item.language}.webp`}
             alt=""
           />
           <span>{item.text}</span>
