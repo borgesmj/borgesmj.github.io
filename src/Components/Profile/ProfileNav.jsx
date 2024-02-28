@@ -7,16 +7,16 @@ const ProfileNav = () => {
       name: "Stack",
     },
     {
-      href: "/files/",
-      name: "Downloads",
-    },
-    {
       href: "/certificates/",
       name: "Certificates",
     },
     {
       href: "/work-together/",
       name: "Work",
+    },
+    {
+      href: "/files/",
+      name: "Downloads",
     },
   ];
   return (
