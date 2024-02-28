@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-
+import ContactForm from "../Components/ContactForm";
 const pageTitle = 'MB | Contact'
 const pageDescription =
   "Personal portfolio showcasing web development projects with an integrated blog. Utilizes HTML, CSS, and JavaScript for frontend, Git for version control, and continuous deployment. Optimized for performance and user experience. Follow for updates";
@@ -16,5 +16,6 @@ const twitterCardUrl = "@https://borgesmj.github.io/contact";
   pageImg={pageImg}
   twitterCardUrl={twitterCardUrl}
 >
-	<h2 class="w-full text-left text-2xl border-b-2 border-b-solid border-d-white py-4 px-4 italic font-bold">Contact</h2>
+	<h2 class="w-full text-left text-2xl border-b-2 border-b-solid border-d-white py-4 px-4 italic font-bold">Contact me</h2>
+  <ContactForm/>
 </BaseLayout>

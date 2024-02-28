@@ -35,21 +35,120 @@ body {
   padding-right: 0.2rem;
 }
 
-
-.profile-nav{
+.profile-nav {
   scroll-padding: 0px 36px;
-    transform: translate3d(0px, 0px, 0px);
-    scroll-snap-type: x mandatory;
-    overflow-x: auto;
-    scrollbar-width: none;
-    overflow-y: hidden;
-    flex-wrap: nowrap;
-    height:6%;
-    flex-direction: row;
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
+  transform: translate3d(0px, 0px, 0px);
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  height: 6%;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* color: var(--text-200); */
+
+}
+
+.campo{
+  position: relative;
+  margin-top: 20px;
+  /* color: var(--text-200); */
+
+}
+
+.campo textarea{
+  margin: 1em 0 1em 0;
+  width: 300px;
+  position: relative;
+  /* color: var(--text-200); */
+
+}
+
+.campo input, .campo textarea{
+  font-size: 100%;
+padding: 0.7em 0;
+outline: none;
+color: #e8e8e8;
+border: none;
+/* border-bottom: 2px solid var(--text-200); */
+background: transparent;
+border-radius: none;
+width: 290px;
+resize: none; 
+/* color: var(--text-200); */
+
+}
+
+.campo label{
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  /* color: var(--text-200); */
+  padding: 0.7em;
+  margin-left: 0.1em;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+
+.campo input:focus + .label,
+.campo input:valid + .label{
+  transform: translateY(-20px);
+  font-size: 0.8em; 
+  /* color: var(--text-200); */
+  padding: 0.4em;
+}
+
+.campo textarea:focus + .label,
+.campo textarea:valid + .label{
+  transform: translateY(-20px);
+  font-size: 0.8em;
+  /* color: var(--text-200); */
+  padding: 0.4em;
+}
+
+
+form .button{  
+  cursor: pointer;
+  width: 50%;
+  height: 30px;
+  /* background-color: var(--bg-100); */
+  border: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--text-200);
+  transition: all 0.5s ease 0s;
+}
+
+form .button:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-200);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
 @media (width >= 768px) {
   body {
     width: 60dvw;
