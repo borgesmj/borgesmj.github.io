@@ -9,12 +9,14 @@ const Router = () => {
     return (
         <BrowserRouter>
             <ProfileNav/>
+            <div className="absolute top-[30rem] w-full p-4 md:w-[60%] md:top-[32rem] lg:w-[45%] lg:top-[30rem] xl:top-[30rem] 2xl:top-[33rem] 2xl:w-2/5 lg:p-1"> 
             <Routes>
                 <Route path="/" element={<StackSection/>}></Route>
                 <Route path="/files/" element={<DownloadsSection/>}></Route>
                 <Route path="/certificates/" element={<CertificatesSection/>}></Route>
                 <Route path="/work-together/" element={<WorkWithSection/>}></Route>
             </Routes>
+            </div>
         </BrowserRouter>
     )
 }

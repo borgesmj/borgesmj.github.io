@@ -20,7 +20,7 @@ const ProfileNav = () => {
     },
   ];
   return (
-    <ul className="absolute flex justify-between items-center top-[27rem] profile-nav border-b-solid border-b-[1px] border-b-accent-100 w-dvw md:w-[55%] lg:w-[45%] 2xl:w-[42%] 2xl:top-[30rem]">
+    <ul className="absolute flex justify-between items-center top-[27rem] profile-nav border-b-solid border-b-[1px] border-b-accent-100 w-dvw md:w-[55%] lg:w-[45%] 2xl:w-[41%] 2xl:top-[30rem]">
       {profileNavLinks.map((item, index) => (
         <li
           key={`pnl_${index}`}
