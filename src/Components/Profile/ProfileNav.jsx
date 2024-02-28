@@ -29,7 +29,7 @@ const ProfileNav = () => {
           <NavLink
             to={item.href}
             className={({ isActive, isPending }) =>
-              isPending ? "h-full w-fit flex justify-center items-center bg-[#ffffff]" : isActive ? "h-full w-fit  flex justify-center items-center border-b-[4px] border-b-solid border-b-primary-300" : "h-full w-fit flex justify-center items-center border-b-[4px] border-b-solid border-b-transparent"
+              isPending ? "h-full w-fit flex justify-center items-center bg-[#ffffff]" : isActive ? "h-full w-fit  flex justify-center items-center border-b-[4px] border-b-solid border-b-primary-300 text-white" : "h-full w-fit flex justify-center items-center border-b-[4px] border-b-solid border-b-transparent text-accent-100"
             }
           >
             {item.name}
