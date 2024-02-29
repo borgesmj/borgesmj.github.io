@@ -3,10 +3,10 @@ import React from "react";
 const Postcard = ({postUrl, postTitle, postImageUrl, postImageAlt}) => {
   return (
     <a
-      class="py-4 my-4 post-link rounded-xl w-full md:w-[45%] flex flex-col justify-center items-center h-60 relative"
+      className="py-4 my-4 post-link rounded-xl w-full md:w-[45%] flex flex-col justify-center items-center h-60 relative"
       href={postUrl}
     >
-      <span class="font-bold text-center bg-primary-200 h-1/3 absolute top-0 flex justify-center items-center px-2 rounded-t-xl w-full max-w-full">
+      <span className="font-bold text-center bg-primary-200 h-1/3 absolute top-0 flex justify-center items-center px-2 rounded-t-xl w-full max-w-full">
         {postTitle}
       </span>
       <img
