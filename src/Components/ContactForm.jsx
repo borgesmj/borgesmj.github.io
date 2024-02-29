@@ -18,7 +18,8 @@ const ContactForm = () => {
     let WaMessage = `Hola, Miguel, mi nombre es ${userName}\n\n${message}\n\nNumero de contacto: ${userPhone}
     `
 
-    console.log(WaMessage)
+    let WhatsAppLink = "https://api.whatsapp.com/send?phone=573205092268&text=" + encodeURI(WaMessage);
+    window.open(WhatsAppLink, "_blank");
     setUserName("");
     setUserPhone("");
     setMessage("");
