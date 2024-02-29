@@ -71,47 +71,44 @@ form{
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0;
+  padding: 0.5em 1em 0.5em 1em;
   margin: 0;
-  color: var(--text-200);
-
+  background-color: #3c4754;
+  border-radius: 20px;
 }
 
 .campo{
   position: relative;
   margin-top: 20px;
-  color: var(--text-200);
-
 }
 
 .campo textarea{
   margin: 1em 0 1em 0;
   width: 300px;
   position: relative;
-  color: var(--text-200);
+  color: white
 
 }
 
 .campo input, .campo textarea{
   font-size: 100%;
-padding: 0.7em 0;
+padding: 0.7em 0.5em;
 outline: none;
 color: #e8e8e8;
 border: none;
-border-bottom: 2px solid var(--text-200);
+border-bottom: 2px solid #e0e0e0;
 background: transparent;
 border-radius: none;
 width: 290px;
-resize: none; 
-color: var(--text-200);
+resize: none; ;
 
 }
 
-.campo label{
+.campo .label{
   font-size: 100%;
   position: absolute;
   left: 0;
-  color: var(--text-200);
+  color: #e0e0e0;
   padding: 0.7em;
   margin-left: 0.1em;
   pointer-events: none;
@@ -123,7 +120,6 @@ color: var(--text-200);
 .campo input:valid + .label{
   transform: translateY(-20px);
   font-size: 0.8em; 
-  color: var(--text-200);
   padding: 0.4em;
 }
 
@@ -131,7 +127,7 @@ color: var(--text-200);
 .campo textarea:valid + .label{
   transform: translateY(-20px);
   font-size: 0.8em;
-  color: var(--text-200);
+  color: #e0e0e0;
   padding: 0.4em;
 }
 
@@ -144,8 +140,9 @@ form .button{
   border: none;
   font-size: 1.1em;
   font-weight: bold;
-  color: var(--text-200);
+  color: black;
   transition: all 0.5s ease 0s;
+  border-radius: 10px;
 }
 
 form .button:before {
@@ -168,6 +165,11 @@ form .button:before {
   body {
     width: 60dvw;
     margin: 0 0 0 16rem;
+  }
+
+  form{
+    width: 75%;
+    margin: 0 auto;
   }
 }
 
@@ -250,5 +252,9 @@ form .button:before {
 @media (width >= 1280px) {
   body {
     width: 45dvw;
+  }
+
+  form{
+    width: 65%;
   }
 }
