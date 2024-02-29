@@ -2,11 +2,11 @@ const DownloadsSection = () => {
   const languages = [
     {
       language: "en",
-      text: "Resume english Version",
+      text: "Resume English version",
     },
     {
       language: "es",
-      text: "Resumen Versión Español",
+      text: "Resume Spanish Version",
     },
   ];
 
