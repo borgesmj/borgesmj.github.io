@@ -1,6 +1,0 @@
-import{j as e}from"./jsx-runtime.rLVLFWFs.js";import{r as s}from"./index.CAtLf4_y.js";const x=()=>{const[n,l]=s.useState(""),[o,r]=s.useState(""),[m,u]=s.useState(""),c=a=>{let t=a.target.value;/^[0-9]*$/.test(t)&&r(t)},d=a=>{a.preventDefault();let t=`Hola, Miguel, mi nombre es ${n}
-
-${m}
-
-Numero de contacto: ${o}
-    `,i="https://api.whatsapp.com/send?phone=573205092268&text="+encodeURI(t);window.open(i,"_blank"),l(""),r(""),u("")};return e.jsx("div",{className:"mx-auto w-full p-4 ",children:e.jsxs("form",{onSubmit:d,children:[e.jsxs("div",{className:"campo",children:[e.jsx("input",{type:"text",required:!0,id:"nombre",autoComplete:"off",name:"user_name",onChange:a=>l(a.target.value),value:n}),e.jsx("label",{htmlFor:"nombre",className:"label",children:"Name"})]}),e.jsxs("div",{className:"campo",children:[e.jsx("input",{type:"text",required:!0,id:"email",autoComplete:"off",name:"user_email",onChange:c,value:o}),e.jsx("label",{htmlFor:"email",className:"label",children:"Phone number:"})]}),e.jsxs("div",{className:"campo",children:[e.jsx("textarea",{name:"message",id:"mensaje",cols:"30",rows:"5",required:!0,onChange:a=>u(a.target.value),value:m}),e.jsx("label",{htmlFor:"textarea",className:"label",children:"Message"})]}),e.jsx("input",{type:"submit",id:"button",value:"Send",className:"button"})]})})};export{x as default};
