@@ -29,7 +29,7 @@ const ContactForm = () => {
             //   value={userEmail}
             />
             <label htmlFor="email" className="label">
-              email:
+              Phone number:
             </label>
           </div>
           <div className="campo">
