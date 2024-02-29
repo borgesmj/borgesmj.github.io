@@ -3,7 +3,7 @@ import React from "react";
 const ContactForm = () => {
   return (
     <div className="mx-auto w-full p-4 ">
-      <form>
+      <form className='flex flex-col justify-center items-center w-full px-0 py-4 m-0 mb-10 bg-accent-100 rounded-2xl'>
           <div className="campo">
             <input
               type="text"
