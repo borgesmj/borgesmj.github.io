@@ -12,11 +12,11 @@ const ProfileNav = () => {
     },
     {
       href: "/work-together/",
-      name: "Let's work",
+      name: "Work with me",
     },
     {
       href: "/files/",
-      name: "Downloads",
+      name: "Download CV",
     },
   ];
   return (
@@ -29,7 +29,7 @@ const ProfileNav = () => {
           <NavLink
             to={item.href}
             className={({ isActive, isPending }) =>
-              isPending ? "h-full w-20 flex justify-center items-center bg-[#ffffff]" : isActive ? "h-full w-20 flex justify-center items-center border-b-[4px] border-b-solid border-b-primary-300 text-white" : "h-full w-20 flex justify-center items-center border-b-[4px] border-b-solid border-b-transparent text-accent-100"
+              isPending ? "h-full w-20 flex justify-center items-center bg-[#ffffff] text-center" : isActive ? "h-full w-20 flex justify-center items-center border-b-[4px] border-b-solid border-b-primary-300 text-white text-center" : "h-full w-20 flex justify-center items-center border-b-[4px] border-b-solid border-b-transparent text-accent-100 text-center"
             }
           >
             {item.name}
