@@ -1,0 +1,80 @@
+---
+const { navlinks } = Astro.props;
+---
+
+<nav
+  class="transition navbar fixed bottom-0 left-0 right-0 h-10 w-full bg-oceanic-noir px-4 flex flex-row items-center"
+>
+  <div class="absolute right-10 top-2">
+    <input type="checkbox" name="" id="nav-menu" class="hidden" />
+    <label
+      for="nav-menu"
+      class="burger-btn w-7 h-7 flex flex-col justify-between items-center"
+    >
+      <span class="transition h-0 w-full border-solid border-b-2 border-b-white"
+      ></span>
+      <span class="transition h-0 w-full border-solid border-b-2 border-b-white"
+      ></span>
+      <span class="transition h-0 w-full border-solid border-b-2 border-b-white"
+      ></span>
+    </label>
+  </div>
+  <ul
+    class="navlist hidden w-full h-fit flex-col items-center justify-between gap-3 text-[20px] font-[900]"
+  >
+    {
+      navlinks.map((item) => (
+        <li>
+          <a href={item.href}>{item.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+<style>
+  #nav-menu:checked + .burger-btn > span:nth-child(2) {
+    display: none;
+  }
+
+  #nav-menu:checked + .burger-btn > span:nth-child(1) {
+    transform: translateY(13px) rotate(-45deg);
+  }
+  #nav-menu:checked + .burger-btn > span:nth-child(3) {
+    transform: translateY(-13px) rotate(45deg);
+  }
+  .navbar-open {
+    height: 90%;
+  }
+</style>
+<script>
+  const navMenu = document.querySelector("#nav-menu") as HTMLInputElement;
+  navMenu.addEventListener("change", () => {
+    const navbar = document.querySelector(".navbar") as HTMLElement;
+    const navlist = document.querySelector(".navlist") as HTMLElement;
+    if (navMenu.checked) {
+      navbar.classList.remove("h-10");
+      navlist.classList.remove("hidden");
+      navlist.classList.add("flex");
+      navbar.classList.add("navbar-open");
+    } else {
+      navbar.classList.remove("navbar-open");
+      navbar.classList.add("h-10");
+      navlist.classList.add("hidden");
+      navlist.classList.add("hidden");
+    }
+  });
+  const navlinks = document.querySelectorAll(
+    "ul li a"
+  ) as NodeListOf<HTMLAnchorElement>;
+  navlinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.checked = false;
+      const navbar = document.querySelector(".navbar") as HTMLElement;
+      const navlist = document.querySelector(".navlist") as HTMLElement;
+      navbar.classList.remove("navbar-open");
+      navbar.classList.add("h-10");
+      navlist.classList.add("hidden");
+      navlist.classList.add("hidden");
+    });
+  });
+</script>
