@@ -7,7 +7,7 @@ const {available} = Astro.props
       class={`pulse ${available ? "bg-green-500" : "bg-red-600"} rounded-full w-2 h-2 block animate-pulse`}
     ></span>
     <span
-      class={`${available ? "text-green-500" : "text-red-600"} text-[12px]`}
+      class={`${available ? "text-green-500" : "text-red-600"} text-[12px] md:text[8px] lg:text-[8px] 2xl:text-[12px]`}
       >{`${available ? "Available" : "Busy, but still open to chat"}`}</span
     >
   </p>

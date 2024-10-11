@@ -3,13 +3,13 @@ const { navlinks } = Astro.props;
 ---
 
 <nav
-  class="transition navbar fixed bottom-0 left-0 right-0 h-10 w-full bg-oceanic-noir px-4 flex flex-row items-center"
+  class="transition navbar fixed bottom-0 left-0 right-0 h-10 w-full bg-oceanic-noir px-4 flex flex-row items-center md:static"
 >
   <div class="absolute right-10 top-2">
     <input type="checkbox" name="" id="nav-menu" class="hidden" />
     <label
       for="nav-menu"
-      class="burger-btn w-7 h-7 flex flex-col justify-between items-center"
+      class="burger-btn w-7 h-7 flex flex-col justify-between items-center md:hidden"
     >
       <span class="transition h-0 w-full border-solid border-b-2 border-b-white"
       ></span>
@@ -20,12 +20,17 @@ const { navlinks } = Astro.props;
     </label>
   </div>
   <ul
-    class="navlist hidden w-full h-fit flex-col items-center justify-between gap-3 text-[20px] font-[900]"
+    class="navlist hidden w-full h-fit flex-col items-center justify-between gap-3 text-[20px] font-[900] md:flex md:flex-row md:text-[10px] md:m-auto md:w-fit md:font-[300] md:gap-0 md:bg-[#f1f6f410] rounded-[50px] py-[2px] px-[3px] 2xl:text-[16px]"
   >
     {
       navlinks.map((item) => (
         <li>
-          <a href={item.href}>{item.name}</a>
+          <a
+            class={`${item.name} md:block md:w-[75px] navlink-name transition p-[5px] rounded-[50px] md:text-center`}
+            href={item.href}
+          >
+            {item.name}
+          </a>
         </li>
       ))
     }
@@ -45,8 +50,54 @@ const { navlinks } = Astro.props;
   .navbar-open {
     height: 90%;
   }
+  .active {
+    background-color: #172B36;
+    font-weight: 400;
+    opacity: 1;
+  }
+
+  .unactive{
+    opacity: 0.5;
+    font-weight: 200;
+  }
+
+  .navlink-name {
+    text-transform: capitalize;
+  }
 </style>
 <script>
+  const updateActiveLink = () => {
+    const currentHash = window.location.hash;
+    const navlinks = document.querySelectorAll('ul li a') as NodeListOf<HTMLAnchorElement>;
+    if (currentHash) {
+       navlinks.forEach((link) => {
+        if (link.href.includes(currentHash)) {
+          link.classList.remove('unactive')
+          link.classList.add("active");
+        } else {
+          link.classList.add('unactive')
+          link.classList.remove("active");
+        }
+        document.querySelector(".home").classList.remove("active")
+        document.querySelector('.home').classList.add('unactive')
+       })
+      return;
+    } else {
+      navlinks.forEach((link) => {
+        if(link.getAttribute('href') !== "/"){
+          link.classList.add('unactive')
+          link.classList.remove("active");
+        }
+      }) 
+      document.querySelector(".home").classList.add("active");
+      return;
+    }
+  };
+
+  window.addEventListener("hashchange", updateActiveLink);
+  document.addEventListener("DOMContentLoaded", updateActiveLink);
+  window.addEventListener("popstate", updateActiveLink);
+
   const navMenu = document.querySelector("#nav-menu") as HTMLInputElement;
   navMenu.addEventListener("change", () => {
     const navbar = document.querySelector(".navbar") as HTMLElement;

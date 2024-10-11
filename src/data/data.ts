@@ -1,34 +1,34 @@
 export const navlinks = [
   {
-    name: "Home",
+    name: "home",
     href: "/",
   },
   {
-    name: "About",
+    name: "about",
     href: "#about",
   },
   {
-    name: "Service",
+    name: "service",
     href: "#service",
   },
   {
-    name: "Résumé",
+    name: "résumé",
     href: "#resume",
   },
   {
-    name: "Projects",
+    name: "projects",
     href: "#projects",
   },
   {
-    name: "Contact",
+    name: "contact",
     href: "#contact",
   },
 ];
 
 export const profile = {
-  name: "MIguel José",
-  titulo: "FrontEnd Web developer",
-  available: false,
+  name: "Miguel José",
+  role: "FrontEnd Web Developer",
+  available: true,
 };
 
 export const socials = [
