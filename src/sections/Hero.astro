@@ -1,0 +1,24 @@
+---
+const { profileData } = Astro.props;
+---
+
+<div
+  id="hero"
+  class="w-full h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center text-center text-white"
+>
+  <h1 class="text-4xl font-bold mb-4 relative">
+    Hi, I'm <span class="hero-title p-2 relative">{profileData.name}</span>
+  </h1>
+  <p class="text-lg mb-6">
+    Frontend Web Developer passionate about creating dynamic and user-friendly
+    websites.
+  </p>
+  <a
+    href="#projects"
+    class="bg-white text-red-600 font-semibold py-2 px-4 rounded-full transition hover:bg-gray-200"
+  >
+    View My Work
+  </a>
+</div>
+
+</style>

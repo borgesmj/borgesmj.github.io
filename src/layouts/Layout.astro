@@ -16,6 +16,7 @@ import Header from "../components/Header.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <title>{title}</title>
   </head>
   <body class="bg-oceanic-noir text-white antialiased">
@@ -27,12 +28,22 @@ import Header from "../components/Header.astro";
   :root {
     @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
   }
+  html{
+    scroll-behavior: smooth;
+
+  }
+  main{
+    max-width: calc(100dvw - 2.5rem);
+  }
   body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    scroll-behavior: smooth;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .transition{
