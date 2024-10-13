@@ -11,7 +11,8 @@
     "usernamehw.errorlens",
     "aaron-bond.better-comments",
     "oderwat.indent-rainbow",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "vscode-icons-team.vscode-icons"
   ],
   "unwantedRecommendations": []
 }
