@@ -1,38 +1,29 @@
 ---
 const { profileData } = Astro.props;
+import HeroBanner from "../components/HeroBanner.astro";
+import HeroButtons from "../components/HeroButtons.astro";
 ---
 
 <div
   id="hero"
   class="w-full h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center text-center text-white"
 >
-  <div class="container max-w-[300px] mx-auto flex flex-row justify-start p-2  md:max-w-[500px]">
+  <div
+    class="container  max-w-[350px] w-[300px]  mx-auto flex flex-row justify-center p-2 md:max-w-[500px]"
+  >
     <div class="letters flex flex-col items-start leading-[0.7]">
       <p class="font-bold">
         <span
-          class="w-[10px] h-0 border-solid border-b-2 border-b-white inline-block align-middle"
+          class="w-[15px] h-0 border-solid border-b-2 border-b-white inline-block align-middle"
         ></span> Build your
       </p>
       <h1
-        class="text-left font-[700] w-[200px] mr-[10px] text-[100px] md:text-[180px] md:w-[360px] bg-gradient-to-r from-green-800 to-forsythis bg-clip-text text-transparent"
+        class="text-left font-[700] w-[230px] text-[100px] md:text-[180px] bg-gradient-to-r from-artic-powder to-oceanic-noir bg-clip-text text-transparent [text-shadow:_2px_4px_6px_rgba(0,_0,_0,_0.4)] md:w-[395px]"
       >
-        next web
+        next web<span class=" h-[15px] w-[15px] bg-gradient-to-r from-artic-powder to-oceanic-noir rounded-full inline-block" ></span>
       </h1>
     </div>
-    <div
-      class="image-banner z-[-1] md:z-0 flex flex-col h-[158px]  p-[4px] w-[50px] md:w-[58px] md:h-[263px] justify-center rounded-[50px] relative items-center bg-gradient-to-r from-forsythis to-oceanic-noir"
-    >
-      <img
-        src="https://avatars.githubusercontent.com/u/121818423?v=4"
-        alt="Profile picture"
-        class="w-[40px] h-auto absolute top-0 left-0 right-0 md:w-[50px]"
-      />
-
-      <span
-        class="rotate-[270deg] w-[100px] md:w-[200px] text-[18px] absolute bottom-0 left-1/2 transform translate-x-[-50%] translate-y-[-50px] text-nocturnal-expedition font-bold md:left-[30px] md:bottom-[30px] md:text-[30px]"
-      >
-        with Miguel
-      </span>
-    </div>
+    <HeroBanner/>
   </div>
+  <HeroButtons/>
 </div>
