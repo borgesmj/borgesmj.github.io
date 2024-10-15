@@ -23,6 +23,7 @@ import Header from "../components/Header.astro";
     <Header profileData={profile} socialLinks={socials} navlinks={navlinks} />
     <slot />
   </body>
+  <script src="../scripts/OpenFormMail.js"></script>
 </html>
 <style is:global>
   :root {
@@ -32,6 +33,9 @@ import Header from "../components/Header.astro";
   html{
     scroll-behavior: smooth;
 
+  }
+  .no-scroll{
+    overflow-y: hidden;
   }
   main{
     max-width: calc(100dvw - 2.5rem);
