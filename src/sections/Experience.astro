@@ -18,12 +18,3 @@ import ExperienceCard from "../components/ExperienceCard.astro";
     }
   </ul>
 </section>
-<script>
-    const buttonsList = document.querySelectorAll("#experience-list li button") as NodeListOf<HTMLButtonElement>;
-        buttonsList.forEach(button => {
-            button.addEventListener("click", () => {
-                const experienceId = button.getAttribute('name').replace("experience-card-", "")
-                console.log(experienceId)
-            })
-        })
-</script>
