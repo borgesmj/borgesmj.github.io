@@ -8,20 +8,23 @@ import HeroButtons from "../components/HeroButtons.astro";
   id="hero"
   class="w-full h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center text-center text-white"
 >
+<!--
+
   <div
-    id="hero-funko-container"
+  id="hero-funko-container"
     class="w-[150px] h-[150px] mb-4 md:w-[250px] md:h-[250px] lg:absolute lg:left-0 lg:h-[300vh] lg:top-0 lg:w-[200px]"
   >
-    <div id="funko-container" class="w-full h-[200px] lg:sticky lg:top-[40%]">
-      <img
-        id="funko-image"
-        src="/hero-funko.png"
-        alt=""
-        class="drop-shadow-[0px_0px_3px_#fafafa]"
-        style=""
-      />
-    </div>
+  <div id="funko-container" class="w-full h-[200px] lg:sticky lg:top-[40%]">
+    <img
+    id="funko-image"
+    src="/hero-funko.png"
+    alt=""
+    class="drop-shadow-[0px_0px_3px_#fafafa]"
+    style=""
+    />
   </div>
+</div>
+-->
   <div
     class="container max-w-[350px] w-[300px] mx-auto flex flex-row justify-center p-2 md:max-w-[500px]"
   >
@@ -48,7 +51,7 @@ import HeroButtons from "../components/HeroButtons.astro";
   document.addEventListener("DOMContentLoaded", () => {
     const funkoImage = document.getElementById("funko-image");
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth >= 1024) {
       // Aplica los estilos iniciales
       funkoImage.style.transform = "translateX(-220px) scale(6)";
       funkoImage.style.willChange = "width, height, transform";

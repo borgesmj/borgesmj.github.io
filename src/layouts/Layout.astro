@@ -16,7 +16,10 @@ import Header from "../components/Header.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
     <title>{title}</title>
   </head>
   <body class="bg-oceanic-noir text-white antialiased">
@@ -28,16 +31,15 @@ import Header from "../components/Header.astro";
 <style is:global>
   :root {
     @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
   }
-  html{
+  html {
     scroll-behavior: smooth;
-
   }
-  .no-scroll{
+  .no-scroll {
     overflow-y: hidden;
   }
-  main{
+  main {
     max-width: calc(100dvw - 2.5rem);
   }
   body {
@@ -51,7 +53,50 @@ import Header from "../components/Header.astro";
     align-items: center;
   }
 
-  .transition{
+  .transition {
     transition: all 0.3s ease-out;
+  }
+
+  .btn-background {
+    border: none;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .btn-background::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffc506;
+    transition: 0.5s ease;
+  }
+
+  .btn-background:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+  }
+
+  .btn-background:hover::before {
+    width: 100%;
+  }
+
+  .btn-background::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: 0.4s ease;
+    z-index: -1;
+  }
+  .btn-background:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
   }
 </style>

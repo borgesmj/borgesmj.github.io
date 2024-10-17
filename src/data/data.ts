@@ -29,6 +29,7 @@ export const profile = {
   name: "Miguel José",
   role: "FrontEnd Web Developer",
   available: true,
+  bio: "**Lorem ipsum dolor sit amet**, consectetur adipisicing elit. Assumenda itaque eligendi aliquid alias quibusdam, sequi rem totam amet blanditiis dolorem a, non, dignissimos molestiae autem odio soluta fugiat? || Voluptatibus facilis eveniet facere dolorem sunt nulla laboriosam temporibus voluptatem blanditiis commodi repellendus eligendi vel, molestias cumque at totam perspiciatis deserunt quisquam debitis rerum laudantium!"
 };
 
 export const socials = [
