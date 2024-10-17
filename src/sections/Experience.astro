@@ -1,7 +1,29 @@
 ---
-
+import { workExperience } from "../data/data";
+import ExperienceCard from "../components/ExperienceCard.astro";
 ---
 
-<div id="experience">
-    experience  
-</div>
+<!-- Lista de experiencias -->
+<section id="experience" class="w-full py-6 px-4">
+  <h2
+    class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-oceanic-noir decoration-solid w-full text-center "
+  >
+    Experience
+  </h2>
+  <ul id="experience-list" class="w-full md:pl-10 md:w-1/2 md:mx-auto">
+    {
+      workExperience.map((experience, index) => (
+        <ExperienceCard key={index} experience={experience} />
+      ))
+    }
+  </ul>
+</section>
+<script>
+    const buttonsList = document.querySelectorAll("#experience-list li button") as NodeListOf<HTMLButtonElement>;
+        buttonsList.forEach(button => {
+            button.addEventListener("click", () => {
+                const experienceId = button.getAttribute('name').replace("experience-card-", "")
+                console.log(experienceId)
+            })
+        })
+</script>

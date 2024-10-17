@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon/components";
+const {experience} = Astro.props;
+console.log(experience)
+---
+
+<li
+  id={`experience-card-${experience.id}`}
+  class="relative p-8 border-dotted border-l-[1px] flex flex-col w-full items-start"
+>
+  <Icon
+    name="building"
+    class="absolute top-0 left-[-18px] rounded-full border-l-white bg-oceanic-noir"
+    size={32}
+  />
+  <p>{experience.position}</p>
+  <p>{experience.company}</p>
+  <p>{experience.startDate} - {experience.endDate}</p>
+  <button
+    name={`experience-card-${experience.id}`}
+    class="bg-mystic-mint text-oceanic-noir px-8 py-2 rounded-full flex flex-row gap-2 items-center mt-4 border-solid border-2 border-deep-saffron relative
+    before:content-[''] before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-deep-saffron before:rounded-full before:transition-all z-0
+     hover:before:w-full
+     group
+    "
+    ><span class="z-10">see more</span><Icon
+      name="arrow-up-rigth"
+      size={28}
+      class="rounded-full h-full w-auto z-10 transition-all group-hover:rotate-45"
+    /></button
+  >
+</li>
