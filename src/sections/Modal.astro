@@ -1,38 +1,18 @@
 ---
 import { Icon } from "astro-icon/components";
+import ModalContent from "../components/ModalContent.astro";
 ---
 
 <section
   id="modal-container"
-  class="w-dvw h-dvh hidden  fixed top-0 left-0 right-0 bottom-0 bg-[#00000040] z-20 flex-col p-10 justify-center items-center"
+  class="w-dvw h-dvh hidden fixed top-0 left-0 right-0 bottom-0 bg-[#00000040] z-20 flex-col p-10 justify-center items-center"
 >
-  <div class="w-full flex flex-row justify-end items center ">
+  <div class="w-full flex flex-row justify-end items center">
     <div id="close-modal-btn" class="bg-white rounded-full p-4">
       <Icon name="close" color="black" size="32" />
     </div>
-</div>
-    <div id="modal-content" class="bg-artic-powder w-full h-fit text-oceanic-noir flex flex-col justify-center items-start rounded-lg mt-10 p-8 md:mt-20" >
-        <h2 id="work-title" class="text-[30px] font-[600]"></h2>
-        <p id="work-company" class="text-[30px]">Tech Corp</p>
-        <span>Since: January 2021</span>
-        <span>Until: January 2022</span>
-        <span class="flex flex-row"><Icon name="map-pin" color="black"/> Remote</span>
-        <p>Responsabilities:</p>
-        <ul class="list-disc pl-10">
-            <li>"Developed responsive web applications using React and Tailwind CSS.</li>
-            <li>Collaborated with backend team to integrate REST APIs.</li>
-            <li>Led UI/UX improvements that enhanced user experience by 20%.</li>
-        </ul>
-        <p>
-            Technologies:
-        </p>
-        <p class="flex flex-wrap flex-row justify-center gap-4">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Javascript</span>
-            <span>GIT</span>
-        </p>
-    </div>
+  </div>
+  <ModalContent/>
 </section>
 <style>
   .scale-in-center {
