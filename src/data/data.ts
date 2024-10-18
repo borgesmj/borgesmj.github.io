@@ -72,5 +72,21 @@ export const workExperience = [
     technologies: [
       "HTML", "CSS", "JavaScript", "Git"
     ]
+  },
+  {
+    id: 3,
+    company: "Creative Solutions",
+    position: "Junior Developer",
+    startDate: "June 2020",
+    endDate: "December 2021",
+    responsibilities: [
+      "Assisted in the development of client websites using HTML, CSS, and JavaScript.",
+      "Implemented SEO best practices to increase website visibility.",
+      "Supported team in debugging and testing web applications."
+    ],
+    location: "New York, NY",
+    technologies: [
+      "HTML", "CSS", "JavaScript", "Git"
+    ]
   }
 ];

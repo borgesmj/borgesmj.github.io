@@ -10,7 +10,7 @@ import ExperienceCard from "../components/ExperienceCard.astro";
   >
     Experience
   </h2>
-  <ul id="experience-list" class="w-full md:pl-10 md:w-1/2 md:mx-auto">
+  <ul id="experience-list" class="w-full flex flex-row p-6 gap-5 overflow-x-scroll scroll-snap-x">
     {
       workExperience.map((experience, index) => (
         <ExperienceCard key={index} experience={experience} />
