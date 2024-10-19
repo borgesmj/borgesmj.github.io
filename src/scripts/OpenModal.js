@@ -16,24 +16,24 @@ buttonsList.forEach((button) => {
     
     <h2 id="work-title" class="text-[30px] font-[600] lg:text-[40px]">${filteredWorkExperience.position}</h2>
     <p id="work-company" class="text-[30px]">${filteredWorkExperience.company}</p>
-    <span>Since: <strong>${filteredWorkExperience.startDate}</strong></span>
-    <span>Until: ${filteredWorkExperience.endDate}</span>
+    <span><strong>Since:</strong> ${filteredWorkExperience.startDate}</span>
+    <span><strong>Until:</strong> ${filteredWorkExperience.endDate}</span>
     <span class="flex flex-row"
       ><Icon name="map-pin" color="black" /> ${filteredWorkExperience.location}</span
     >
-    <p>Responsabilities:</p>
-    <ul class="list-disc pl-10">
+    <p><strong>Responsabilities:</strong></p>
+    <ul class="list-disc pl-10 text-[15px]">
       ${
         filteredWorkExperience.responsibilities.map((responsibility) => {
           return `<li>${responsibility}</li>`
         }).join('')
       }
     </ul>
-    <p>Technologies:</p>
-    <p class="flex flex-wrap flex-row justify-center gap-4">
+    <p><strong>Technologies:</strong></p>
+    <p class="flex flex-wrap flex-row justify-start items-center gap-[5px] md:justify-around w-full">
       ${
         filteredWorkExperience.technologies.map((tech) => {
-          return `<span>${tech}</span>`
+          return `<span class="p-[5px] rounded-[50px] border-solid border-[1px] border-[#FF9932]">${tech}</span>`
         }).join('')
       }
     </p>

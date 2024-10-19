@@ -101,7 +101,28 @@ import Header from "../components/Header.astro";
     transition-delay: 0.4s;
     color: aliceblue;
   }
-  .scroll-snap-x{
+  .scroll-snap-x {
     scroll-snap-type: x mandatory;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+    border-radius: 50px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #F1F6F4;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #172B36;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 </style>
