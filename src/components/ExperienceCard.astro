@@ -1,18 +1,13 @@
 ---
 import { Icon } from "astro-icon/components";
 const {experience} = Astro.props;
-console.log(experience)
+import Card from "./Card.astro";
 ---
 
-<li
+<Card
   id={`experience-card-${experience.id}`}
-  class="relative p-8 border-dotted border-[1px] flex flex-col w-[300px] items-start border-white whitespace-nowrap"
+  iconName = "building"
 >
-  <Icon
-    name="building"
-    class="absolute top-[-20px] left-[-20px] rounded-full bg-red-900 p-4 "
-    size={48}
-  />
   <p>{experience.position}</p>
   <p>{experience.company}</p>
   <p>{experience.startDate} - {experience.endDate}</p>
@@ -29,4 +24,4 @@ console.log(experience)
       class="rounded-full h-full w-auto z-10 transition-all group-hover:rotate-45"
     /></button
   >
-</li>
+</Card>

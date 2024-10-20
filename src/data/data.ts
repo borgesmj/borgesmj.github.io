@@ -90,3 +90,62 @@ export const workExperience = [
     ]
   }
 ];
+
+export const projects = [
+    {
+      "id": 1,
+      "name": "ChatMob",
+      "description": "A real-time chat application built using Firebase for backend services and React for the frontend. The app supports user authentication, message storage, and real-time updates.",
+      "technologies": ["React", "Firebase", "Tailwind CSS", "JavaScript"],
+      "repositoryLink": "https://github.com/borgesmj/real-time-chat-app",
+      "liveDemo": "https://chatmob.netlify.app/",
+      "year": 2024,
+      "features": [
+        "Real-time messaging",
+        "Firebase authentication",
+        "Responsive design"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sweet Bites",
+      "description": "An e-commerce platform for sweets and snacks built with React Router. It includes features such as product catalog, shopping cart, and user reviews.",
+      "technologies": ["React Router", "Tailwind CSS", "Firebase", "React"],
+      "repositoryLink": "https://github.com/borgesmj/sweet-bites",
+      "liveDemo": "https://sweet-bites.co/",
+      "year": 2023,
+      "features": [
+        "Product catalog",
+        "Secure payment integration",
+        "Shopping cart functionality"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Frontend 101",
+      "description": "A blog that focuses on teaching the fundamentals of frontend development with tutorials on React, JavaScript, and other frontend technologies.",
+      "technologies": ["Astro", "React", "Tailwind CSS"],
+      "repositoryLink": "https://github.com/borgesmj/saburo-blog",
+      "liveDemo": "https://frontend101.netlify.app/",
+      "year": 2024,
+      "features": [
+        "Tutorials on React and JavaScript",
+        "SEO-friendly static site",
+        "Responsive layout"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "SaburoFinanceBot",
+      "description": "A Telegram bot built with Java and MySQL that tracks user expenses and income. It features user-friendly commands for adding, updating, and viewing financial data.",
+      "technologies": ["Java", "MySQL", "Telegram API"],
+      "repositoryLink": "https://github.com/borgesmj/telegram_app_bot",
+      "liveDemo": null,
+      "year": 2024,
+      "features": [
+        "Expense and income tracking",
+        "MySQL database integration",
+        "Interactive user commands"
+      ]
+    }
+  ]

@@ -2,6 +2,7 @@
 import { workExperience } from "../data/data";
 import ExperienceCard from "../components/ExperienceCard.astro";
 import { Icon } from "astro-icon/components";
+import CardsList from "../components/CardsList.astro";
 ---
 
 <!-- Lista de experiencias -->
@@ -11,33 +12,28 @@ import { Icon } from "astro-icon/components";
   >
     Experience
   </h2>
-  <ul
-    id="experience-list"
-    class="w-full flex flex-row p-6 gap-5 overflow-x-scroll scroll-snap-x lg:justify-around lg:items-center"
-  >
+  <CardsList id="experience-list">
     {
       workExperience.map((experience, index) => (
         <ExperienceCard key={index} experience={experience} />
       ))
     }
-    <li class="relative py-2 px-5 flex flex-col w-fit whitespace-nowrap justify-center items-start ">
-      <a href="https://www.linkedin.com/in/borgesmj/details/experience/" target="_blank" class="py-1 px-5 bg-forsythis lg:bg-transparent btn-background text-white text-lg font-semibold hover:scale-105 transition-transform w-[200px]  flex-row text-center  rounded-3xl flex justify-center items-center">More<Icon name="new-tab" size={28} class="ml-2"/></a>
+    <li
+      class="relative py-2 px-5 flex flex-col w-fit whitespace-nowrap justify-center items-start"
+    >
+      <a
+        href="https://www.linkedin.com/in/borgesmj/details/experience/"
+        target="_blank"
+        class="py-1 px-5 bg-forsythis lg:bg-transparent btn-background text-white text-lg font-semibold hover:scale-105 transition-transform w-[200px] flex-row text-center rounded-3xl flex justify-center items-center"
+        >More<Icon name="new-tab" size={28} class="ml-2" /></a
+      >
     </li>
-  </ul>
+  </CardsList>
 </section>
-<style>
-  #experience-list::-webkit-scrollbar{
-    display: none;
-  }
-  @media (width >= 1024px) {
-    #experience-list {
-      overflow-x: hidden;
-    }
-  }
-</style>
+
 <script>
   document.getElementById("experience-list").addEventListener("scroll", () => {
     const scroll = document.getElementById("experience-list").scrollLeft;
-    console.log(scroll)
+    console.log(scroll);
   });
 </script>

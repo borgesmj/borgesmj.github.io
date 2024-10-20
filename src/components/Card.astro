@@ -1,0 +1,16 @@
+---
+const { cardId, iconName } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<li
+  id={cardId}
+  class="relative p-8 border-dotted border-[1px] flex flex-col w-[300px] items-start border-white whitespace-nowrap"
+>
+<Icon
+    name={iconName}
+    class="absolute top-[-20px] left-[-20px] rounded-full bg-red-900 p-4 "
+    size={48}
+  />
+  <slot />
+</li>
