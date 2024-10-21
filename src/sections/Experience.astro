@@ -12,7 +12,7 @@ import CardsList from "../components/CardsList.astro";
   >
     Experience
   </h2>
-  <CardsList id="experience-list">
+  <CardsList listId="experience-list">
     {
       workExperience.map((experience, index) => (
         <ExperienceCard key={index} experience={experience} />
