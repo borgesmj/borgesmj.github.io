@@ -12,9 +12,15 @@ const { listId } = Astro.props;
     .cardsList::-webkit-scrollbar {
       display: none;
     }
-    @media (width >= 1024px) {
+    @media (width >= 1280px) {
       .cardsList {
         overflow-x: hidden;
+      }
+    }
+
+    @media (width > 1500px){
+      .cardsList{
+        width: 1400px;
       }
     }
   </style>

@@ -2,17 +2,20 @@
 const { profileData } = Astro.props;
 import HeroBanner from "../components/HeroBanner.astro";
 import HeroButtons from "../components/HeroButtons.astro";
+import PageSection from "../components/PageSection.astro";
 ---
 
-<section
-  id="hero"
-  class="w-full h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center text-center text-white"
->
-<div id="hero-funko-container" class="h-28 w-28">
-  <div id="funko-container" class="h-28 w-28">
-    <img src="/funko.webp" alt="funko image saburo.dev" class="drop-shadow-[1px_1px_4px_#F1F6F4]">
+<PageSection sectionId="hero">
+  <div id="hero-funko-container" class="h-28 w-28">
+    <div id="funko-container" class="h-28 w-28">
+      <img
+        src="/funko.webp"
+        alt="funko image saburo.dev"
+        class="drop-shadow-[1px_1px_4px_#F1F6F4]"
+        id="funko-image"
+      />
+    </div>
   </div>
-</div>
   <div
     class="container max-w-[350px] w-[300px] mx-auto flex flex-row justify-center p-2 md:max-w-[500px]"
   >
@@ -33,24 +36,22 @@ import HeroButtons from "../components/HeroButtons.astro";
     <HeroBanner />
   </div>
   <HeroButtons />
-</section>
+</PageSection>
 
 <script>
   /**
-   * 
-   document.addEventListener("DOMContentLoaded", () => {
-     const funkoImage = document.getElementById("funko-image");
+
+  window.addEventListener("scroll", () => {
+    const scrollValue = window.scrollY;
+    const funkoImage = document.getElementById("funko-image");
 
     if (window.innerWidth >= 1024) {
-      // Aplica los estilos iniciales
-      funkoImage.style.transform = "translateX(-220px) scale(6)";
-      funkoImage.style.willChange = "width, height, transform";
-      funkoImage.style.height = "100%";
-      funkoImage.style.transformStyle = "preserve-3d";
-    } else {
-      funkoImage.style.transform = "";
+      const scaleValue = Math.max(1,6-scrollValue/150)
+      funkoImage.style.transform = `scale(${scaleValue})`;
     }
-  });
+    })
+
+   * 
 
   window.addEventListener("scroll", () => {
     const scrollValue = window.scrollY;

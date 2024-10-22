@@ -3,17 +3,15 @@ import { profile } from "../data/data";
 import { marked } from "marked";
 const paragraphOne = marked(profile.bio.split("||")[0]);
 const paragraphTwo = marked(profile.bio.split("||")[1]);
+import PageSection from "../components/PageSection.astro";
 ---
 
-<section
-  id="about"
-  class="relative w-full py-8 px-4 md:px-12 h-[100vh] md:mb-10 max-h-[700px] flex justify-center items-center my-10"
->
+<PageSection sectionId="about">
   <div
-    class="container mx-auto flex flex-col  items-center justify-between relative w-full md:w-1/2 lg:absolute lg:right-0 gap-2"
+    class="container mx-auto flex flex-col items-center justify-between relative w-full md:w-1/2 lg:absolute lg:right-0 gap-2"
   >
-  <div class="text-white space-y-6">
-    <!-- Title -->
+    <div class="text-white space-y-6">
+      <!-- Title -->
       <h2
         id="about-header"
         class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-oceanic-noir text-shadow-[1px_1px_4px_#F1F6F4]"
@@ -44,4 +42,4 @@ const paragraphTwo = marked(profile.bio.split("||")[1]);
       />
     </div>
   </div>
-</section>
+</PageSection>
