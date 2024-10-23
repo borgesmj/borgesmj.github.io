@@ -4,42 +4,37 @@ import { marked } from "marked";
 const paragraphOne = marked(profile.bio.split("||")[0]);
 const paragraphTwo = marked(profile.bio.split("||")[1]);
 import PageSection from "../components/PageSection.astro";
+import Button from "../components/Button.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <PageSection sectionId="about">
   <div
-    class="container mx-auto flex flex-col items-center justify-between relative w-full md:w-1/2 lg:absolute lg:right-0 gap-2"
+    class="container flex flex-col justify-center items-center h-fit w-full "
   >
-    <div class="text-white space-y-6">
-      <!-- Title -->
-      <h2
-        id="about-header"
-        class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-oceanic-noir text-shadow-[1px_1px_4px_#F1F6F4]"
-      >
-        About Me
-      </h2>
-      <!-- Contenido de texto -->
+    <h2
+      id="about-header"
+      class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-oceanic-noir text-shadow-[1px_1px_4px_#F1F6F4]"
+    >
+      About Me
+    </h2>
+    <div class="text-white space-y-6 md:w-3/4 lg:w-1/2">
       <div id="content" class="flex flex-col gap-2 lg:px-4">
         <p class="text-lg leading-relaxed" set:html={paragraphOne} />
         <p class="text-lg leading-relaxed" set:html={paragraphTwo} />
       </div>
     </div>
-    <!-- Button -->
-    <a
-      href="#contact"
-      class="inline-block mt-6 mx-auto py-3 px-8 bg-forsythis lg:bg-transparent btn-background text-white text-lg font-semibold hover:scale-105 transition-transform"
-      >Get in Touch</a
-    >
-
-    <!-- Imagen de la derecha -->
-    <div class="md:w-1/2 mt-10 md:mt-0">
-      <img
-        src="/funko-teclado.webp"
-        width="50px"
-        height="50px"
-        alt="Profile image"
-        class="w-[100px] h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform drop-shadow-[1px_1px_4px_#F1F6F4]"
-      />
-    </div>
+    <Button otherClasses="md:w-[200px] md:text-[20px] md:font-[600] my-8">
+      <a href="https://github.com/borgesmj" target="_blank" class="flex flex-row items-center justify-center"
+        >View my github<Icon name="arrow-up-rigth" /></a
+      >
+    </Button>
+    <img
+      src="/funko-teclado.webp"
+      width="50px"
+      height="50px"
+      alt="Profile image"
+      class="w-[100px] h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform drop-shadow-[1px_1px_4px_#F1F6F4]"
+    />
   </div>
 </PageSection>
