@@ -46,9 +46,7 @@ import Header from "../components/Header.astro";
   main {
     max-width: calc(100dvw - 2.5rem);
   }
-
   section {
-    height: calc(100dvh - (var(--mobile-header) + var(--mobile-nav)));
     position: relative;
     width: 100dvw;
     padding-block: 2rem;
@@ -59,7 +57,11 @@ import Header from "../components/Header.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+
+  }
+  #hero {
+    height: calc(100dvh - (var(--mobile-header) + var(--mobile-nav)));
+  }
   body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -129,17 +131,16 @@ import Header from "../components/Header.astro";
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #F1F6F4;
+    background: #f1f6f4;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #172B36;
+    background: #172b36;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-
 </style>

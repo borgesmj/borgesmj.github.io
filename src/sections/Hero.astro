@@ -6,71 +6,29 @@ import PageSection from "../components/PageSection.astro";
 ---
 
 <PageSection sectionId="hero">
-  <div id="hero-funko-container" class="h-28 w-28">
-    <div id="funko-container" class="h-28 w-28">
-      <img
-        src="/funko.webp"
-        alt="funko image saburo.dev"
-        class="drop-shadow-[1px_1px_4px_#F1F6F4]"
-        id="funko-image"
-      />
+  <div id="funko-container" class="w-25 h-25 lg:absolute lg:left-0 lg:top-0 lg:h-[200dvh] lg:z-30">
+    <div id="funko-image-container" class="sticky top-[30px] w-25 h-25">
+      <img src="hero-funko.png" alt="hero funko image" width="100px" height="100px" class="md:w-[200px] md:h-auto ">
     </div>
   </div>
   <div
-    class="container max-w-[350px] w-[300px] mx-auto flex flex-row justify-center p-2 md:max-w-[500px]"
+    class="container relative  flex flex-row justify-center items-center w-[260px] h-[190px] md:w-[400px] md:h-[300px]"
   >
-    <div class="letters flex flex-col items-start leading-[0.7]">
-      <p class="font-bold">
+    <div
+      class="letters-container flex flex-col justify-start items-start  w-full"
+    >
+      <p class="text-[25px]">
         <span
-          class="w-[15px] h-0 border-solid border-b-2 border-b-white inline-block align-middle"
-        ></span> Build your
+          class="w-[30px] mr-2 h-0 border-solid border-b-2 border-b-white inline-block align-middle md:w-[50px]"
+        ></span>Build your
       </p>
       <h1
-        class="text-left font-[700] w-[230px] text-[100px] md:text-[180px] bg-gradient-to-r from-artic-powder to-oceanic-noir bg-clip-text text-transparent [text-shadow:_2px_4px_6px_rgba(0,_0,_0,_0.4)] md:w-[395px]"
+        class="text-[100px] text-left font-bold leading-[0.75] [text-shadow:_4px_4px_12px_rgba(0,_0,_0,_0.25)] bg-gradient-to-r from-[#d9e8e3] to-oceanic-noir bg-clip-text text-transparent md:text-[160px]"
       >
-        next web<span
-          class="h-[15px] w-[15px] bg-gradient-to-r from-artic-powder to-oceanic-noir rounded-full inline-block"
-        ></span>
+        Next Web
       </h1>
     </div>
-    <HeroBanner />
+    <HeroBanner/>
   </div>
-  <HeroButtons />
+  <HeroButtons/>
 </PageSection>
-
-<script>
-  /**
-
-  window.addEventListener("scroll", () => {
-    const scrollValue = window.scrollY;
-    const funkoImage = document.getElementById("funko-image");
-
-    if (window.innerWidth >= 1024) {
-      const scaleValue = Math.max(1,6-scrollValue/150)
-      funkoImage.style.transform = `scale(${scaleValue})`;
-    }
-    })
-
-   * 
-
-  window.addEventListener("scroll", () => {
-    const scrollValue = window.scrollY;
-    const funkoImage = document.getElementById("funko-image");
-
-    // Verifica si el ancho de la pantalla es mayor que un umbral (por ejemplo, 768px para pantallas grandes)
-    if (window.innerWidth > 768) {
-      // Calcular el valor de translate
-      const translateValue = Math.min(0, -110 + scrollValue / 10); // Desde -110 hasta 0
-
-      // Calcular el valor de escala
-      const scaleValue = Math.max(1, 6 - scrollValue / 200);
-
-      // Aplicar las transformaciones solo si la pantalla es grande
-      funkoImage.style.transform = `translateX(${translateValue}%) scale(${scaleValue})`;
-    } else {
-      // Para pantallas pequeñas, puedes aplicar un estilo diferente o no hacer nada
-      funkoImage.style.transform = ""; // O puedes aplicar un estilo específico para pantallas pequeñas
-    }
-  });
-     */
-</script>

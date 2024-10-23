@@ -17,9 +17,9 @@ import { Icon } from "astro-icon/components";
       class="flex flex-row gap-2 md:justify-end md:h-6 md:items-center w-full justify-end h-10"
     >
       <Status available={profileData.available} />
-      <Button buttonId="open-form-btn" buttonTitle="Open form" >
+      <Button buttonId="open-form-btn" buttonTitle="Open form" btnWidth="w-10 md:w-[120px]" >
         <Icon class="block md:hidden" name="chats-circle" size={32} />
-        <span class="hidden md:block">Get in touch</span>
+        <span class="hidden md:block font-[600]">Get in touch</span>
       </Button>
         <SocialLinks socialLinks={socialLinks} />
     </div>

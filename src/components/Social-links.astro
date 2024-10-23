@@ -14,7 +14,7 @@ import { Icon } from "astro-icon/components";
             <Icon name={link.name} />
           </a>
           <span
-            class={`text-xs tooltip ${link.name}-tooltip absolute bottom-0 invisible group-hover:bottom-[-45px] bg-[${link.color}] p-1 opacity-0 group-hover:opacity-100 group-hover:visible rounded-lg transition before:content-[''] before:absolute before:h-[8px] before:w-[8px] before:top-[-5px] before:left-0`}
+            class={`text-xs tooltip ${link.name}-tooltip absolute bottom-0 invisible group-hover:bottom-[-45px] bg-[${link.color}] p-1 opacity-0 group-hover:opacity-100 group-hover:visible rounded-lg transition before:content-[''] before:absolute before:h-[8px] before:w-[8px] before:top-[-5px] before:left-0 capitalize`}
           >
             {link.name}
           </span>

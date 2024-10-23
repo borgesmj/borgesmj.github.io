@@ -2,20 +2,18 @@
 import { Icon } from "astro-icon/components";
 const className =
   "py-1 px-5 bg-forsythis lg:bg-transparent btn-background text-white text-lg font-semibold hover:scale-105 transition-transform w-[200px] flex flex-row text-center justify-center items-center gap-0 ";
+import Button from "./Button.astro";
 ---
 
 <div
-  class="buttons p-[10px] w-[calc(100%-20px)] flex flex-col md:flex-row gap-2 justify-center items-center z-10 md:gap-5"
+  class="buttons p-[10px] w-[calc(100%-20px)] flex flex-row gap-2 justify-center items-center z-10 md:gap-5"
 >
-  <a
-    href="#experience"
-    class={className}
-    >View more</a
-  >
-  <a
-    href="https://github.com/borgesmj"
-    target="_blank"
-    class={className}
-    >View my github<Icon name="arrow-up-rigth" size={28} /></a
-  >
+  <Button btnWidth="md:w-[200px] md:text-[20px] md:font-[600]">
+    <a href="#" class="flex flex-row items-center justify-center">View more</a>
+  </Button>
+  <Button btnWidth="md:w-[200px] md:text-[20px] md:font-[600]">
+    <a href="" target="_blank" class="flex flex-row items-center justify-center"
+      >View my github<Icon name="arrow-up-rigth" /></a
+    >
+  </Button>
 </div>
