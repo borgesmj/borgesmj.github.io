@@ -4,21 +4,24 @@ import SocialLinks from "./Social-links.astro";
 import Status from "./Status.astro";
 import Navbar from "./Navbar.astro";
 const { profileData, socialLinks, navLinks } = Astro.props;
-import HomeLink from "./HomeLink.astro";
+import Button from "./Button.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <header
   class="sticky top-0 left-0 right-0 flex flex-row justify-between items-center px-5 py-1 w-full bg-oceanic-noir text-white z-20"
 >
-  <HomeLink profileData={profileData} />
-  <div class="flex flex-col w-4/5 items-center gap-4">
+  <div class="flex flex-col w-full items-center gap-4">
     <Navbar navlinks={navlinks} />
-    <div class="flex flex-row gap-2 md:justify-end md:h-6 md:items-center w-full justify-end">
+    <div
+      class="flex flex-row gap-2 md:justify-end md:h-6 md:items-center w-full justify-end h-10"
+    >
       <Status available={profileData.available} />
-      <div id="open-form-btn" class="py-2 px-2 bg-forsythis lg:bg-transparent btn-background  text-white text-xs md:text-lg font-semibold hover:scale-105 transition-transform w-[110px] md:w-[150px] flex flex-row text-center justify-center items-center gap-0 "
-        >Get in touch</div
-      >
-      <SocialLinks socialLinks={socialLinks} className="hidden md:flex" />
+      <Button buttonId="open-form-btn" buttonTitle="Open form" >
+        <Icon class="block md:hidden" name="chats-circle" size={32} />
+        <span class="hidden md:block">Get in touch</span>
+      </Button>
+        <SocialLinks socialLinks={socialLinks} className="hidden md:flex" />
       {
         /*
         <SocialLinks socialLinks={socialLinks.slice(3)} className="hidden md:flex" />

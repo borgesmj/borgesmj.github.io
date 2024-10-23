@@ -16,10 +16,6 @@ export const navlinks = [
     href: "#projects",
   },
   {
-    name: "résumé",
-    href: "#resume",
-  },
-  {
     name: "contact",
     href: "#contact",
   },
