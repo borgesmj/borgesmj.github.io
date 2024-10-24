@@ -9,32 +9,33 @@ import PageSection from "../components/PageSection.astro";
 <!-- Lista de experiencias -->
 <PageSection sectionId="experience">
   <h2
-    class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-oceanic-noir decoration-solid w-full text-center"
+    class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-mystic-mint decoration-solid w-full text-center"
   >
     Experience
   </h2>
-  <CardsList listId="experience-list">
+  <ul class="w-full mb-10 lg:w-3/4 lg:mx-auto xl:w-2/3 2xl:w-1/2">
     {
-      workExperience.map((experience, index) => (
-        <ExperienceCard key={index} experience={experience} />
+      workExperience.map((experience) => (
+        <ExperienceCard experience={experience} />
       ))
     }
-    <li
-      class="relative py-2 px-5 flex flex-col w-fit whitespace-nowrap justify-center items-start"
+    <a
+      href="https://www.linkedin.com/in/borgesmj/details/experience/"
+      target="_blank"
+      class="text-deep-saffron flex flex-row items-center justify-start font-[600] text-2xl hover:text-white transition-colors mx-auto"
+      >View more<Icon name="caret-right" /></a
     >
-      <a
-        href="https://www.linkedin.com/in/borgesmj/details/experience/"
-        target="_blank"
-        class="py-1 px-5 bg-forsythis lg:bg-transparent btn-background text-white text-lg font-semibold hover:scale-105 transition-transform w-[200px] flex-row text-center rounded-3xl flex justify-center items-center"
-        >More<Icon name="new-tab" size={28} class="ml-2" /></a
-      >
-    </li>
-  </CardsList>
+    <a
+      href="https://drive.google.com/drive/folders/106qk2bjK1uKgwcB8TMaMNkUnjNUtIjRv"
+      target="_blank"
+      class="relative w-40 h-10 cursor-pointer flex items-center border-solid border-2 border-[#17795E] bg-[#209978] group my-4"
+      ><span
+        class="button__text transition absolute h-full w-30 left-0 flex justify-center items-center text-xl group-hover:w-0 group-hover:text-transparent group-hover:hidden"
+        >Download</span
+      ><span
+        class="button__icon transition absolute h-full w-10 bg-[#17795E] flex justify-center items-center right-0 group-hover:w-full group-hover:translate-x-0"
+        ><Icon name="download-simple" size={32} /></span
+      ></a
+    >
+  </ul>
 </PageSection>
-
-<script>
-  document.getElementById("experience-list").addEventListener("scroll", () => {
-    const scroll = document.getElementById("experience-list").scrollLeft;
-    console.log(scroll);
-  });
-</script>
