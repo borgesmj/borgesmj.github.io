@@ -1,0 +1,11 @@
+---
+const {techName } = Astro.props;
+import { badges } from "../data/data";
+const filteredBadge = badges.filter((badge) => badge.name === techName.replace(" ", "").toLowerCase())[0]
+---
+
+<img
+  src={`https://img.shields.io/badge/${techName}-${filteredBadge?.color.replace("#", "").toLowerCase()}?style=for-the-badge&logo=${filteredBadge?.name.replace(" ", "")}&logoColor=black`}
+  alt=""
+  class="rounded-full"
+/>

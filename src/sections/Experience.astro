@@ -9,8 +9,9 @@ import PageSection from "../components/PageSection.astro";
 <!-- Lista de experiencias -->
 <PageSection sectionId="experience">
   <h2
-    class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-mystic-mint decoration-solid w-full text-center"
+    class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-mystic-mint decoration-solid w-full text-center flex flex-row gap-4 items-center"
   >
+    <Icon name="briefcase" color="#ffffff" />
     Experience
   </h2>
   <ul class="w-full mb-10 lg:w-3/4 lg:mx-auto xl:w-2/3 2xl:w-1/2">
@@ -30,7 +31,7 @@ import PageSection from "../components/PageSection.astro";
       target="_blank"
       class="relative w-40 h-10 cursor-pointer flex items-center border-solid border-2 border-[#17795E] bg-[#209978] group my-4"
       ><span
-        class="button__text transition absolute h-full w-30 left-0 flex justify-center items-center text-xl group-hover:w-0 group-hover:text-transparent group-hover:hidden"
+        class="button__text transition absolute h-full w-30 left-4 flex justify-center items-center text-xl group-hover:w-0 group-hover:text-transparent group-hover:hidden"
         >Download</span
       ><span
         class="button__icon transition absolute h-full w-10 bg-[#17795E] flex justify-center items-center right-0 group-hover:w-full group-hover:translate-x-0"

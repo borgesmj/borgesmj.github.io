@@ -19,14 +19,5 @@ import Card from "./Card.astro";
     <ul class="list-disc">
       {experience.responsibilities.map((item) => <li>{item}</li>)}
     </ul>
-    <div class="w-full grid grid-cols-2 gap-2 lg:grid-cols-3">
-      {
-        experience.technologies.map((item) => (
-          <span class="text-center text-white p-1 border-solid border-deep-saffron border-2 rounded-full">
-            {item}
-          </span>
-        ))
-      }
-    </div>
   </div>
 </li>

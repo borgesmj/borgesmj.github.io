@@ -1,0 +1,41 @@
+---
+import { Icon } from "astro-icon/components";
+import Badge from "./Badge.astro";
+const { projectInfo } = Astro.props;
+---
+
+<li class="w-full flex flex-col gap-4 md:flex-row my-4 group">
+  <img
+    src="/Diseño-sin-título.png"
+    alt=""
+    class="rounded-lg w-full h-auto md:w-[300px] md:h-[200px] group-hover:scale-[1.05] transition"
+  />
+  <div class="flex flex-col gap-4">
+    <h2 class="text-[30px] font-bold">{projectInfo.name}</h2>
+    <div class="badges--container grid grid-cols-2 w-[220px] gap-2">
+      {projectInfo.technologies.map((tech) => <Badge techName={tech} />)}
+    </div>
+    <p>
+      {projectInfo.description}
+    </p>
+    <div class="flex flex-row justify-start gap-4">
+      {
+        projectInfo.repositoryLink ?
+        <a
+        href={projectInfo.repositoryLink}
+        target="_blank"
+        class="flex flex-row justify-center items-center gap-2 border-solid rounded-lg border-nocturnal-expedition border-[0.5px] p-2 bg-gradient-to-r from-oceanic-noir to-nocturnal-expedition transition hover:scale-[1.05]"
+        ><span>Code</span><span><Icon name="github" /></span>
+      </a> : null
+      }
+      {
+        projectInfo.liveDemo ? <a
+        href={projectInfo.liveDemo}
+        target="_blank"
+        class="flex flex-row justify-center items-center gap-2 border-solid rounded-lg border-nocturnal-expedition border-[0.5px] p-2 bg-gradient-to-r from-oceanic-noir to-nocturnal-expedition transition hover:scale-[1.05]"
+        ><span>Demo</span><span><Icon name="link" /></span>
+      </a> : null
+      }
+    </div>
+  </div>
+</li>

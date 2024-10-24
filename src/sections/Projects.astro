@@ -1,8 +1,22 @@
 ---
-
+import PageSection from "../components/PageSection.astro";
+import { Icon } from "astro-icon/components";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/data";
 ---
 
-<div id="projects">
-    projects
-
-</div>
+<PageSection sectionId="projects">
+  <h2
+    class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-artic-powder to-mystic-mint decoration-solid w-full text-center flex flex-row gap-4 items-center"
+  >
+    <Icon name="code" color="#ffffff" />
+    Projects
+  </h2>
+  <ul class="w-full mb-10 lg:w-3/4 lg:mx-auto xl:w-2/3 2xl:w-1/2">
+    {
+      projects.map((project) => (
+        <ProjectCard projectInfo = {project} />
+      ))
+    }
+  </ul>
+</PageSection>

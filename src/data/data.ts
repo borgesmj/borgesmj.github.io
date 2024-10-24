@@ -139,7 +139,7 @@ export const projects = [
     name: "SaburoFinanceBot",
     description:
       "A Telegram bot built with Java and MySQL that tracks user expenses and income. It features user-friendly commands for adding, updating, and viewing financial data.",
-    technologies: ["Java", "MySQL", "Telegram API"],
+    technologies: ["Java", "MySQL", "Telegram"],
     repositoryLink: "https://github.com/borgesmj/telegram_app_bot",
     liveDemo: null,
     year: 2024,
@@ -150,3 +150,38 @@ export const projects = [
     ],
   },
 ];
+
+
+export const badges = [
+  {
+    name: "tailwindcss",
+    color: "#06B6D4"
+  },{
+    name: "firebase",
+    color: "#DD2C00"
+  },
+  {
+    name: "react",
+    color: "#61DAFB"
+  },
+  {
+    name: "javascript",
+    color: "#F7DF1E"
+  },
+  {
+    name: "reactrouter",
+    color: "#CA4245"
+  },
+  {
+    name: "astro",
+    color: "#BC52EE"
+  },
+  {
+    name: "mysql",
+    color: "#4479A1"
+  },
+  {
+    name: "telegram",
+    color: "#26A5E4"
+  }
+]
