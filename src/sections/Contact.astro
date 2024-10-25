@@ -1,7 +1,80 @@
 ---
-
+import { socials } from "../data/data";
+const currentYear = new Date().getFullYear();
 ---
 
-<footer id="contact">
-    contact
+<footer
+  id="contact"
+  class="flex flex-col items-center gap-8 py-10 text-white w-[90%]"
+>
+  <!-- contEiner -->
+  <div class="flex flex-row gap-4 justify-around items-center md:gap-0 w-full">
+    <!-- Redes Sociales -->
+    <div class="flex flex-col items-center text-center">
+      <h2 class="text-lg font-semibold mb-3">Follow me</h2>
+      <div id="links" class="flex flex-col items-center justify-center gap-4">
+        {
+          socials.map((link) => (
+            <a
+              href={link.href}
+              class="capitalize text-gray-300 hover:text-blue-400 transition-colors duration-200"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {link.name}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Enlaces Rápidos -->
+    <div
+      id="quick-links"
+      class="flex flex-col items-center justify-center gap-4 text-center"
+    >
+      <a
+        href="/"
+        class="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+        >Home</a
+      >
+      <a
+        href="#about"
+        class="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+        >About</a
+      >
+      <a
+        href="#experience"
+        class="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+        >Experience</a
+      >
+      <a
+        href="#projects"
+        class="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+        >Projects</a
+      >
+    </div>
+
+    <!-- Información de Contacto -->
+  </div>
+  <div
+    id="contact-info"
+    class="flex flex-col items-center gap-2 text-center text-gray-300"
+  >
+    <p class="text-sm">
+      Email: <a
+        href="mailto:contacto@ejemplo.com"
+        class="hover:text-blue-400 transition-colors duration-200"
+        >contacto@ejemplo.com</a
+      >
+    </p>
+  </div>
+
+  <!-- Derechos de Autor -->
+  <div id="copyright" class="text-xs text-gray-500 text-center mt-4">
+    <p>
+      &copy; <span id="current-year">{currentYear}</span> Miguel Borges. Algunos
+      de los derechos reservados.
+    </p>
+  </div>
 </footer>

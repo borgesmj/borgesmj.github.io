@@ -1,20 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Experience from '../sections/Experience.astro';
-import Hero from '../sections/Hero.astro';
-import Projects from '../sections/Projects.astro';
-import About from '../sections/About.astro';
-import Contact from '../sections/Contact.astro';
-import MailForm from '../components/MailForm.astro';
-import { profile } from '../data/data';
+import Layout from "../layouts/Layout.astro";
+import Experience from "../sections/Experience.astro";
+import Hero from "../sections/Hero.astro";
+import Projects from "../sections/Projects.astro";
+import About from "../sections/About.astro";
+import Contact from "../sections/Contact.astro";
+import MailForm from "../components/MailForm.astro";
+import { profile } from "../data/data";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="">
-		<Hero/>
-		<About/>
-		<Experience/>
-		<Projects/>
-		<Contact/>
-	</main>
+  <main class="">
+    <Hero />
+    <About />
+    <Experience />
+    <Projects />
+  </main>
+
+  <Contact />
 </Layout>
