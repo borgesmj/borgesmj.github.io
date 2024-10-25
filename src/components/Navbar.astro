@@ -20,13 +20,13 @@ const { navlinks } = Astro.props;
     </label>
   </div>
   <ul
-    class="navlist hidden w-full h-fit flex-col items-center justify-between gap-3 text-[20px] font-[900] md:flex md:flex-row md:text-[10px] md:m-auto md:w-fit md:font-[300] md:gap-0 md:bg-[#f1f6f410] rounded-[50px] py-[2px] px-[3px] 2xl:text-[16px] 2xl:w-[456px]"
+    class="navlist hidden w-full h-fit flex-col items-center justify-between gap-3 text-[20px] font-[900] md:flex md:flex-row md:text-[15px] md:m-auto md:w-fit md:font-[300] md:gap-3 md:bg-[#f1f6f410] rounded-[50px] py-[2px] px-[3px] 2xl:text-[16px] 2xl:w-[456px]"
   >
     {
       navlinks.map((item) => (
         <li>
           <a
-            class={`${item.name} md:block md:w-[75px] navlink-name transition p-[5px] rounded-[50px] md:text-center`}
+            class={`${item.name} md:block md:w-fit navlink-name transition p-[5px] rounded-[50px] md:text-center`}
             href={item.href}
           >
             {item.name}
@@ -50,13 +50,14 @@ const { navlinks } = Astro.props;
   .navbar-open {
     height: 90%;
   }
+  .navlist li a:hover,
   .active {
-    background-color: #172B36;
+    background-color: #172b36;
     font-weight: 400;
     opacity: 1;
   }
 
-  .unactive{
+  .unactive {
     opacity: 0.5;
     font-weight: 200;
   }
@@ -68,27 +69,29 @@ const { navlinks } = Astro.props;
 <script>
   const updateActiveLink = () => {
     const currentHash = window.location.hash;
-    const navlinks = document.querySelectorAll('ul li a') as NodeListOf<HTMLAnchorElement>;
+    const navlinks = document.querySelectorAll(
+      "ul li a"
+    ) as NodeListOf<HTMLAnchorElement>;
     if (currentHash) {
-       navlinks.forEach((link) => {
+      navlinks.forEach((link) => {
         if (link.href.includes(currentHash)) {
-          link.classList.remove('unactive')
+          link.classList.remove("unactive");
           link.classList.add("active");
         } else {
-          link.classList.add('unactive')
+          link.classList.add("unactive");
           link.classList.remove("active");
         }
-        document.querySelector(".home").classList.remove("active")
-        document.querySelector('.home').classList.add('unactive')
-       })
+        document.querySelector(".home").classList.remove("active");
+        document.querySelector(".home").classList.add("unactive");
+      });
       return;
     } else {
       navlinks.forEach((link) => {
-        if(link.getAttribute('href') !== "/"){
-          link.classList.add('unactive')
+        if (link.getAttribute("href") !== "/") {
+          link.classList.add("unactive");
           link.classList.remove("active");
         }
-      }) 
+      });
       document.querySelector(".home").classList.add("active");
       return;
     }
