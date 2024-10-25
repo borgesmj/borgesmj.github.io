@@ -18,10 +18,10 @@ import { Icon } from "astro-icon/components";
     >
       About Me
     </h2>
-    <div class="text-white space-y-6 md:w-3/4 lg:w-1/2">
+    <div class="text-white space-y-6 md:w-3/4 lg:w-1/2 ">
       <div id="content" class="flex flex-col gap-2 lg:px-4">
-        <p class="text-lg leading-relaxed" set:html={paragraphOne} />
-        <p class="text-lg leading-relaxed" set:html={paragraphTwo} />
+        <p class="text-lg leading-relaxed prose prose-invert" set:html={paragraphOne} />
+        <p class="text-lg leading-relaxed prose prose-invert" set:html={paragraphTwo} />
       </div>
     </div>
     <Button otherClasses="md:w-[200px] md:text-[20px] md:font-[600] my-8">

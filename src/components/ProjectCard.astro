@@ -15,7 +15,7 @@ const { projectInfo } = Astro.props;
     <div class="badges--container grid grid-cols-2 w-[220px] gap-2">
       {projectInfo.technologies.map((tech) => <Badge techName={tech} />)}
     </div>
-    <p>
+    <p class="prose prose-invert leading-tight">
       {projectInfo.description}
     </p>
     <div class="flex flex-row justify-start gap-4">
