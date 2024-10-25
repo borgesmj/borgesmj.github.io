@@ -29,6 +29,7 @@ import Header from "../components/Header.astro";
   <script src="../scripts/OpenFormMail.js"></script>
   <script src="../scripts/OpenModal.js"></script>
   <script src="../scripts/closeModal.js"></script>
+  <script src="../scripts/main.js"></script>
 </html>
 <style is:global>
   :root {
@@ -142,5 +143,11 @@ import Header from "../components/Header.astro";
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+
+  @media ((min-width: 1024px)) {
+    .dynamic-height{
+      height: auto;
+    }
   }
 </style>
