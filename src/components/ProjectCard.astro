@@ -6,7 +6,7 @@ const { projectInfo } = Astro.props;
 
 <li class="w-full flex flex-col gap-4 md:flex-row my-4 group">
   <img
-    src="/Diseño-sin-título.png"
+    src={`/${projectInfo.name.replace(" ", "_")}.webp`}
     alt=""
     class="rounded-lg w-full h-auto md:w-[300px] md:h-[200px] group-hover:scale-[1.05] transition"
   />

@@ -111,7 +111,7 @@ export const projects = [
       "An e-commerce platform for sweets and snacks built with React Router. It includes features such as product catalog, shopping cart, and user reviews.",
     technologies: ["React Router", "Tailwind CSS", "Firebase", "React"],
     repositoryLink: "https://github.com/borgesmj/sweet-bites",
-    liveDemo: "https://sweet-bites.co/",
+    liveDemo: "https://sweet-bites-co.netlify.app/",
     year: 2023,
     features: [
       "Product catalog",
