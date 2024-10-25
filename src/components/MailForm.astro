@@ -2,18 +2,69 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<form
+<div
   id="mail-form"
-  action=""
-  class="flex-col w-dvw h-dvh fixed top-0 -right-[100%] bg-green-500 z-30 hidden md:w-[40dvw] lg:w-[25dvw]"
+  class="flex-col w-dvw h-dvh fixed top-0 -right-[100%] bg-oceanic-noir z-30 hidden md:w-[40dvw] lg:w-[25dvw]gap-4 p-4"
 >
   <div class="w-full h-10 p-4 flex justify-end">
-    <div id="close-form-btn" class="cursor-pointer h-10 w-10 flex justify-center items-center">
+    <div
+      id="close-form-btn"
+      class="cursor-pointer h-10 w-10 flex justify-center items-center"
+    >
       <Icon name="close" size={60} />
     </div>
   </div>
-  formulario
-</form>
+  <h2 class="w-full text-center text-2xl underline underline-offset-8 my-4">
+    Send me an e-mail
+  </h2>
+  <form class="form-container flex flex-col gap-6">
+    <div class="field relative h-10 w-full group">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        required
+        class="peer absolute top-0 bottom-0 left-0 right-0 z-[-1] focus:border-solid focus:border-b-white focus:border-b-2 outline-none bg-transparent"
+      />
+      <label
+        for="username"
+        class="w-full text-white absolute bottom-0 left-7 text-2xl group-focus-within:text-[15px] transition group-focus-within:-translate-x-6 group-focus-within:translate-y-[-30px] group-focus-within:text-white peer-valid:-translate-x-6 peer-valid:translate-y-[-30px] peer-valid:text-[15px]"
+        >Name:</label
+      >
+    </div>
+    <div class="field relative h-10 w-full group">
+      <input
+        type="text"
+        name="email"
+        id="email"
+        required
+        class="peer absolute top-0 bottom-0 left-0 right-0 z-[-1] focus:border-solid focus:border-b-white focus:border-b-2 outline-none bg-transparent"
+      />
+      <label
+        for="email"
+        class="w-full text-white absolute bottom-0 left-7 text-2xl group-focus-within:text-[15px] transition group-focus-within:-translate-x-6 group-focus-within:translate-y-[-30px] group-focus-within:text-white peer-valid:-translate-x-6 peer-valid:translate-y-[-30px] peer-valid:text-[15px]"
+        >Email:</label
+      >
+    </div>
+    <div class="field relative h-32 w-full group">
+      <textarea
+        rows="4"
+        name="message"
+        id="message"
+        required
+        class="peer absolute top-0 bottom-0 left-0 right-0 z-[-1] border-solid border-transparent focus:border-b-white border-b-2 peer-valid:border-b-white outline-none bg-transparent resize-none h-full bg-red-900"
+      ></textarea>
+      <label
+        for="message"
+        class="w-full text-white absolute bottom-[90px] left-7 text-2xl group-focus-within:text-[15px] transition group-focus-within:-translate-x-6 group-focus-within:translate-y-[-30px] group-focus-within:text-white peer-valid:-translate-x-6 peer-valid:translate-y-[-30px] peer-valid:text-[15px]"
+        >Message:</label
+      >
+    </div>
+    <div class="field h-10 w-full flex flex-row justify-center items-center">
+      <input id="send-btn" type="submit" value="Send" />
+    </div>
+  </form>
+</div>
 <style>
   .slide-in-right {
     -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
