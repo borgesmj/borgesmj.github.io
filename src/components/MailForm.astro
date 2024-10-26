@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import Button from "./Button.astro";
 ---
 
 <div
@@ -21,10 +22,11 @@ import { Icon } from "astro-icon/components";
     <div class="field relative h-10 w-full group">
       <input
         type="text"
-        name="username"
+        name="user_name"
         id="username"
         required
         class="peer absolute top-0 bottom-0 left-0 right-0 z-[-1] focus:border-solid focus:border-b-white focus:border-b-2 outline-none bg-transparent"
+        tabindex="1"
       />
       <label
         for="username"
@@ -35,10 +37,11 @@ import { Icon } from "astro-icon/components";
     <div class="field relative h-10 w-full group">
       <input
         type="text"
-        name="email"
+        name="user_email"
         id="email"
         required
         class="peer absolute top-0 bottom-0 left-0 right-0 z-[-1] focus:border-solid focus:border-b-white focus:border-b-2 outline-none bg-transparent"
+        tabindex="2"
       />
       <label
         for="email"
@@ -53,6 +56,7 @@ import { Icon } from "astro-icon/components";
         id="message"
         required
         class="peer absolute top-0 bottom-0 left-0 right-0 z-[-1] border-solid border-transparent focus:border-b-white border-b-2 peer-valid:border-b-white outline-none bg-transparent resize-none h-full bg-red-900"
+        tabindex="3"
       ></textarea>
       <label
         for="message"
@@ -61,10 +65,43 @@ import { Icon } from "astro-icon/components";
       >
     </div>
     <div class="field h-10 w-full flex flex-row justify-center items-center">
-      <input id="send-btn" type="submit" value="Send" />
+      <input id="send-btn" type="submit" value="Send" class="bg-gradient-to-tr from-[#7118e2] to-[#bdc3ff] h-[52px] w-[132px] rounded-[100px] p-4 flex justify-center items-center font-[600] text-[15px]" />
     </div>
   </form>
 </div>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+<script type="text/javascript">
+  // Inicializa EmailJS después de cargar la biblioteca
+  (function () {
+    emailjs.init("NydoYd6k-fDjKaeCc");
+  })();
+  const sendEmailBtn = document.getElementById("send-btn");
+  const nameInput = document.getElementById('username');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+  document.getElementById("mail-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    sendEmailBtn.value = "Sending...";
+    const serviceID = "service_dlmwhdk";
+    const templateID = "template_oeg299d";
+    try {
+      const result = await emailjs.sendForm(serviceID, templateID, e.target);
+      console.log("email sent", result.text);
+      sendEmailBtn.value = "Send";
+      alert("Email sent successfully!");
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      sendEmailBtn.value = "Send";
+
+    }
+  });
+</script>
 <style>
   .slide-in-right {
     -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
