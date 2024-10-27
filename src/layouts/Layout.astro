@@ -11,6 +11,12 @@ import Header from "../components/Header.astro";
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Miguel Borges || FrontEnd Developer</title>
+    <meta
+      name="description"
+      content="Hi! I'm Miguel, a FrontEnd dev, focused on create atractive and user friendly websites "
+    />
+    <meta name="robots" content="index, follow" />
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
@@ -20,7 +26,23 @@ import Header from "../components/Header.astro";
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <title>{title}</title>
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Miguel Borges" />
+    <meta property="og:url" content="https://borgesmj.github.io/" />
+    <meta
+      property="og:image"
+      content="https://borgesmj.github.io/funko-teclado.webp"
+    />
+    <meta property="profile:first_name" content="" />
+    <meta property="profile:last_name" content="" />
+    <meta name="twitter:card" content="app" />
+    <meta name="twitter:site" content="@https://borgesmj.github.io/" />
+    <meta
+      name="twitter:description"
+      content="Hi! I'm Miguel, a FrontEnd dev, focused on create atractive and user friendly websites"
+    />
+    <meta name="twitter:title" content="Miguel Borges" />
+    <meta name="twitter:image" content="https://borgesmj.github.io/funko-teclado.webp" />
   </head>
   <body class="bg-oceanic-noir text-white antialiased">
     <Header profileData={profile} socialLinks={socials} navlinks={navlinks} />
@@ -58,7 +80,6 @@ import Header from "../components/Header.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
   #hero {
     height: calc(100dvh - (var(--mobile-header) + var(--mobile-nav)));
@@ -146,7 +167,7 @@ import Header from "../components/Header.astro";
   }
 
   @media ((min-width: 1024px)) {
-    .dynamic-height{
+    .dynamic-height {
       height: auto;
     }
   }
