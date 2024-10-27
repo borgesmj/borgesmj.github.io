@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import Button from "./Button.astro";
 ---
 
 <div
@@ -18,6 +17,12 @@ import Button from "./Button.astro";
   <h2 class="w-full text-center text-2xl underline underline-offset-8 my-4">
     Send me an e-mail
   </h2>
+  <p class="w-full leading-7 text-center">
+    <strong>Let's stay in touch!</strong> Feel free to send me an email with what
+    you need—whether it’s a website, a landing page, or even a job opportunity. I'm
+    here to help!
+  </p>
+
   <form class="form-container flex flex-col gap-6">
     <div class="field relative h-10 w-full group">
       <input
@@ -56,8 +61,7 @@ import Button from "./Button.astro";
         id="message"
         required
         class="peer absolute top-0 bottom-0 left-0 right-0 z-[-1] border-solid border-transparent focus:border-b-white border-b-2 peer-valid:border-b-white outline-none bg-transparent resize-none h-full bg-red-900"
-        tabindex="3"
-      ></textarea>
+        tabindex="3"></textarea>
       <label
         for="message"
         class="w-full text-white absolute bottom-[90px] left-7 text-2xl group-focus-within:text-[15px] transition group-focus-within:-translate-x-6 group-focus-within:translate-y-[-30px] group-focus-within:text-white peer-valid:-translate-x-6 peer-valid:translate-y-[-30px] peer-valid:text-[15px]"
@@ -65,7 +69,12 @@ import Button from "./Button.astro";
       >
     </div>
     <div class="field h-10 w-full flex flex-row justify-center items-center">
-      <input id="send-btn" type="submit" value="Send" class="bg-gradient-to-tr from-[#7118e2] to-[#bdc3ff] h-[52px] w-[132px] rounded-[100px] p-4 flex justify-center items-center font-[600] text-[15px]" />
+      <input
+        id="send-btn"
+        type="submit"
+        value="Send"
+        class="bg-gradient-to-tr from-[#7118e2] to-[#bdc3ff] h-[52px] w-[132px] rounded-[100px] p-4 flex justify-center items-center font-[600] text-[15px]"
+      />
     </div>
   </form>
 </div>
@@ -79,9 +88,9 @@ import Button from "./Button.astro";
     emailjs.init("NydoYd6k-fDjKaeCc");
   })();
   const sendEmailBtn = document.getElementById("send-btn");
-  const nameInput = document.getElementById('username');
-  const emailInput = document.getElementById('email');
-  const messageInput = document.getElementById('message');
+  const nameInput = document.getElementById("username");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
   document.getElementById("mail-form").addEventListener("submit", async (e) => {
     e.preventDefault();
     sendEmailBtn.value = "Sending...";
@@ -92,13 +101,12 @@ import Button from "./Button.astro";
       console.log("email sent", result.text);
       sendEmailBtn.value = "Send";
       alert("Email sent successfully!");
-      nameInput.value = '';
-      emailInput.value = '';
-      messageInput.value = '';
+      nameInput.value = "";
+      emailInput.value = "";
+      messageInput.value = "";
     } catch (error) {
       console.error("Failed to send email:", error);
       sendEmailBtn.value = "Send";
-
     }
   });
 </script>

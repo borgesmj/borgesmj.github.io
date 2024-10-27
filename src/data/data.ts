@@ -25,67 +25,33 @@ export const profile = {
   name: "Miguel José",
   role: "FrontEnd Web Developer",
   available: true,
-  bio: "**Lorem ipsum dolor sit amet**, consectetur adipisicing elit. Assumenda itaque eligendi aliquid alias quibusdam, sequi rem totam amet blanditiis dolorem a, non, dignissimos molestiae autem odio soluta fugiat? || Voluptatibus facilis eveniet facere dolorem sunt nulla laboriosam temporibus voluptatem blanditiis commodi repellendus eligendi vel, molestias cumque at totam perspiciatis deserunt quisquam debitis rerum laudantium!",
+  bio: "Hi! I'm **Miguel**, a FrontEnd dev, focused on create atractive and user friendly websites || I’m a strong believer in continuous learning, which keeps me adaptable and growing with industry trends. My goal is to deliver quality and efficiency on every project while prioritizing collaboration and constant improvement. If you're looking for someone who’s committed, adaptable, and results-driven, I’d love to connect!",
 };
 
 export const socials = [
-  { name: "github", href: "#", color: "#171515" },
-  { name: "linkedin", href: "#", color: "#0073b1" },
-  { name: "twitter", href: "#", color: "#1DA1F2" },
-  { name: "instagram", href: "#", color: "#E1306C" },
-  { name: "telegram", href: "#", color: "#229ED9" },
+  { name: "github", href: "https://github.com/borgesmj", color: "#171515" },
+  { name: "linkedin", href: "https://www.linkedin.com/in/borgesmj/", color: "#0073b1" },
+  { name: "twitter", href: "https://x.com/saburodotjs", color: "#1DA1F2" },
+  { name: "instagram", href: "https://instagram.com/saburodotjs", color: "#E1306C" },
+  { name: "telegram", href: "https://t.me/saburodotjs", color: "#229ED9" },
 ];
 
 export const workExperience = [
   {
     id: 1,
-    company: "Tech Corp", // Nombre de la empresa
-    position: "Frontend Developer", // Cargo desempeñado
-    startDate: "January 2022", // Fecha de inicio
-    endDate: "Present", // Fecha de finalización (o "Present" si sigues trabajando allí)
+    company: "Freelance",
+    position: "Frontend Developer",
+    startDate: "January 2023",
+    endDate: "Present",
     responsibilities: [
-      // Lista de responsabilidades o logros
-      "Developed responsive web applications using React and Tailwind CSS.",
-      "Collaborated with backend team to integrate REST APIs.",
-      "Led UI/UX improvements that enhanced user experience by 20%.",
+      "Built and deployed responsive web projects using React.js, Astro, and Tailwind CSS, focusing on performance and user-centered design.",
+      "Collaborated with backend technologies like Node.js and Flask, enhancing my understanding of full-stack development through hands-on projects.",
+      "Integrated REST APIs and Firebase Authentication in personal projects, learning best practices for secure and efficient data handling.",
+      "Developed UI/UX features with an emphasis on accessibility and mobile-first design, improving usability and visual consistency across devices.",
+      "Engaged in continuous learning, exploring modern frameworks and design patterns to enhance my skills and deliver quality in each project."
     ],
-    location: "Remote", // Ubicación (puede ser física o remoto)
-    technologies: [
-      // Tecnologías usadas
-      "JavaScript",
-      "React",
-      "Tailwind CSS",
-      "REST APIs",
-    ],
-  },
-  {
-    id: 2,
-    company: "Creative Solutions",
-    position: "Junior Developer",
-    startDate: "June 2020",
-    endDate: "December 2021",
-    responsibilities: [
-      "Assisted in the development of client websites using HTML, CSS, and JavaScript.",
-      "Implemented SEO best practices to increase website visibility.",
-      "Supported team in debugging and testing web applications.",
-    ],
-    location: "New York, NY",
-    technologies: ["HTML", "CSS", "JavaScript", "Git"],
-  },
-  {
-    id: 3,
-    company: "Creative Solutions",
-    position: "Junior Developer",
-    startDate: "June 2020",
-    endDate: "December 2021",
-    responsibilities: [
-      "Assisted in the development of client websites using HTML, CSS, and JavaScript.",
-      "Implemented SEO best practices to increase website visibility.",
-      "Supported team in debugging and testing web applications.",
-    ],
-    location: "New York, NY",
-    technologies: ["HTML", "CSS", "JavaScript", "Git"],
-  },
+    location: "Remote"
+  }
 ];
 
 export const projects = [
