@@ -74,11 +74,11 @@ export const projects = [
     id: 2,
     name: "Sweet Bites",
     description:
-      "An e-commerce platform for sweets and snacks built with React Router. It includes features such as product catalog, shopping cart, and user reviews.",
-    technologies: ["React Router", "Tailwind CSS", "Firebase", "React"],
+      "An e-commerce platform for sweets and snacks built with NextJs. It includes features such as product catalog, shopping cart, and user reviews. The database is built with firebase",
+    technologies: ["NextJs", "Tailwind CSS", "Firebase", "React"],
     repositoryLink: "https://github.com/borgesmj/sweet-bites",
-    liveDemo: "https://sweet-bites-co.netlify.app/",
-    year: 2023,
+    liveDemo: "https://sweet-bites.vercel.app/",
+    year: 2024,
     features: [
       "Product catalog",
       "Secure payment integration",
