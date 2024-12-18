@@ -4,54 +4,53 @@ const { socialLinks } = Astro.props;
 import { Icon } from "astro-icon/components";
 ---
 
-<ul class="hidden md:flex flex-row gap-2 justify-between w-[250px] ">
-    {
-      socialLinks.map((link) => (
-        <li
-          class={`${link.name}-icon bg-mystic-mint w-10 h-10 flex justify-center items-center rounded-full relative group hover:cursor-pointer text-oceanic-noir hover:text-mystic-mint`}
+<ul class="hidden md:flex flex-row gap-2 justify-between w-[160px]">
+  {
+    socialLinks.map((link) => (
+      <li
+        class={`${link.name}-icon bg-mystic-mint w-6 h-6 flex justify-center items-center rounded-full relative group hover:cursor-pointer text-oceanic-noir hover:text-mystic-mint`}
+      >
+        <a target="_blank" href={link.href} class="p-[3px]">
+          <Icon name={link.name} />
+        </a>
+        <span
+          class={`text-xs tooltip ${link.name}-tooltip absolute bottom-0 invisible group-hover:bottom-[-45px] bg-[${link.color}] p-1 opacity-0 group-hover:opacity-100 group-hover:visible rounded-lg transition before:content-[''] before:absolute before:h-[8px] before:w-[8px] before:top-[-5px] before:left-0 capitalize`}
         >
-          <a target="_blank" href="#" class="p-2">
-            <Icon name={link.name} />
-          </a>
-          <span
-            class={`text-xs tooltip ${link.name}-tooltip absolute bottom-0 invisible group-hover:bottom-[-45px] bg-[${link.color}] p-1 opacity-0 group-hover:opacity-100 group-hover:visible rounded-lg transition before:content-[''] before:absolute before:h-[8px] before:w-[8px] before:top-[-5px] before:left-0 capitalize`}
-          >
-            {link.name}
-          </span>
-        </li>
-      ))
-    }
-  </ul>
-  
-  <style>
-      .tooltip::before {
-          left: 50%;
-          transform: translateX(-50%) rotate(45deg);
-      }
-    .github-icon:hover,
-    .github-tooltip,
-    .github-tooltip::before {
-      background-color: #171515;
-    }
-    .linkedin-icon:hover,
-    .linkedin-tooltip,
-    .linkedin-tooltip::before {
-      background-color: #0073b1;
-    }
-    .instagram-icon:hover,
-    .instagram-tooltip,
-    .instagram-tooltip::before {
-      background-color: #e1306c;
-    }
-    .telegram-icon:hover,
-    .telegram-tooltip,
-    .telegram-tooltip::before {
-      background-color: #229ed9;
-    }
-    .twitter-icon:hover,
-    .twitter-tooltip,
-    .twitter-tooltip::before {
-      background-color: #1da1f2;
-    }
-  </style>
-  
+          {link.name}
+        </span>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .tooltip::before {
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .github-icon:hover,
+  .github-tooltip,
+  .github-tooltip::before {
+    background-color: #171515;
+  }
+  .linkedin-icon:hover,
+  .linkedin-tooltip,
+  .linkedin-tooltip::before {
+    background-color: #0073b1;
+  }
+  .instagram-icon:hover,
+  .instagram-tooltip,
+  .instagram-tooltip::before {
+    background-color: #e1306c;
+  }
+  .telegram-icon:hover,
+  .telegram-tooltip,
+  .telegram-tooltip::before {
+    background-color: #229ed9;
+  }
+  .twitter-icon:hover,
+  .twitter-tooltip,
+  .twitter-tooltip::before {
+    background-color: #1da1f2;
+  }
+</style>

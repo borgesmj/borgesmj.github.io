@@ -101,6 +101,10 @@ const { navlinks } = Astro.props;
   document.addEventListener("DOMContentLoaded", updateActiveLink);
   window.addEventListener("popstate", updateActiveLink);
 
+/**
+ * 
+ // * ver el navbar en version movil
+ */
   const navMenu = document.querySelector("#nav-menu") as HTMLInputElement;
   navMenu.addEventListener("change", () => {
     const navbar = document.querySelector(".navbar") as HTMLElement;
@@ -117,6 +121,9 @@ const { navlinks } = Astro.props;
       navlist.classList.add("hidden");
     }
   });
+  /**
+   * Scroll desde el navbar movil
+   */
   const navlinks = document.querySelectorAll(
     "ul li a"
   ) as NodeListOf<HTMLAnchorElement>;

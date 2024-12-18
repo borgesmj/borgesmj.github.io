@@ -12,8 +12,6 @@ const setFunkoContainerHeight = () => {
     funkoContainer.classList.remove("dynamic-height");
     funkoContainer.style.height = "";
   }
-
-  console.log("Altura total en pantallas grandes:", totalHeight);
 };
 
 window.addEventListener("DOMContentLoaded", setFunkoContainerHeight);
